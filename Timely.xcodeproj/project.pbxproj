@@ -79,12 +79,10 @@
 				BF12870D226ED8C1000DB226 /* Models */,
 				BF12870C226ED8B3000DB226 /* ExtensionsAndProtocols */,
 				BF12870B226ED8A9000DB226 /* Constants */,
-				BF1286F9226DE2FE000DB226 /* AppDelegate.swift */,
 				BF1286FB226DE2FE000DB226 /* ViewController.swift */,
 				BF1286FD226DE2FE000DB226 /* Main.storyboard */,
 				BF128700226DE300000DB226 /* Assets.xcassets */,
 				BF128702226DE300000DB226 /* LaunchScreen.storyboard */,
-				BF128705226DE300000DB226 /* Info.plist */,
 			);
 			path = Timely;
 			sourceTree = "<group>";
@@ -125,6 +123,8 @@
 		BF12870F226ED8D1000DB226 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				BF1286F9226DE2FE000DB226 /* AppDelegate.swift */,
+				BF128705226DE300000DB226 /* Info.plist */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -391,7 +391,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = Timely/Info.plist;
+				INFOPLIST_FILE = Timely/Common/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -408,7 +408,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = Timely/Info.plist;
+				INFOPLIST_FILE = Timely/Common/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
