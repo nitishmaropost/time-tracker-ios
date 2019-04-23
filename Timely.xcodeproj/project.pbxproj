@@ -21,6 +21,7 @@
 		BF128722226EDBE6000DB226 /* fa-solid-900.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BF12871D226EDAFD000DB226 /* fa-solid-900.ttf */; };
 		BF128723226EDBE6000DB226 /* FontAwesome.otf in Resources */ = {isa = PBXBuildFile; fileRef = BF12871B226EDAFD000DB226 /* FontAwesome.otf */; };
 		BF128725226EDFCF000DB226 /* RoundedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF128724226EDFCF000DB226 /* RoundedView.swift */; };
+		BF128728226EE8B5000DB226 /* AuthenticationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF128727226EE8B5000DB226 /* AuthenticationVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		BF12871D226EDAFD000DB226 /* fa-solid-900.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "fa-solid-900.ttf"; sourceTree = "<group>"; };
 		BF12871E226EDAFD000DB226 /* fa-regular-400.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "fa-regular-400.ttf"; sourceTree = "<group>"; };
 		BF128724226EDFCF000DB226 /* RoundedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedView.swift; sourceTree = "<group>"; };
+		BF128727226EE8B5000DB226 /* AuthenticationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,15 +74,15 @@
 		BF1286F8226DE2FE000DB226 /* Timely */ = {
 			isa = PBXGroup;
 			children = (
+				BF12870C226ED8B3000DB226 /* ExtensionsAndProtocols */,
+				BF12870D226ED8C1000DB226 /* Models */,
+				BF12870E226ED8CA000DB226 /* ViewModels */,
 				BF128719226EDAEB000DB226 /* Assets */,
+				BF128726226EE81E000DB226 /* Storyboards */,
 				BF128710226ED8DA000DB226 /* ViewControllers */,
 				BF12870F226ED8D1000DB226 /* Common */,
-				BF12870E226ED8CA000DB226 /* ViewModels */,
-				BF12870D226ED8C1000DB226 /* Models */,
-				BF12870C226ED8B3000DB226 /* ExtensionsAndProtocols */,
 				BF12870B226ED8A9000DB226 /* Constants */,
 				BF1286FB226DE2FE000DB226 /* ViewController.swift */,
-				BF1286FD226DE2FE000DB226 /* Main.storyboard */,
 				BF128700226DE300000DB226 /* Assets.xcassets */,
 				BF128702226DE300000DB226 /* LaunchScreen.storyboard */,
 			);
@@ -132,6 +134,7 @@
 		BF128710226ED8DA000DB226 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				BF128727226EE8B5000DB226 /* AuthenticationVC.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -161,6 +164,14 @@
 				BF12871B226EDAFD000DB226 /* FontAwesome.otf */,
 			);
 			path = "Font-Awesome";
+			sourceTree = "<group>";
+		};
+		BF128726226EE81E000DB226 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				BF1286FD226DE2FE000DB226 /* Main.storyboard */,
+			);
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -240,6 +251,7 @@
 			files = (
 				BF1286FC226DE2FE000DB226 /* ViewController.swift in Sources */,
 				BF128716226ED90E000DB226 /* PlaceholderIcon.swift in Sources */,
+				BF128728226EE8B5000DB226 /* AuthenticationVC.swift in Sources */,
 				BF128725226EDFCF000DB226 /* RoundedView.swift in Sources */,
 				BF128718226ED913000DB226 /* HRToast+UIView.swift in Sources */,
 				BF128712226ED8F2000DB226 /* RoundedButton.swift in Sources */,
