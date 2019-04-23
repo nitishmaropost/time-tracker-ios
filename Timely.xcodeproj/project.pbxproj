@@ -20,6 +20,7 @@
 		BF128721226EDBE6000DB226 /* fa-regular-400.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BF12871E226EDAFD000DB226 /* fa-regular-400.ttf */; };
 		BF128722226EDBE6000DB226 /* fa-solid-900.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BF12871D226EDAFD000DB226 /* fa-solid-900.ttf */; };
 		BF128723226EDBE6000DB226 /* FontAwesome.otf in Resources */ = {isa = PBXBuildFile; fileRef = BF12871B226EDAFD000DB226 /* FontAwesome.otf */; };
+		BF128725226EDFCF000DB226 /* RoundedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF128724226EDFCF000DB226 /* RoundedView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		BF12871C226EDAFD000DB226 /* fa-brands-400.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "fa-brands-400.ttf"; sourceTree = "<group>"; };
 		BF12871D226EDAFD000DB226 /* fa-solid-900.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "fa-solid-900.ttf"; sourceTree = "<group>"; };
 		BF12871E226EDAFD000DB226 /* fa-regular-400.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "fa-regular-400.ttf"; sourceTree = "<group>"; };
+		BF128724226EDFCF000DB226 /* RoundedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 				BF128715226ED90E000DB226 /* PlaceholderIcon.swift */,
 				BF128713226ED8FB000DB226 /* DesignableTextField.swift */,
 				BF128711226ED8F2000DB226 /* RoundedButton.swift */,
+				BF128724226EDFCF000DB226 /* RoundedView.swift */,
 			);
 			path = ExtensionsAndProtocols;
 			sourceTree = "<group>";
@@ -237,6 +240,7 @@
 			files = (
 				BF1286FC226DE2FE000DB226 /* ViewController.swift in Sources */,
 				BF128716226ED90E000DB226 /* PlaceholderIcon.swift in Sources */,
+				BF128725226EDFCF000DB226 /* RoundedView.swift in Sources */,
 				BF128718226ED913000DB226 /* HRToast+UIView.swift in Sources */,
 				BF128712226ED8F2000DB226 /* RoundedButton.swift in Sources */,
 				BF1286FA226DE2FE000DB226 /* AppDelegate.swift in Sources */,

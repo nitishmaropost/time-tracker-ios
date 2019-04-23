@@ -26,28 +26,56 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0vS-St-E8F">
-                                <rect key="frame" x="-127" y="-144" width="300" height="300"/>
-                                <color key="backgroundColor" red="1" green="0.32549019607843138" blue="0.054901960784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0vS-St-E8F" customClass="RoundedView" customModule="Timely" customModuleProvider="target">
+                                <rect key="frame" x="-140" y="-160" width="300" height="300"/>
+                                <color key="backgroundColor" red="0.98431372549019602" green="0.23529411764705882" blue="0.058823529411764705" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="300" id="94W-pB-SwQ"/>
                                     <constraint firstAttribute="height" constant="300" id="Ulp-o9-zHh"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="150"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lFs-eV-guH">
-                                <rect key="frame" x="30" y="-200" width="300" height="300"/>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lFs-eV-guH" customClass="RoundedView" customModule="Timely" customModuleProvider="target">
+                                <rect key="frame" x="10" y="-220" width="300" height="300"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="0.17254901960784313" blue="0.047058823529411764" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.8784313725490196" green="0.086274509803921567" blue="0.054901960784313725" alpha="1" colorSpace="calibratedRGB"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="150"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6bD-iq-WlI">
-                                <rect key="frame" x="331" y="646" width="300" height="300"/>
-                                <color key="backgroundColor" red="1" green="0.32549019607843138" blue="0.054901960784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6bD-iq-WlI" customClass="RoundedView" customModule="Timely" customModuleProvider="target">
+                                <rect key="frame" x="320" y="680" width="300" height="300"/>
+                                <color key="backgroundColor" red="0.98431372549019602" green="0.23529411764705882" blue="0.058823529411764705" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="8pP-MS-IPh"/>
+                                    <constraint firstAttribute="height" constant="300" id="CQi-HG-5By"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="150"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LaX-Vr-Zsb">
-                                <rect key="frame" x="94" y="791" width="300" height="300"/>
-                                <color key="backgroundColor" red="1" green="0.17254901960784313" blue="0.047058823529411764" alpha="1" colorSpace="calibratedRGB"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LaX-Vr-Zsb" customClass="RoundedView" customModule="Timely" customModuleProvider="target">
+                                <rect key="frame" x="94" y="810" width="300" height="300"/>
+                                <color key="backgroundColor" red="0.8784313725490196" green="0.086274509803921567" blue="0.054901960784313725" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="5ER-V6-fXk"/>
+                                    <constraint firstAttribute="height" constant="300" id="hI1-YG-mn1"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="150"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eB5-vN-ZGc">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eB5-vN-ZGc" customClass="RoundedView" customModule="Timely" customModuleProvider="target">
                                 <rect key="frame" x="-40" y="358" width="414" height="180"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder=" Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AyD-Mv-hgI">
@@ -84,7 +112,7 @@
                                             <constraint firstAttribute="height" constant="1" id="lkj-gh-G1v"/>
                                         </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8jg-wp-Dfc">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8jg-wp-Dfc">
                                         <rect key="frame" x="40" y="120" width="374" height="1"/>
                                         <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
@@ -104,7 +132,7 @@
                                     <constraint firstItem="SAe-kM-C6o" firstAttribute="top" secondItem="AyD-Mv-hgI" secondAttribute="bottom" id="aSs-Yx-SPO"/>
                                     <constraint firstItem="t1c-RK-W7i" firstAttribute="leading" secondItem="AyD-Mv-hgI" secondAttribute="leading" id="duD-Z4-NDY"/>
                                     <constraint firstItem="ipE-8W-9S1" firstAttribute="trailing" secondItem="t1c-RK-W7i" secondAttribute="trailing" id="eiQ-U1-vX4"/>
-                                    <constraint firstItem="8jg-wp-Dfc" firstAttribute="top" secondItem="t1c-RK-W7i" secondAttribute="bottom" id="ihM-db-FsU"/>
+                                    <constraint firstItem="8jg-wp-Dfc" firstAttribute="top" secondItem="t1c-RK-W7i" secondAttribute="bottom" constant="2" id="ihM-db-FsU"/>
                                     <constraint firstItem="t1c-RK-W7i" firstAttribute="trailing" secondItem="AyD-Mv-hgI" secondAttribute="trailing" id="lyF-yq-dJV"/>
                                     <constraint firstAttribute="trailing" secondItem="AyD-Mv-hgI" secondAttribute="trailing" id="mGG-eQ-Rsh"/>
                                     <constraint firstAttribute="height" constant="180" id="ngs-ae-svy"/>
@@ -112,6 +140,23 @@
                                     <constraint firstItem="ipE-8W-9S1" firstAttribute="top" secondItem="AyD-Mv-hgI" secondAttribute="bottom" constant="60" id="qzV-Ez-wiW"/>
                                     <constraint firstAttribute="trailing" secondItem="SAe-kM-C6o" secondAttribute="trailing" id="xCO-KW-nmh"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="50"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                        <real key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                        <real key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                        <size key="value" width="3" height="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                        <color key="value" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BRZ-sJ-qbd" customClass="RoundedButton" customModule="Timely" customModuleProvider="target">
                                 <rect key="frame" x="339" y="418" width="60" height="60"/>
@@ -130,24 +175,63 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Register" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bqD-r9-tUd">
+                                <rect key="frame" x="20" y="268" width="374" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="be7-c7-sJn"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="43Q-H1-K1O" customClass="RoundedButton" customModule="Timely" customModuleProvider="target">
+                                <rect key="frame" x="289" y="193" width="150" height="60"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="eDk-gA-aYd"/>
+                                    <constraint firstAttribute="width" constant="150" id="vof-67-DhB"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Login">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="30"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                        <real key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                        <real key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                        <size key="value" width="3" height="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                        <color key="value" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="0vS-St-E8F" secondAttribute="trailing" constant="241" id="0CV-gS-A1r"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="0vS-St-E8F" secondAttribute="trailing" constant="254" id="0CV-gS-A1r"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="LaX-Vr-Zsb" secondAttribute="trailing" constant="20" id="0f7-z4-aBc"/>
-                            <constraint firstAttribute="bottom" secondItem="LaX-Vr-Zsb" secondAttribute="bottom" constant="-195" id="18x-0d-lZB"/>
-                            <constraint firstItem="6bD-iq-WlI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="331" id="4cT-tw-TY9"/>
-                            <constraint firstItem="6bD-iq-WlI" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="602" id="7Yj-Fm-yT1"/>
-                            <constraint firstAttribute="trailing" secondItem="6bD-iq-WlI" secondAttribute="trailing" constant="-217" id="7rc-GP-aNE"/>
-                            <constraint firstItem="LaX-Vr-Zsb" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="791" id="EGd-OQ-Ddw"/>
+                            <constraint firstAttribute="bottom" secondItem="LaX-Vr-Zsb" secondAttribute="bottom" constant="-214" id="18x-0d-lZB"/>
+                            <constraint firstAttribute="trailing" secondItem="6bD-iq-WlI" secondAttribute="trailing" constant="-206" id="7rc-GP-aNE"/>
+                            <constraint firstItem="43Q-H1-K1O" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="25" id="7v7-gp-qw3"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="BRZ-sJ-qbd" secondAttribute="trailing" constant="15" id="II7-rS-06V"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="eB5-vN-ZGc" secondAttribute="trailing" constant="40" id="Sgw-rD-6m4"/>
-                            <constraint firstAttribute="bottomMargin" secondItem="6bD-iq-WlI" secondAttribute="bottom" constant="-84" id="ThP-ci-4JW"/>
-                            <constraint firstItem="LaX-Vr-Zsb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="94" id="dkp-UA-Hug"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="6bD-iq-WlI" secondAttribute="bottom" constant="-118" id="ThP-ci-4JW"/>
+                            <constraint firstItem="bqD-r9-tUd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="UEN-Dc-NzQ"/>
+                            <constraint firstItem="bqD-r9-tUd" firstAttribute="top" secondItem="43Q-H1-K1O" secondAttribute="bottom" constant="15" id="eii-0o-pCu"/>
                             <constraint firstItem="BRZ-sJ-qbd" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="ftJ-Ws-hcK"/>
-                            <constraint firstItem="0vS-St-E8F" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="-144" id="nS2-N1-blU"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bqD-r9-tUd" secondAttribute="trailing" constant="20" id="ih9-hk-EKF"/>
+                            <constraint firstItem="0vS-St-E8F" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="-160" id="nS2-N1-blU"/>
                             <constraint firstItem="eB5-vN-ZGc" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="ryF-yF-KPZ"/>
                             <constraint firstItem="eB5-vN-ZGc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="-40" id="tI9-bc-8ae"/>
+                            <constraint firstItem="eB5-vN-ZGc" firstAttribute="top" secondItem="bqD-r9-tUd" secondAttribute="bottom" constant="50" id="yyK-jL-pvO"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
