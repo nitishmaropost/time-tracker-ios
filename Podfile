@@ -7,4 +7,6 @@ target 'Timely' do
 
   # Pods for Timely
 
+pod 'DateTimePicker'
+
 end

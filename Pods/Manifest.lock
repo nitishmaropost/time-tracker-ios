@@ -1,0 +1,16 @@
+PODS:
+  - DateTimePicker (2.1.3)
+
+DEPENDENCIES:
+  - DateTimePicker
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - DateTimePicker
+
+SPEC CHECKSUMS:
+  DateTimePicker: 1d34181c5e9cd6a32ca87174fdf66c9710e483ef
+
+PODFILE CHECKSUM: d56d9794f4cd410195cdcf9dbf2ced4889758fd7
+
+COCOAPODS: 1.5.3
