@@ -12,7 +12,7 @@ class SideMenuVC: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.tableView.backgroundColor = TimelyColors.shared.color_SideMenu
+        self.tableView.backgroundColor = TimelyColors.shared.kColorSideMenu
     }
 
     // MARK: - Table view data source

@@ -13,5 +13,8 @@ class TimelyColors {
     
     static let shared = TimelyColors()
     
-    let color_SideMenu = UIColor(hexString: "#88d3f6")
+    let kColorSideMenu = UIColor(hexString: "#ff8566")
+    let kColorRedTheme = UIColor(hexString: "#ff530e")
+    let kColorOrangeTheme = UIColor(hexString: "#e92c0c")
+    let kColorNavTitleColor = UIColor(hexString: "#4d4d4d")
 }
