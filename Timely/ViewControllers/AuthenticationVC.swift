@@ -32,21 +32,21 @@ class AuthenticationVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.buttonForgotPassword.isHidden = true
-        self.buttonLogin.isHidden = true
+        self.buttonRegister.isHidden = true
     }
     
     @IBAction func buttonActionTapped(_ sender: RoundedButton) {
-        
+        self.performSegue(withIdentifier: TimelyConstants.shared.segue_auth_to_home, sender: nil)
     }
     
     @IBAction func buttonSwitchModeTapped(_ sender: RoundedButton) {
         if sender.tag == 1 {
-            self.buttonLogin.isHidden = false
-            self.buttonRegister.isHidden = true
-            self.animateViewOnSwitch(tag: 1)
-        } else {
             self.buttonLogin.isHidden = true
             self.buttonRegister.isHidden = false
+            self.animateViewOnSwitch(tag: 1)
+        } else {
+            self.buttonLogin.isHidden = false
+            self.buttonRegister.isHidden = true
             self.animateViewOnSwitch(tag: 2)
         }
     }
@@ -54,10 +54,6 @@ class AuthenticationVC: UIViewController {
     func animateViewOnSwitch(tag: Int) {
         if tag == 1 {
 //            // Show login
-            
-//            self.view.layoutIfNeeded()
-//            self.view.layoutSubviews()
-            
             UIView.animate(withDuration: 0) {
                // self.buttonSwitchMode.setTitle("Register", for: .normal)
                 self.labelTitle.text = "Login"
@@ -73,7 +69,6 @@ class AuthenticationVC: UIViewController {
             
         } else {
             // Show register
-            
             UIView.animate(withDuration: 0) {
                 //self.buttonSwitchMode.setTitle("Login", for: .normal)
                 self.labelTitle.text = "Register"

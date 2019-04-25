@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BF02516322718CC10005E0A6 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF02516222718CC10005E0A6 /* HomeVC.swift */; };
+		BF02516722718DA90005E0A6 /* SideMenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF02516622718DA90005E0A6 /* SideMenuVC.swift */; };
+		BF0251692271928D0005E0A6 /* TimelyColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0251682271928D0005E0A6 /* TimelyColors.swift */; };
+		BF02516B2271929C0005E0A6 /* TimelyConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF02516A2271929C0005E0A6 /* TimelyConstants.swift */; };
+		BF02516D227192AB0005E0A6 /* TimelyFonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF02516C227192AB0005E0A6 /* TimelyFonts.swift */; };
+		BF025170227198040005E0A6 /* TimelyColorsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF02516F227198040005E0A6 /* TimelyColorsExtension.swift */; };
+		BF025172227199890005E0A6 /* RightVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF025171227199890005E0A6 /* RightVC.swift */; };
 		BF1286FA226DE2FE000DB226 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1286F9226DE2FE000DB226 /* AppDelegate.swift */; };
 		BF1286FC226DE2FE000DB226 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1286FB226DE2FE000DB226 /* ViewController.swift */; };
 		BF1286FF226DE2FE000DB226 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF1286FD226DE2FE000DB226 /* Main.storyboard */; };
@@ -22,9 +29,25 @@
 		BF128723226EDBE6000DB226 /* FontAwesome.otf in Resources */ = {isa = PBXBuildFile; fileRef = BF12871B226EDAFD000DB226 /* FontAwesome.otf */; };
 		BF128725226EDFCF000DB226 /* RoundedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF128724226EDFCF000DB226 /* RoundedView.swift */; };
 		BF128728226EE8B5000DB226 /* AuthenticationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF128727226EE8B5000DB226 /* AuthenticationVC.swift */; };
+		BF12873A22717D90000DB226 /* LGSideMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = BF12872D22717D8F000DB226 /* LGSideMenuView.m */; };
+		BF12873B22717D90000DB226 /* LGSideMenuBorderView.m in Sources */ = {isa = PBXBuildFile; fileRef = BF12872F22717D8F000DB226 /* LGSideMenuBorderView.m */; };
+		BF12873C22717D90000DB226 /* LGSideMenuController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF12873122717D8F000DB226 /* LGSideMenuController.m */; };
+		BF12873D22717D90000DB226 /* LGSideMenuGesturesHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = BF12873222717D90000DB226 /* LGSideMenuGesturesHandler.m */; };
+		BF12873E22717D90000DB226 /* UIViewController+LGSideMenuController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF12873522717D90000DB226 /* UIViewController+LGSideMenuController.m */; };
+		BF12873F22717D90000DB226 /* LGSideMenuSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = BF12873622717D90000DB226 /* LGSideMenuSegue.m */; };
+		BF12874022717D90000DB226 /* LGSideMenuHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = BF12873822717D90000DB226 /* LGSideMenuHelper.m */; };
+		BF1287422271828E000DB226 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1287412271828E000DB226 /* MainVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BF02516222718CC10005E0A6 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
+		BF02516622718DA90005E0A6 /* SideMenuVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuVC.swift; sourceTree = "<group>"; };
+		BF0251682271928D0005E0A6 /* TimelyColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelyColors.swift; sourceTree = "<group>"; };
+		BF02516A2271929C0005E0A6 /* TimelyConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelyConstants.swift; sourceTree = "<group>"; };
+		BF02516C227192AB0005E0A6 /* TimelyFonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelyFonts.swift; sourceTree = "<group>"; };
+		BF02516E227193EA0005E0A6 /* Timely-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Timely-Bridging-Header.h"; sourceTree = "<group>"; };
+		BF02516F227198040005E0A6 /* TimelyColorsExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelyColorsExtension.swift; sourceTree = "<group>"; };
+		BF025171227199890005E0A6 /* RightVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RightVC.swift; sourceTree = "<group>"; };
 		BF1286F6226DE2FE000DB226 /* Timely.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Timely.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF1286F9226DE2FE000DB226 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BF1286FB226DE2FE000DB226 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -42,6 +65,21 @@
 		BF12871E226EDAFD000DB226 /* fa-regular-400.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "fa-regular-400.ttf"; sourceTree = "<group>"; };
 		BF128724226EDFCF000DB226 /* RoundedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedView.swift; sourceTree = "<group>"; };
 		BF128727226EE8B5000DB226 /* AuthenticationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationVC.swift; sourceTree = "<group>"; };
+		BF12872C22717D8F000DB226 /* UIViewController+LGSideMenuController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+LGSideMenuController.h"; sourceTree = "<group>"; };
+		BF12872D22717D8F000DB226 /* LGSideMenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LGSideMenuView.m; sourceTree = "<group>"; };
+		BF12872E22717D8F000DB226 /* LGSideMenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGSideMenuView.h; sourceTree = "<group>"; };
+		BF12872F22717D8F000DB226 /* LGSideMenuBorderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LGSideMenuBorderView.m; sourceTree = "<group>"; };
+		BF12873022717D8F000DB226 /* LGSideMenuController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGSideMenuController.h; sourceTree = "<group>"; };
+		BF12873122717D8F000DB226 /* LGSideMenuController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LGSideMenuController.m; sourceTree = "<group>"; };
+		BF12873222717D90000DB226 /* LGSideMenuGesturesHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LGSideMenuGesturesHandler.m; sourceTree = "<group>"; };
+		BF12873322717D90000DB226 /* LGSideMenuGesturesHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGSideMenuGesturesHandler.h; sourceTree = "<group>"; };
+		BF12873422717D90000DB226 /* LGSideMenuHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGSideMenuHelper.h; sourceTree = "<group>"; };
+		BF12873522717D90000DB226 /* UIViewController+LGSideMenuController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+LGSideMenuController.m"; sourceTree = "<group>"; };
+		BF12873622717D90000DB226 /* LGSideMenuSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LGSideMenuSegue.m; sourceTree = "<group>"; };
+		BF12873722717D90000DB226 /* LGSideMenuBorderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGSideMenuBorderView.h; sourceTree = "<group>"; };
+		BF12873822717D90000DB226 /* LGSideMenuHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LGSideMenuHelper.m; sourceTree = "<group>"; };
+		BF12873922717D90000DB226 /* LGSideMenuSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGSideMenuSegue.h; sourceTree = "<group>"; };
+		BF1287412271828E000DB226 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +112,7 @@
 		BF1286F8226DE2FE000DB226 /* Timely */ = {
 			isa = PBXGroup;
 			children = (
+				BF12872922717D6A000DB226 /* Custom */,
 				BF12870C226ED8B3000DB226 /* ExtensionsAndProtocols */,
 				BF12870D226ED8C1000DB226 /* Models */,
 				BF12870E226ED8CA000DB226 /* ViewModels */,
@@ -83,7 +122,6 @@
 				BF12870F226ED8D1000DB226 /* Common */,
 				BF12870B226ED8A9000DB226 /* Constants */,
 				BF1286FB226DE2FE000DB226 /* ViewController.swift */,
-				BF128700226DE300000DB226 /* Assets.xcassets */,
 				BF128702226DE300000DB226 /* LaunchScreen.storyboard */,
 			);
 			path = Timely;
@@ -92,6 +130,9 @@
 		BF12870B226ED8A9000DB226 /* Constants */ = {
 			isa = PBXGroup;
 			children = (
+				BF0251682271928D0005E0A6 /* TimelyColors.swift */,
+				BF02516A2271929C0005E0A6 /* TimelyConstants.swift */,
+				BF02516C227192AB0005E0A6 /* TimelyFonts.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -104,6 +145,7 @@
 				BF128713226ED8FB000DB226 /* DesignableTextField.swift */,
 				BF128711226ED8F2000DB226 /* RoundedButton.swift */,
 				BF128724226EDFCF000DB226 /* RoundedView.swift */,
+				BF02516F227198040005E0A6 /* TimelyColorsExtension.swift */,
 			);
 			path = ExtensionsAndProtocols;
 			sourceTree = "<group>";
@@ -125,6 +167,7 @@
 		BF12870F226ED8D1000DB226 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				BF02516E227193EA0005E0A6 /* Timely-Bridging-Header.h */,
 				BF1286F9226DE2FE000DB226 /* AppDelegate.swift */,
 				BF128705226DE300000DB226 /* Info.plist */,
 			);
@@ -135,6 +178,10 @@
 			isa = PBXGroup;
 			children = (
 				BF128727226EE8B5000DB226 /* AuthenticationVC.swift */,
+				BF1287412271828E000DB226 /* MainVC.swift */,
+				BF02516222718CC10005E0A6 /* HomeVC.swift */,
+				BF02516622718DA90005E0A6 /* SideMenuVC.swift */,
+				BF025171227199890005E0A6 /* RightVC.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -142,6 +189,7 @@
 		BF128719226EDAEB000DB226 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				BF128700226DE300000DB226 /* Assets.xcassets */,
 				BF12871A226EDAF3000DB226 /* Fonts */,
 			);
 			path = Assets;
@@ -172,6 +220,35 @@
 				BF1286FD226DE2FE000DB226 /* Main.storyboard */,
 			);
 			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		BF12872922717D6A000DB226 /* Custom */ = {
+			isa = PBXGroup;
+			children = (
+				BF12872A22717D81000DB226 /* LGSideMenuController */,
+			);
+			path = Custom;
+			sourceTree = "<group>";
+		};
+		BF12872A22717D81000DB226 /* LGSideMenuController */ = {
+			isa = PBXGroup;
+			children = (
+				BF12873722717D90000DB226 /* LGSideMenuBorderView.h */,
+				BF12872F22717D8F000DB226 /* LGSideMenuBorderView.m */,
+				BF12873022717D8F000DB226 /* LGSideMenuController.h */,
+				BF12873122717D8F000DB226 /* LGSideMenuController.m */,
+				BF12873322717D90000DB226 /* LGSideMenuGesturesHandler.h */,
+				BF12873222717D90000DB226 /* LGSideMenuGesturesHandler.m */,
+				BF12873422717D90000DB226 /* LGSideMenuHelper.h */,
+				BF12873822717D90000DB226 /* LGSideMenuHelper.m */,
+				BF12873922717D90000DB226 /* LGSideMenuSegue.h */,
+				BF12873622717D90000DB226 /* LGSideMenuSegue.m */,
+				BF12872E22717D8F000DB226 /* LGSideMenuView.h */,
+				BF12872D22717D8F000DB226 /* LGSideMenuView.m */,
+				BF12872C22717D8F000DB226 /* UIViewController+LGSideMenuController.h */,
+				BF12873522717D90000DB226 /* UIViewController+LGSideMenuController.m */,
+			);
+			path = LGSideMenuController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -206,6 +283,7 @@
 				TargetAttributes = {
 					BF1286F5226DE2FE000DB226 = {
 						CreatedOnToolsVersion = 10.2;
+						LastSwiftMigration = 1020;
 					};
 				};
 			};
@@ -250,13 +328,28 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF1286FC226DE2FE000DB226 /* ViewController.swift in Sources */,
+				BF0251692271928D0005E0A6 /* TimelyColors.swift in Sources */,
 				BF128716226ED90E000DB226 /* PlaceholderIcon.swift in Sources */,
+				BF12873C22717D90000DB226 /* LGSideMenuController.m in Sources */,
+				BF12873D22717D90000DB226 /* LGSideMenuGesturesHandler.m in Sources */,
+				BF02516B2271929C0005E0A6 /* TimelyConstants.swift in Sources */,
 				BF128728226EE8B5000DB226 /* AuthenticationVC.swift in Sources */,
+				BF02516322718CC10005E0A6 /* HomeVC.swift in Sources */,
+				BF02516D227192AB0005E0A6 /* TimelyFonts.swift in Sources */,
+				BF1287422271828E000DB226 /* MainVC.swift in Sources */,
 				BF128725226EDFCF000DB226 /* RoundedView.swift in Sources */,
+				BF12873F22717D90000DB226 /* LGSideMenuSegue.m in Sources */,
 				BF128718226ED913000DB226 /* HRToast+UIView.swift in Sources */,
+				BF12873B22717D90000DB226 /* LGSideMenuBorderView.m in Sources */,
+				BF12873A22717D90000DB226 /* LGSideMenuView.m in Sources */,
+				BF12873E22717D90000DB226 /* UIViewController+LGSideMenuController.m in Sources */,
 				BF128712226ED8F2000DB226 /* RoundedButton.swift in Sources */,
+				BF025170227198040005E0A6 /* TimelyColorsExtension.swift in Sources */,
+				BF02516722718DA90005E0A6 /* SideMenuVC.swift in Sources */,
 				BF1286FA226DE2FE000DB226 /* AppDelegate.swift in Sources */,
+				BF12874022717D90000DB226 /* LGSideMenuHelper.m in Sources */,
 				BF128714226ED8FC000DB226 /* DesignableTextField.swift in Sources */,
+				BF025172227199890005E0A6 /* RightVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -402,6 +495,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Timely/Common/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -410,6 +504,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = Maropost.Timely;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Timely/Common/Timely-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -419,6 +515,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Timely/Common/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -427,6 +524,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = Maropost.Timely;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Timely/Common/Timely-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
