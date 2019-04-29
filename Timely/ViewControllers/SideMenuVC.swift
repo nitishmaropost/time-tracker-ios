@@ -12,27 +12,80 @@ class SideMenuVC: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.tableView.backgroundColor = TimelyColors.shared.kColorSideMenu
+        self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: "reuseIdentifier")
+        self.tableView.contentInset = UIEdgeInsets(top: 30, left: 20, bottom: 0, right: 0)
     }
 
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 2
+        return 7
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        if indexPath.row == 0 {
+            return 260
+        }
+        
+        return 80
     }
 
+    override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        
+    }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        cell.textLabel?.text = "test"
-        cell.backgroundColor = UIColor.clear
+        cell.selectionStyle = .none
+        switch indexPath.row {
+        case 0:
+            let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 200, height: 200))
+            imageView.image = UIImage(named: "test_user.png")
+            imageView.layer.cornerRadius = (imageView.frame.size.width)/2
+            imageView.layer.borderColor = UIColor.lightGray.cgColor
+            imageView.layer.borderWidth = 2
+            imageView.clipsToBounds = true
+            cell.contentView.addSubview(imageView)
+            
+            let labeltitle = UILabel(frame: CGRect(x: 0, y: 210, width: self.view.frame.size.width, height: 25))
+            labeltitle.text = "John Gloom"
+            labeltitle.textColor = TimelyColors.shared.kColorRedTheme
+            labeltitle.font = UIFont(name: "Lato", size: 24)
+            cell.contentView.addSubview(labeltitle)
+            
+            let labelEmail = UILabel(frame: CGRect(x: 0, y: 240, width: self.view.frame.size.width, height: 25))
+            labelEmail.text = "jgloom@gmail.com"
+            labelEmail.textColor = TimelyColors.shared.kColorRedTheme
+            labelEmail.font = UIFont(name: "Lato", size: 20)
+            cell.contentView.addSubview(labelEmail)
+            
+        case 1:
+            cell.textLabel?.text = "Calendar"
+        case 2:
+            cell.textLabel?.text = "Terms"
+        case 3:
+            cell.textLabel?.text = "Check-in"
+        case 4:
+            cell.textLabel?.text = "Leave"
+        case 5:
+            cell.textLabel?.text = "About Us"
+        case 6:
+            cell.textLabel?.text = "About Us"
+            
+        default:
+            print("")
+        }
+        
+        cell.textLabel?.font = UIFont(name: "Lato", size: 20)
+        cell.textLabel?.textColor = UIColor.darkGray
+        cell.textLabel?.textAlignment = .left
+        
         return cell
     }
     

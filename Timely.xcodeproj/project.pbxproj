@@ -24,6 +24,14 @@
 		BF0251852271B8850005E0A6 /* Lato-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BF02517B2271B7D50005E0A6 /* Lato-Light.ttf */; };
 		BF0251862271B8850005E0A6 /* Lato-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BF02517C2271B7D50005E0A6 /* Lato-LightItalic.ttf */; };
 		BF0251872271B8850005E0A6 /* Lato-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BF0251782271B7D50005E0A6 /* Lato-Regular.ttf */; };
+		BF02518D2271CC6D0005E0A6 /* XYMarkerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF02518A2271CC6C0005E0A6 /* XYMarkerView.swift */; };
+		BF02518E2271CC6D0005E0A6 /* RadarMarkerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF02518B2271CC6C0005E0A6 /* RadarMarkerView.swift */; };
+		BF02518F2271CC6D0005E0A6 /* BalloonMarker.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF02518C2271CC6C0005E0A6 /* BalloonMarker.swift */; };
+		BF0251942271CCB20005E0A6 /* DateValueFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0251902271CCB20005E0A6 /* DateValueFormatter.swift */; };
+		BF0251952271CCB20005E0A6 /* IntAxisValueFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0251912271CCB20005E0A6 /* IntAxisValueFormatter.swift */; };
+		BF0251962271CCB20005E0A6 /* DayAxisValueFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0251922271CCB20005E0A6 /* DayAxisValueFormatter.swift */; };
+		BF0251972271CCB20005E0A6 /* LargeValueFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0251932271CCB20005E0A6 /* LargeValueFormatter.swift */; };
+		BF02519B2276FE190005E0A6 /* ColoredImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF02519A2276FE190005E0A6 /* ColoredImageView.swift */; };
 		BF1286FA226DE2FE000DB226 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1286F9226DE2FE000DB226 /* AppDelegate.swift */; };
 		BF1286FC226DE2FE000DB226 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1286FB226DE2FE000DB226 /* ViewController.swift */; };
 		BF1286FF226DE2FE000DB226 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF1286FD226DE2FE000DB226 /* Main.storyboard */; };
@@ -71,6 +79,14 @@
 		BF02517B2271B7D50005E0A6 /* Lato-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Light.ttf"; sourceTree = "<group>"; };
 		BF02517C2271B7D50005E0A6 /* Lato-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-LightItalic.ttf"; sourceTree = "<group>"; };
 		BF02517D2271B7D50005E0A6 /* Lato-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Black.ttf"; sourceTree = "<group>"; };
+		BF02518A2271CC6C0005E0A6 /* XYMarkerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = XYMarkerView.swift; path = ../XYMarkerView.swift; sourceTree = "<group>"; };
+		BF02518B2271CC6C0005E0A6 /* RadarMarkerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RadarMarkerView.swift; path = ../RadarMarkerView.swift; sourceTree = "<group>"; };
+		BF02518C2271CC6C0005E0A6 /* BalloonMarker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BalloonMarker.swift; path = ../BalloonMarker.swift; sourceTree = "<group>"; };
+		BF0251902271CCB20005E0A6 /* DateValueFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DateValueFormatter.swift; path = ../DateValueFormatter.swift; sourceTree = "<group>"; };
+		BF0251912271CCB20005E0A6 /* IntAxisValueFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = IntAxisValueFormatter.swift; path = ../IntAxisValueFormatter.swift; sourceTree = "<group>"; };
+		BF0251922271CCB20005E0A6 /* DayAxisValueFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DayAxisValueFormatter.swift; path = ../DayAxisValueFormatter.swift; sourceTree = "<group>"; };
+		BF0251932271CCB20005E0A6 /* LargeValueFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LargeValueFormatter.swift; path = ../LargeValueFormatter.swift; sourceTree = "<group>"; };
+		BF02519A2276FE190005E0A6 /* ColoredImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColoredImageView.swift; sourceTree = "<group>"; };
 		BF1286F6226DE2FE000DB226 /* Timely.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Timely.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF1286F9226DE2FE000DB226 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BF1286FB226DE2FE000DB226 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -135,6 +151,20 @@
 			path = Lato;
 			sourceTree = "<group>";
 		};
+		BF0251992271CCE50005E0A6 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+				BF0251902271CCB20005E0A6 /* DateValueFormatter.swift */,
+				BF0251922271CCB20005E0A6 /* DayAxisValueFormatter.swift */,
+				BF0251912271CCB20005E0A6 /* IntAxisValueFormatter.swift */,
+				BF0251932271CCB20005E0A6 /* LargeValueFormatter.swift */,
+				BF02518C2271CC6C0005E0A6 /* BalloonMarker.swift */,
+				BF02518B2271CC6C0005E0A6 /* RadarMarkerView.swift */,
+				BF02518A2271CC6C0005E0A6 /* XYMarkerView.swift */,
+			);
+			path = "New Group";
+			sourceTree = "<group>";
+		};
 		BF1286ED226DE2FE000DB226 = {
 			isa = PBXGroup;
 			children = (
@@ -190,6 +220,7 @@
 				BF128711226ED8F2000DB226 /* RoundedButton.swift */,
 				BF128724226EDFCF000DB226 /* RoundedView.swift */,
 				BF02516F227198040005E0A6 /* TimelyColorsExtension.swift */,
+				BF02519A2276FE190005E0A6 /* ColoredImageView.swift */,
 			);
 			path = ExtensionsAndProtocols;
 			sourceTree = "<group>";
@@ -270,6 +301,7 @@
 		BF12872922717D6A000DB226 /* Custom */ = {
 			isa = PBXGroup;
 			children = (
+				BF0251992271CCE50005E0A6 /* New Group */,
 				BF12872A22717D81000DB226 /* LGSideMenuController */,
 			);
 			path = Custom;
@@ -422,10 +454,12 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Timely/Pods-Timely-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Charts/Charts.framework",
 				"${BUILT_PRODUCTS_DIR}/DateTimePicker/DateTimePicker.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Charts.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DateTimePicker.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -440,26 +474,34 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF02518E2271CC6D0005E0A6 /* RadarMarkerView.swift in Sources */,
 				BF1286FC226DE2FE000DB226 /* ViewController.swift in Sources */,
 				BF0251692271928D0005E0A6 /* TimelyColors.swift in Sources */,
 				BF128716226ED90E000DB226 /* PlaceholderIcon.swift in Sources */,
 				BF12873C22717D90000DB226 /* LGSideMenuController.m in Sources */,
 				BF12873D22717D90000DB226 /* LGSideMenuGesturesHandler.m in Sources */,
 				BF02516B2271929C0005E0A6 /* TimelyConstants.swift in Sources */,
+				BF0251952271CCB20005E0A6 /* IntAxisValueFormatter.swift in Sources */,
 				BF128728226EE8B5000DB226 /* AuthenticationVC.swift in Sources */,
 				BF02516322718CC10005E0A6 /* HomeVC.swift in Sources */,
 				BF02516D227192AB0005E0A6 /* TimelyFonts.swift in Sources */,
+				BF0251962271CCB20005E0A6 /* DayAxisValueFormatter.swift in Sources */,
 				BF1287422271828E000DB226 /* MainVC.swift in Sources */,
+				BF02519B2276FE190005E0A6 /* ColoredImageView.swift in Sources */,
 				BF128725226EDFCF000DB226 /* RoundedView.swift in Sources */,
+				BF02518D2271CC6D0005E0A6 /* XYMarkerView.swift in Sources */,
 				BF12873F22717D90000DB226 /* LGSideMenuSegue.m in Sources */,
+				BF0251972271CCB20005E0A6 /* LargeValueFormatter.swift in Sources */,
 				BF128718226ED913000DB226 /* HRToast+UIView.swift in Sources */,
 				BF12873B22717D90000DB226 /* LGSideMenuBorderView.m in Sources */,
 				BF12873A22717D90000DB226 /* LGSideMenuView.m in Sources */,
+				BF02518F2271CC6D0005E0A6 /* BalloonMarker.swift in Sources */,
 				BF12873E22717D90000DB226 /* UIViewController+LGSideMenuController.m in Sources */,
 				BF128712226ED8F2000DB226 /* RoundedButton.swift in Sources */,
 				BF025170227198040005E0A6 /* TimelyColorsExtension.swift in Sources */,
 				BF02516722718DA90005E0A6 /* SideMenuVC.swift in Sources */,
 				BF1286FA226DE2FE000DB226 /* AppDelegate.swift in Sources */,
+				BF0251942271CCB20005E0A6 /* DateValueFormatter.swift in Sources */,
 				BF12874022717D90000DB226 /* LGSideMenuHelper.m in Sources */,
 				BF128714226ED8FC000DB226 /* DesignableTextField.swift in Sources */,
 				BF025172227199890005E0A6 /* RightVC.swift in Sources */,

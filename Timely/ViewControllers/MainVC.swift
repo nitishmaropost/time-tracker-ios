@@ -19,7 +19,10 @@ class MainVC: LGSideMenuController {
         self.leftViewPresentationStyle = .scaleFromBig
         self.rightViewPresentationStyle = .scaleFromBig
 
-        self.leftViewBackgroundColor = TimelyColors.shared.kColorSideMenu
-        self.leftViewCoverColor = TimelyColors.shared.kColorSideMenu
+        self.leftViewBackgroundColor = UIColor.white
+        self.leftViewCoverColor = UIColor.white
+        self.rightViewLayerBorderColor = TimelyColors.shared.kColorSideMenu
+        self.rightViewLayerShadowColor = TimelyColors.shared.kColorSideMenu
+        self.rightViewLayerShadowRadius = 2
     }
 }

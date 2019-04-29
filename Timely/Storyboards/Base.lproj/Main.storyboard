@@ -13,6 +13,9 @@
         <array key="FontAwesome.otf">
             <string>FontAwesome</string>
         </array>
+        <array key="Lato-Bold.ttf">
+            <string>Lato-Bold</string>
+        </array>
         <array key="fa-solid-900.ttf">
             <string>FontAwesome5FreeSolid</string>
         </array>
@@ -60,7 +63,7 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="1Jq-ef-mjJ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.090196078430000007" green="0.69411764710000001" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="mdh-qg-Gj3">
                                 <rect key="frame" x="0.0" y="28" width="414" height="44"/>
@@ -105,24 +108,106 @@
                     <view key="view" contentMode="scaleToFill" id="ihe-Io-JaP">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thu, 25 April" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U30-4a-RwJ">
+                                <rect key="frame" x="20" y="108" width="374" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="xq1-Um-jA4"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="35"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y86-AV-gAg" customClass="BarChartView" customModule="Charts">
+                                <rect key="frame" x="20" y="242" width="374" height="250"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="zHz-oS-i9E"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pju-hk-BJy">
+                                <rect key="frame" x="0.0" y="168" width="80" height="54"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="en0-dy-oVV"/>
+                                </constraints>
+                                <string key="text">9:30
+AM</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="in" translatesAutoresizingMaskIntoConstraints="NO" id="fEu-X9-Fqx">
+                                <rect key="frame" x="69" y="177" width="36" height="36"/>
+                                <color key="tintColor" red="0.87843137250000003" green="0.086274509799999996" blue="0.054901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                                        <color key="value" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TB0-BL-yKP">
+                                <rect key="frame" x="293" y="168" width="80" height="54"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="cQ4-32-3k4"/>
+                                </constraints>
+                                <string key="text">9:30
+AM</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="out" translatesAutoresizingMaskIntoConstraints="NO" id="Emv-6b-rih">
+                                <rect key="frame" x="358" y="177" width="36" height="36"/>
+                                <color key="tintColor" red="0.87843137250000003" green="0.086274509799999996" blue="0.054901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                                        <color key="value" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="TB0-BL-yKP" firstAttribute="centerY" secondItem="Pju-hk-BJy" secondAttribute="centerY" id="0P6-vx-ce3"/>
+                            <constraint firstItem="Emv-6b-rih" firstAttribute="trailing" secondItem="U30-4a-RwJ" secondAttribute="trailing" id="24W-sD-kJV"/>
+                            <constraint firstItem="fEu-X9-Fqx" firstAttribute="centerY" secondItem="Pju-hk-BJy" secondAttribute="centerY" id="69z-sn-jh3"/>
+                            <constraint firstItem="U30-4a-RwJ" firstAttribute="leading" secondItem="NJi-v2-Azc" secondAttribute="leading" constant="20" id="C6i-Fo-9yW"/>
+                            <constraint firstItem="NJi-v2-Azc" firstAttribute="trailing" secondItem="TB0-BL-yKP" secondAttribute="trailing" constant="41" id="DUQ-aP-UEK"/>
+                            <constraint firstItem="Pju-hk-BJy" firstAttribute="top" secondItem="U30-4a-RwJ" secondAttribute="bottom" constant="10" id="EkU-gH-IgM"/>
+                            <constraint firstItem="Y86-AV-gAg" firstAttribute="top" secondItem="Pju-hk-BJy" secondAttribute="bottom" constant="20" id="KYa-Hp-eYT"/>
+                            <constraint firstItem="NJi-v2-Azc" firstAttribute="trailing" secondItem="Y86-AV-gAg" secondAttribute="trailing" constant="20" id="Kij-o9-hOZ"/>
+                            <constraint firstItem="Pju-hk-BJy" firstAttribute="leading" secondItem="ihe-Io-JaP" secondAttribute="leading" id="QKG-jQ-DyV"/>
+                            <constraint firstItem="U30-4a-RwJ" firstAttribute="top" secondItem="NJi-v2-Azc" secondAttribute="top" constant="20" id="WAf-H6-xnc"/>
+                            <constraint firstItem="fEu-X9-Fqx" firstAttribute="top" secondItem="U30-4a-RwJ" secondAttribute="bottom" constant="19" id="cb5-PD-ZD7"/>
+                            <constraint firstItem="Pju-hk-BJy" firstAttribute="baseline" secondItem="TB0-BL-yKP" secondAttribute="baseline" id="i8J-sz-dVI"/>
+                            <constraint firstItem="fEu-X9-Fqx" firstAttribute="leading" secondItem="NJi-v2-Azc" secondAttribute="leading" constant="69" id="iIr-Ld-hIf"/>
+                            <constraint firstItem="Emv-6b-rih" firstAttribute="centerY" secondItem="Pju-hk-BJy" secondAttribute="centerY" id="tx0-BX-xsf"/>
+                            <constraint firstItem="Y86-AV-gAg" firstAttribute="leading" secondItem="NJi-v2-Azc" secondAttribute="leading" constant="20" id="vVy-xS-NjH"/>
+                            <constraint firstItem="NJi-v2-Azc" firstAttribute="trailing" secondItem="U30-4a-RwJ" secondAttribute="trailing" constant="20" id="vgZ-5q-bue"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="NJi-v2-Azc"/>
                     </view>
                     <navigationItem key="navigationItem" id="2LM-lB-T5n">
                         <barButtonItem key="leftBarButtonItem" image="side_menu" id="q2h-Gy-hN1">
-                            <color key="tintColor" red="0.87843137250000003" green="0.086274509799999996" blue="0.054901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="tintColor" red="1" green="0.32549019607843138" blue="0.054901960784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
                                 <action selector="openLeftView:" destination="kjS-x3-15c" id="WBY-R3-U2P"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" image="navigation_calendar" id="qrU-4c-ryA">
-                            <color key="tintColor" red="0.87843137250000003" green="0.086274509799999996" blue="0.054901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="tintColor" red="1" green="0.32549019607843138" blue="0.054901960784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="showDatePicker:" destination="kjS-x3-15c" id="reG-8s-kcN"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="barChartView" destination="Y86-AV-gAg" id="HpL-Su-50o"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2QT-ae-t3W" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="74" y="1030"/>
+            <point key="canvasLocation" x="73.913043478260875" y="1029.9107142857142"/>
         </scene>
         <!--AuthenticationVC-->
         <scene sceneID="tne-QT-ifu">
@@ -460,7 +545,9 @@
         </scene>
     </scenes>
     <resources>
+        <image name="in" width="36" height="36"/>
         <image name="navigation_calendar" width="18" height="18"/>
+        <image name="out" width="36" height="36"/>
         <image name="side_menu" width="18" height="18"/>
     </resources>
 </document>
