@@ -32,6 +32,11 @@
 		BF0251962271CCB20005E0A6 /* DayAxisValueFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0251922271CCB20005E0A6 /* DayAxisValueFormatter.swift */; };
 		BF0251972271CCB20005E0A6 /* LargeValueFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0251932271CCB20005E0A6 /* LargeValueFormatter.swift */; };
 		BF02519B2276FE190005E0A6 /* ColoredImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF02519A2276FE190005E0A6 /* ColoredImageView.swift */; };
+		BF0E32C922781BA2003C0B8B /* InOutCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0E32C722781BA2003C0B8B /* InOutCell.swift */; };
+		BF0E32CA22781BA2003C0B8B /* InOutCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF0E32C822781BA2003C0B8B /* InOutCell.xib */; };
+		BF0E32CD227823F8003C0B8B /* InOutCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0E32CB227823F8003C0B8B /* InOutCollectionCell.swift */; };
+		BF0E32CE227823F8003C0B8B /* InOutCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF0E32CC227823F8003C0B8B /* InOutCollectionCell.xib */; };
+		BF0E32D3227857AF003C0B8B /* TimelyArrayExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0E32D2227857AF003C0B8B /* TimelyArrayExtensions.swift */; };
 		BF1286FA226DE2FE000DB226 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1286F9226DE2FE000DB226 /* AppDelegate.swift */; };
 		BF1286FC226DE2FE000DB226 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1286FB226DE2FE000DB226 /* ViewController.swift */; };
 		BF1286FF226DE2FE000DB226 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF1286FD226DE2FE000DB226 /* Main.storyboard */; };
@@ -87,6 +92,11 @@
 		BF0251922271CCB20005E0A6 /* DayAxisValueFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DayAxisValueFormatter.swift; path = ../DayAxisValueFormatter.swift; sourceTree = "<group>"; };
 		BF0251932271CCB20005E0A6 /* LargeValueFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LargeValueFormatter.swift; path = ../LargeValueFormatter.swift; sourceTree = "<group>"; };
 		BF02519A2276FE190005E0A6 /* ColoredImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColoredImageView.swift; sourceTree = "<group>"; };
+		BF0E32C722781BA2003C0B8B /* InOutCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InOutCell.swift; sourceTree = "<group>"; };
+		BF0E32C822781BA2003C0B8B /* InOutCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InOutCell.xib; sourceTree = "<group>"; };
+		BF0E32CB227823F8003C0B8B /* InOutCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InOutCollectionCell.swift; sourceTree = "<group>"; };
+		BF0E32CC227823F8003C0B8B /* InOutCollectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InOutCollectionCell.xib; sourceTree = "<group>"; };
+		BF0E32D2227857AF003C0B8B /* TimelyArrayExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelyArrayExtensions.swift; sourceTree = "<group>"; };
 		BF1286F6226DE2FE000DB226 /* Timely.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Timely.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF1286F9226DE2FE000DB226 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BF1286FB226DE2FE000DB226 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -165,6 +175,17 @@
 			path = "New Group";
 			sourceTree = "<group>";
 		};
+		BF0E32C6227817E7003C0B8B /* InOutCell */ = {
+			isa = PBXGroup;
+			children = (
+				BF0E32C722781BA2003C0B8B /* InOutCell.swift */,
+				BF0E32C822781BA2003C0B8B /* InOutCell.xib */,
+				BF0E32CB227823F8003C0B8B /* InOutCollectionCell.swift */,
+				BF0E32CC227823F8003C0B8B /* InOutCollectionCell.xib */,
+			);
+			path = InOutCell;
+			sourceTree = "<group>";
+		};
 		BF1286ED226DE2FE000DB226 = {
 			isa = PBXGroup;
 			children = (
@@ -221,6 +242,7 @@
 				BF128724226EDFCF000DB226 /* RoundedView.swift */,
 				BF02516F227198040005E0A6 /* TimelyColorsExtension.swift */,
 				BF02519A2276FE190005E0A6 /* ColoredImageView.swift */,
+				BF0E32D2227857AF003C0B8B /* TimelyArrayExtensions.swift */,
 			);
 			path = ExtensionsAndProtocols;
 			sourceTree = "<group>";
@@ -301,6 +323,7 @@
 		BF12872922717D6A000DB226 /* Custom */ = {
 			isa = PBXGroup;
 			children = (
+				BF0E32C6227817E7003C0B8B /* InOutCell */,
 				BF0251992271CCE50005E0A6 /* New Group */,
 				BF12872A22717D81000DB226 /* LGSideMenuController */,
 			);
@@ -414,6 +437,7 @@
 				BF0251832271B8850005E0A6 /* Lato-HairlineItalic.ttf in Resources */,
 				BF0251842271B8850005E0A6 /* Lato-Italic.ttf in Resources */,
 				BF0251852271B8850005E0A6 /* Lato-Light.ttf in Resources */,
+				BF0E32CE227823F8003C0B8B /* InOutCollectionCell.xib in Resources */,
 				BF0251862271B8850005E0A6 /* Lato-LightItalic.ttf in Resources */,
 				BF0251872271B8850005E0A6 /* Lato-Regular.ttf in Resources */,
 				BF128720226EDBE6000DB226 /* fa-brands-400.ttf in Resources */,
@@ -421,6 +445,7 @@
 				BF128722226EDBE6000DB226 /* fa-solid-900.ttf in Resources */,
 				BF128723226EDBE6000DB226 /* FontAwesome.otf in Resources */,
 				BF128704226DE300000DB226 /* LaunchScreen.storyboard in Resources */,
+				BF0E32CA22781BA2003C0B8B /* InOutCell.xib in Resources */,
 				BF128701226DE300000DB226 /* Assets.xcassets in Resources */,
 				BF1286FF226DE2FE000DB226 /* Main.storyboard in Resources */,
 			);
@@ -491,14 +516,17 @@
 				BF128725226EDFCF000DB226 /* RoundedView.swift in Sources */,
 				BF02518D2271CC6D0005E0A6 /* XYMarkerView.swift in Sources */,
 				BF12873F22717D90000DB226 /* LGSideMenuSegue.m in Sources */,
+				BF0E32D3227857AF003C0B8B /* TimelyArrayExtensions.swift in Sources */,
 				BF0251972271CCB20005E0A6 /* LargeValueFormatter.swift in Sources */,
 				BF128718226ED913000DB226 /* HRToast+UIView.swift in Sources */,
 				BF12873B22717D90000DB226 /* LGSideMenuBorderView.m in Sources */,
 				BF12873A22717D90000DB226 /* LGSideMenuView.m in Sources */,
 				BF02518F2271CC6D0005E0A6 /* BalloonMarker.swift in Sources */,
+				BF0E32CD227823F8003C0B8B /* InOutCollectionCell.swift in Sources */,
 				BF12873E22717D90000DB226 /* UIViewController+LGSideMenuController.m in Sources */,
 				BF128712226ED8F2000DB226 /* RoundedButton.swift in Sources */,
 				BF025170227198040005E0A6 /* TimelyColorsExtension.swift in Sources */,
+				BF0E32C922781BA2003C0B8B /* InOutCell.swift in Sources */,
 				BF02516722718DA90005E0A6 /* SideMenuVC.swift in Sources */,
 				BF1286FA226DE2FE000DB226 /* AppDelegate.swift in Sources */,
 				BF0251942271CCB20005E0A6 /* DateValueFormatter.swift in Sources */,
@@ -652,14 +680,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Manny Ju (D5K5YUDFU4)";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = LM89JMBV9C;
 				INFOPLIST_FILE = Timely/Common/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = Maropost.Timely;
+				PRODUCT_BUNDLE_IDENTIFIER = com.development.maropost;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = MaropostDevelopment;
 				SWIFT_OBJC_BRIDGING_HEADER = "Timely/Common/Timely-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -673,14 +704,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Manny Ju (D5K5YUDFU4)";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = LM89JMBV9C;
 				INFOPLIST_FILE = Timely/Common/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = Maropost.Timely;
+				PRODUCT_BUNDLE_IDENTIFIER = com.development.maropost;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = MaropostDevelopment;
 				SWIFT_OBJC_BRIDGING_HEADER = "Timely/Common/Timely-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

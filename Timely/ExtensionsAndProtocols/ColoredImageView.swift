@@ -22,10 +22,10 @@ import UIKit
     }
 }
 
-extension UIImageView {
-    func setImageRenderingMode(_ renderMode: UIImage.RenderingMode) {
-        assert(image != nil, "Image must be set before setting rendering mode")
-        // AlwaysOriginal as an example
-        image = image?.withRenderingMode(.alwaysOriginal)
-    }
-}
+//extension UIImageView {
+//    func setImageRenderingMode(_ renderMode: UIImage.RenderingMode) {
+//        assert(image != nil, "Image must be set before setting rendering mode")
+//        // AlwaysOriginal as an example
+//        image = image?.withRenderingMode(.alwaysOriginal)
+//    }
+//}

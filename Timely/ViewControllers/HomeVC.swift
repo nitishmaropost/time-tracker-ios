@@ -11,64 +11,54 @@ import DateTimePicker
 import Charts
 
 class HomeVC: UIViewController, ChartViewDelegate {
-
+    
     // IBOutlets
     @IBOutlet weak var barChartView: BarChartView!
+    @IBOutlet weak var collectionViewInOut: UICollectionView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
         self.title = "Timely"
+        self.collectionViewInOut.register(InOutCollectionCell.self, forCellWithReuseIdentifier: "inOutCell")
+        self.collectionViewInOut.register(UINib(nibName: "InOutCollectionCell", bundle: Bundle.main), forCellWithReuseIdentifier: "inOutCell")
+        
         self.configureChart()
-        self.updateChartData()
+        self.setDataCount()
     }
     
-    func updateChartData() {
-        self.setDataCount(5, range: 1)
-    }
-    
-    func setDataCount(_ count: Int, range: UInt32) {
-        let start = 1
+    func setDataCount() {
         
-        let yVals = (start..<start+count+1).map { (i) -> BarChartDataEntry in
-            let mult = range + 1
-            let val = Double(arc4random_uniform(mult))
-            if arc4random_uniform(100) < 25 {
-                return BarChartDataEntry(x: Double(i), y: val, icon: UIImage(named: "icon"))
-            } else {
-                return BarChartDataEntry(x: Double(i), y: val)
-            }
-        }
+        let entry1 = BarChartDataEntry(x: 0, y: 8)
+        let entry2 = BarChartDataEntry(x: 1, y: 9)
+        let entry3 = BarChartDataEntry(x: 2, y: 6)
+        let entry4 = BarChartDataEntry(x: 3, y: 4)
+        let entry5 = BarChartDataEntry(x: 4, y: 9)
+        let entry6 = BarChartDataEntry(x: 5, y: 8)
+        let entry7 = BarChartDataEntry(x: 6, y: 7)
         
-        var set1: BarChartDataSet! = nil
-        if let set = barChartView.data?.dataSets.first as? BarChartDataSet {
-            set1 = set
-            set1.replaceEntries(yVals)
-            barChartView.data?.notifyDataChanged()
-            barChartView.notifyDataSetChanged()
-        } else {
-            set1 = BarChartDataSet(entries: yVals, label: "The year 2017")
-            set1.colors = ChartColorTemplates.material()
-            set1.drawValuesEnabled = false
-            
-            let data = BarChartData(dataSet: set1)
-            data.setValueFont(UIFont(name: "HelveticaNeue-Light", size: 10)!)
-            data.barWidth = 0.9
-            barChartView.data = data
-        }
+        let set11 = BarChartDataSet(entries: [entry1, entry2, entry3, entry4, entry5, entry6, entry7], label: "")
         
-        //        chartView.setNeedsDisplay()
+        set11.colors = ChartColorTemplates.material()
+        set11.drawValuesEnabled = false
+        let data = BarChartData(dataSet: set11)
+        data.setValueFont(UIFont(name: "HelveticaNeue-Light", size: 10)!)
+        data.barWidth = 0.9
+        barChartView.data = data
+        barChartView.leftAxis.axisMaximum = 10
+        barChartView.animate(yAxisDuration: 2, easingOption: .easeInBounce)
     }
     
     func configureChart() {
         
         barChartView.chartDescription?.enabled = false
         
-        barChartView.dragEnabled = true
-        barChartView.setScaleEnabled(true)
+        barChartView.dragEnabled = false
+        barChartView.setScaleEnabled(false)
         barChartView.pinchZoomEnabled = false
-        
+        barChartView.highlightFullBarEnabled = false
+        barChartView.highlightPerTapEnabled = false
         var xAxis = barChartView.xAxis
         xAxis.labelPosition = .bottom
         
@@ -96,7 +86,7 @@ class HomeVC: UIViewController, ChartViewDelegate {
         let leftAxisFormatter = NumberFormatter()
         leftAxisFormatter.minimumFractionDigits = 0
         leftAxisFormatter.maximumFractionDigits = 9
-        
+        //
         let leftAxis = barChartView.leftAxis
         leftAxis.labelFont = .systemFont(ofSize: 10)
         leftAxis.labelCount = 8
@@ -105,33 +95,7 @@ class HomeVC: UIViewController, ChartViewDelegate {
         leftAxis.spaceTop = 9
         leftAxis.axisMinimum = 0 // FIXME: HUH?? this replaces startAtZero = YES
         
-//        let rightAxis = barChartView.rightAxis
-//        rightAxis.enabled = true
-//        rightAxis.labelFont = .systemFont(ofSize: 10)
-//        rightAxis.labelCount = 8
-//        rightAxis.valueFormatter = leftAxis.valueFormatter
-//        rightAxis.spaceTop = 0.15
-//        rightAxis.axisMinimum = 0
-        
-        let l = barChartView.legend
-        l.horizontalAlignment = .left
-        l.verticalAlignment = .bottom
-        l.orientation = .horizontal
-        l.drawInside = false
-        l.form = .circle
-        l.formSize = 9
-        l.font = UIFont(name: "HelveticaNeue-Light", size: 11)!
-        l.xEntrySpace = 4
-        //        chartView.legend = l
-        
-        let marker = XYMarkerView(color: UIColor(white: 180/250, alpha: 1),
-                                  font: .systemFont(ofSize: 12),
-                                  textColor: .white,
-                                  insets: UIEdgeInsets(top: 8, left: 8, bottom: 20, right: 8),
-                                  xAxisValueFormatter: barChartView.xAxis.valueFormatter!)
-        marker.chartView = barChartView
-        marker.minimumSize = CGSize(width: 80, height: 40)
-        barChartView.marker = marker
+        barChartView.legend.enabled = false
     }
     
     @IBAction func showDatePicker(_ sender: UIBarButtonItem) {
@@ -149,4 +113,53 @@ class HomeVC: UIViewController, ChartViewDelegate {
         
         picker.show()
     }
+}
+
+extension HomeVC: UICollectionViewDelegate {
+    
+}
+
+extension HomeVC: UICollectionViewDataSource {
+    
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 1
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 10
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "inOutCell", for: indexPath) as! InOutCollectionCell
+        
+//        switch indexPath.row {
+//        case 0:
+//            cell.backgroundColor = TimelyColors.shared.kColorArray[0]
+//        case 1:
+//            cell.backgroundColor = TimelyColors.shared.kColorArray[1]
+//        case 2:
+//            cell.backgroundColor = TimelyColors.shared.kColorArray[2]
+//        case 3:
+//            cell.backgroundColor = TimelyColors.shared.kColorArray[3]
+//        case 4:
+//            cell.backgroundColor = TimelyColors.shared.kColorArray[4]
+//        case 5:
+//            cell.backgroundColor = TimelyColors.shared.kColorArray[2]
+//        case 6:
+//            cell.backgroundColor = TimelyColors.shared.kColorArray[0]
+//        case 7:
+//            cell.backgroundColor = TimelyColors.shared.kColorArray[4]
+//        case 8:
+//            cell.backgroundColor = TimelyColors.shared.kColorArray[1]
+//        case 9:
+//            cell.backgroundColor = TimelyColors.shared.kColorArray[3]
+//        default:
+//            cell.backgroundColor = TimelyColors.shared.kColorArray[0]
+//        }
+        
+        
+        return cell
+    }
+    
+    
 }

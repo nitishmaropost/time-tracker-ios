@@ -17,4 +17,5 @@ class TimelyColors {
     let kColorOrangeTheme = UIColor(hexString: "#ff530e")
     let kColorRedTheme = UIColor(hexString: "#e92c0c")
     let kColorNavTitleColor = UIColor(hexString: "#4d4d4d")
+    let kColorArray = [UIColor(hexString: "#ff6d33"), UIColor(hexString: "#ff530e"), UIColor(hexString: "#e92c0c"), UIColor(hexString: "#4d4d4d"), UIColor(hexString: "#cc66ff")]
 }
