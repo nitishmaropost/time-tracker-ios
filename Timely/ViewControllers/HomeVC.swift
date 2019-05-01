@@ -23,20 +23,20 @@ class HomeVC: UIViewController, ChartViewDelegate {
         self.title = "Timely"
         self.collectionViewInOut.register(InOutCollectionCell.self, forCellWithReuseIdentifier: "inOutCell")
         self.collectionViewInOut.register(UINib(nibName: "InOutCollectionCell", bundle: Bundle.main), forCellWithReuseIdentifier: "inOutCell")
-        
+        self.collectionViewInOut.contentInset = UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 10)
         self.configureChart()
         self.setDataCount()
     }
     
     func setDataCount() {
         
-        let entry1 = BarChartDataEntry(x: 0, y: 8)
-        let entry2 = BarChartDataEntry(x: 1, y: 9)
-        let entry3 = BarChartDataEntry(x: 2, y: 6)
-        let entry4 = BarChartDataEntry(x: 3, y: 4)
-        let entry5 = BarChartDataEntry(x: 4, y: 9)
-        let entry6 = BarChartDataEntry(x: 5, y: 8)
-        let entry7 = BarChartDataEntry(x: 6, y: 7)
+        let entry1 = BarChartDataEntry(x: 1, y: 8)
+        let entry2 = BarChartDataEntry(x: 2, y: 9)
+        let entry3 = BarChartDataEntry(x: 3, y: 6)
+        let entry4 = BarChartDataEntry(x: 4, y: 4)
+        let entry5 = BarChartDataEntry(x: 5, y: 9)
+        let entry6 = BarChartDataEntry(x: 6, y: 8)
+        let entry7 = BarChartDataEntry(x: 7, y: 7)
         
         let set11 = BarChartDataSet(entries: [entry1, entry2, entry3, entry4, entry5, entry6, entry7], label: "")
         
