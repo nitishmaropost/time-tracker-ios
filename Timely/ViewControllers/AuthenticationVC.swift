@@ -31,8 +31,24 @@ class AuthenticationVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.buttonForgotPassword.isHidden = true
+//        self.buttonForgotPassword.isHidden = true
+//        self.buttonRegister.isHidden = true
+        self.buttonForgotPassword.isHidden = false
         self.buttonRegister.isHidden = true
+        self.buttonLogin.isHidden = true
+        self.setupUI()
+    }
+    
+    func setupUI() {
+        self.labelTitle.text = "Login"
+        self.buttonForgotPassword.isHidden = false
+        self.constraint_center_viewTextFields.constant = -30
+        self.constraint_center_buttonAction.constant = -30
+        self.constraint_height_viewTextFields.constant = 120
+        self.textFieldEmail.isHidden = true
+        self.viewLineBottom.isHidden = true
+        self.viewTextFields.layoutIfNeeded()
+        self.view.layoutIfNeeded()
     }
     
     @IBAction func buttonActionTapped(_ sender: RoundedButton) {

@@ -9,5 +9,6 @@ target 'Timely' do
 
 pod 'DateTimePicker'
 pod 'Charts'
+pod 'Alamofire', '~> 5.0.0-beta.5'
 
 end

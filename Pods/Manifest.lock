@@ -1,22 +1,26 @@
 PODS:
+  - Alamofire (5.0.0-beta.6)
   - Charts (3.3.0):
     - Charts/Core (= 3.3.0)
   - Charts/Core (3.3.0)
   - DateTimePicker (2.1.3)
 
 DEPENDENCIES:
+  - Alamofire (~> 5.0.0-beta.5)
   - Charts
   - DateTimePicker
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - Alamofire
     - Charts
     - DateTimePicker
 
 SPEC CHECKSUMS:
+  Alamofire: cd08a4402bd12cacd0c66f23fb12fec8d6b965e4
   Charts: ec1f57f9340054155691e84d4544a1d239d382c5
   DateTimePicker: 1d34181c5e9cd6a32ca87174fdf66c9710e483ef
 
-PODFILE CHECKSUM: d0961b08883fd8466ce16a404822713d2b7739f4
+PODFILE CHECKSUM: ec046eaad4a184f6a8bed7cef90f28e4b385abbd
 
 COCOAPODS: 1.5.3
