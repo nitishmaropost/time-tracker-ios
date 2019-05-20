@@ -10,9 +10,19 @@ import UIKit
 
 class AuthenticationVC: UIViewController {
     
+    @IBOutlet weak var viewModel: LoginVM!
     @IBOutlet weak var viewTextFields: RoundedView!
-    @IBOutlet weak var textFieldUsername: UITextField!
-    @IBOutlet weak var textFieldPassword: UITextField!
+    @IBOutlet weak var textFieldUsername: BindingTextField! {
+        didSet {
+            textFieldUsername.bind { self.viewModel.username = $0 }
+        }
+    }
+    @IBOutlet weak var textFieldPassword: BindingTextField! {
+        didSet {
+            textFieldPassword.bind { self.viewModel.password = $0 }
+        }
+    }
+    
     @IBOutlet weak var textFieldEmail: UITextField!
     @IBOutlet weak var buttonAction: RoundedButton!
     @IBOutlet weak var buttonLogin: RoundedButton!
@@ -31,8 +41,6 @@ class AuthenticationVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        self.buttonForgotPassword.isHidden = true
-//        self.buttonRegister.isHidden = true
         self.buttonForgotPassword.isHidden = false
         self.buttonRegister.isHidden = true
         self.buttonLogin.isHidden = true
@@ -52,7 +60,14 @@ class AuthenticationVC: UIViewController {
     }
     
     @IBAction func buttonActionTapped(_ sender: RoundedButton) {
-        self.performSegue(withIdentifier: TimelyConstants.shared.segue_auth_to_home, sender: nil)
+        self.textFieldUsername.resignFirstResponder()
+        self.textFieldPassword.resignFirstResponder()
+        if self.viewModel.checkValidations(view: self.view) && self.viewModel.isConnectedToInternet(view: self.view) {
+            self.viewModel.callLoginService { (result) in
+                print(result)
+                self.performSegue(withIdentifier: TimelyConstants.shared.segue_auth_to_home, sender: nil)
+            }
+        }
     }
     
     @IBAction func buttonSwitchModeTapped(_ sender: RoundedButton) {
@@ -71,7 +86,6 @@ class AuthenticationVC: UIViewController {
         if tag == 1 {
 //            // Show login
             UIView.animate(withDuration: 0) {
-               // self.buttonSwitchMode.setTitle("Register", for: .normal)
                 self.labelTitle.text = "Login"
                 self.buttonForgotPassword.isHidden = false
                 self.constraint_center_viewTextFields.constant = -30
@@ -86,7 +100,6 @@ class AuthenticationVC: UIViewController {
         } else {
             // Show register
             UIView.animate(withDuration: 0) {
-                //self.buttonSwitchMode.setTitle("Login", for: .normal)
                 self.labelTitle.text = "Register"
                 self.buttonForgotPassword.isHidden = true
                 self.constraint_center_viewTextFields.constant = 0

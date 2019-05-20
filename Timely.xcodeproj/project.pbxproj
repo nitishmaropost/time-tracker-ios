@@ -60,6 +60,14 @@
 		BF12873F22717D90000DB226 /* LGSideMenuSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = BF12873622717D90000DB226 /* LGSideMenuSegue.m */; };
 		BF12874022717D90000DB226 /* LGSideMenuHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = BF12873822717D90000DB226 /* LGSideMenuHelper.m */; };
 		BF1287422271828E000DB226 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1287412271828E000DB226 /* MainVC.swift */; };
+		BF39E090228EB97800881626 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF39E08F228EB97800881626 /* User.swift */; };
+		BF39E093228EBDDE00881626 /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF39E092228EBDDE00881626 /* LoginService.swift */; };
+		BF39E095228ECD6200881626 /* ResponseEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF39E094228ECD6200881626 /* ResponseEnums.swift */; };
+		BF39E097228ED02000881626 /* TimelyUrls.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF39E096228ED02000881626 /* TimelyUrls.swift */; };
+		BFE3EF172292910B0029DA89 /* Binding.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE3EF152292910B0029DA89 /* Binding.swift */; };
+		BFE3EF182292910B0029DA89 /* BindingTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE3EF162292910B0029DA89 /* BindingTextField.swift */; };
+		BFE3EF1A229291480029DA89 /* LoginVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE3EF19229291480029DA89 /* LoginVM.swift */; };
+		BFE3EF1D2292A6120029DA89 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE3EF1C2292A6120029DA89 /* Reachability.swift */; };
 		CF6825D85FB0D9A7E9A442A9 /* Pods_Timely.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FCF99208C2A9328624F467C /* Pods_Timely.framework */; };
 /* End PBXBuildFile section */
 
@@ -129,6 +137,14 @@
 		BF12873822717D90000DB226 /* LGSideMenuHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LGSideMenuHelper.m; sourceTree = "<group>"; };
 		BF12873922717D90000DB226 /* LGSideMenuSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGSideMenuSegue.h; sourceTree = "<group>"; };
 		BF1287412271828E000DB226 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
+		BF39E08F228EB97800881626 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		BF39E092228EBDDE00881626 /* LoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
+		BF39E094228ECD6200881626 /* ResponseEnums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseEnums.swift; sourceTree = "<group>"; };
+		BF39E096228ED02000881626 /* TimelyUrls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelyUrls.swift; sourceTree = "<group>"; };
+		BFE3EF152292910B0029DA89 /* Binding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Binding.swift; sourceTree = "<group>"; };
+		BFE3EF162292910B0029DA89 /* BindingTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BindingTextField.swift; sourceTree = "<group>"; };
+		BFE3EF19229291480029DA89 /* LoginVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVM.swift; sourceTree = "<group>"; };
+		BFE3EF1C2292A6120029DA89 /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		F01F6EC1C06B8A93CAEB3494 /* Pods-Timely.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Timely.release.xcconfig"; path = "Pods/Target Support Files/Pods-Timely/Pods-Timely.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -207,6 +223,8 @@
 		BF1286F8226DE2FE000DB226 /* Timely */ = {
 			isa = PBXGroup;
 			children = (
+				BFE3EF1B2292A6070029DA89 /* Reachability */,
+				BF39E091228EBDC900881626 /* Services */,
 				BF12872922717D6A000DB226 /* Custom */,
 				BF12870C226ED8B3000DB226 /* ExtensionsAndProtocols */,
 				BF12870D226ED8C1000DB226 /* Models */,
@@ -228,6 +246,7 @@
 				BF0251682271928D0005E0A6 /* TimelyColors.swift */,
 				BF02516A2271929C0005E0A6 /* TimelyConstants.swift */,
 				BF02516C227192AB0005E0A6 /* TimelyFonts.swift */,
+				BF39E096228ED02000881626 /* TimelyUrls.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -250,6 +269,7 @@
 		BF12870D226ED8C1000DB226 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				BF39E08F228EB97800881626 /* User.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -257,6 +277,8 @@
 		BF12870E226ED8CA000DB226 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				BFE3EF14229290FD0029DA89 /* Binding */,
+				BFE3EF19229291480029DA89 /* LoginVM.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -349,6 +371,32 @@
 				BF12873522717D90000DB226 /* UIViewController+LGSideMenuController.m */,
 			);
 			path = LGSideMenuController;
+			sourceTree = "<group>";
+		};
+		BF39E091228EBDC900881626 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				BF39E092228EBDDE00881626 /* LoginService.swift */,
+				BF39E094228ECD6200881626 /* ResponseEnums.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		BFE3EF14229290FD0029DA89 /* Binding */ = {
+			isa = PBXGroup;
+			children = (
+				BFE3EF152292910B0029DA89 /* Binding.swift */,
+				BFE3EF162292910B0029DA89 /* BindingTextField.swift */,
+			);
+			path = Binding;
+			sourceTree = "<group>";
+		};
+		BFE3EF1B2292A6070029DA89 /* Reachability */ = {
+			isa = PBXGroup;
+			children = (
+				BFE3EF1C2292A6120029DA89 /* Reachability.swift */,
+			);
+			path = Reachability;
 			sourceTree = "<group>";
 		};
 		C6494A0865D37AC60CB5256E /* Pods */ = {
@@ -480,14 +528,18 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Timely/Pods-Timely-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireObjectMapper/AlamofireObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/Charts/Charts.framework",
 				"${BUILT_PRODUCTS_DIR}/DateTimePicker/DateTimePicker.framework",
+				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Charts.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DateTimePicker.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -508,12 +560,14 @@
 				BF12873C22717D90000DB226 /* LGSideMenuController.m in Sources */,
 				BF12873D22717D90000DB226 /* LGSideMenuGesturesHandler.m in Sources */,
 				BF02516B2271929C0005E0A6 /* TimelyConstants.swift in Sources */,
+				BFE3EF172292910B0029DA89 /* Binding.swift in Sources */,
 				BF0251952271CCB20005E0A6 /* IntAxisValueFormatter.swift in Sources */,
 				BF128728226EE8B5000DB226 /* AuthenticationVC.swift in Sources */,
 				BF02516322718CC10005E0A6 /* HomeVC.swift in Sources */,
 				BF02516D227192AB0005E0A6 /* TimelyFonts.swift in Sources */,
 				BF0251962271CCB20005E0A6 /* DayAxisValueFormatter.swift in Sources */,
 				BF1287422271828E000DB226 /* MainVC.swift in Sources */,
+				BFE3EF1D2292A6120029DA89 /* Reachability.swift in Sources */,
 				BF02519B2276FE190005E0A6 /* ColoredImageView.swift in Sources */,
 				BF128725226EDFCF000DB226 /* RoundedView.swift in Sources */,
 				BF02518D2271CC6D0005E0A6 /* XYMarkerView.swift in Sources */,
@@ -528,12 +582,18 @@
 				BF12873E22717D90000DB226 /* UIViewController+LGSideMenuController.m in Sources */,
 				BF128712226ED8F2000DB226 /* RoundedButton.swift in Sources */,
 				BF025170227198040005E0A6 /* TimelyColorsExtension.swift in Sources */,
+				BF39E097228ED02000881626 /* TimelyUrls.swift in Sources */,
 				BF0E32C922781BA2003C0B8B /* InOutCell.swift in Sources */,
 				BF02516722718DA90005E0A6 /* SideMenuVC.swift in Sources */,
 				BF1286FA226DE2FE000DB226 /* AppDelegate.swift in Sources */,
 				BF0251942271CCB20005E0A6 /* DateValueFormatter.swift in Sources */,
+				BF39E093228EBDDE00881626 /* LoginService.swift in Sources */,
 				BF12874022717D90000DB226 /* LGSideMenuHelper.m in Sources */,
+				BFE3EF1A229291480029DA89 /* LoginVM.swift in Sources */,
 				BF128714226ED8FC000DB226 /* DesignableTextField.swift in Sources */,
+				BF39E095228ECD6200881626 /* ResponseEnums.swift in Sources */,
+				BFE3EF182292910B0029DA89 /* BindingTextField.swift in Sources */,
+				BF39E090228EB97800881626 /* User.swift in Sources */,
 				BF025172227199890005E0A6 /* RightVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -611,7 +671,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -666,7 +726,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;

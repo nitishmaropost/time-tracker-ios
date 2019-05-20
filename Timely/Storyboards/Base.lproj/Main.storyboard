@@ -366,23 +366,23 @@
                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eB5-vN-ZGc" customClass="RoundedView" customModule="Timely" customModuleProvider="target">
                                 <rect key="frame" x="-40" y="358" width="414" height="180"/>
                                 <subviews>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder=" Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AyD-Mv-hgI">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder=" Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AyD-Mv-hgI" customClass="BindingTextField" customModule="Timely" customModuleProvider="target">
                                         <rect key="frame" x="50" y="0.0" width="364" height="60"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="60" id="twe-oN-tKK"/>
                                         </constraints>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" name="FontAwesome" family="FontAwesome" pointSize="17"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
                                     </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder=" Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="t1c-RK-W7i">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder=" Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="t1c-RK-W7i" customClass="BindingTextField" customModule="Timely" customModuleProvider="target">
                                         <rect key="frame" x="50" y="58" width="364" height="60"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="60" id="Xef-9V-W20"/>
                                         </constraints>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" name="FontAwesome" family="FontAwesome" pointSize="17"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder=" Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ipE-8W-9S1">
                                         <rect key="frame" x="50" y="120" width="364" height="60"/>
@@ -632,11 +632,13 @@
                         <outlet property="textFieldPassword" destination="t1c-RK-W7i" id="gbj-Jd-M1n"/>
                         <outlet property="textFieldUsername" destination="AyD-Mv-hgI" id="hYb-p4-9af"/>
                         <outlet property="viewLineBottom" destination="8jg-wp-Dfc" id="zeg-ot-OPL"/>
+                        <outlet property="viewModel" destination="v0O-Kz-3yD" id="uAF-ze-1Xr"/>
                         <outlet property="viewTextFields" destination="eB5-vN-ZGc" id="qip-fb-NbS"/>
                         <segue destination="idF-Md-zy1" kind="show" identifier="auth_to_home" id="mMe-cQ-srh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <customObject id="v0O-Kz-3yD" customClass="LoginVM" customModule="Timely" customModuleProvider="target"/>
             </objects>
             <point key="canvasLocation" x="73.913043478260875" y="20.758928571428569"/>
         </scene>
