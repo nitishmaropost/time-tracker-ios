@@ -9,6 +9,6 @@
 import Foundation
 
 enum LoginResult {
-    case success(Data)
+    case success(User)
     case error(Error)
 }

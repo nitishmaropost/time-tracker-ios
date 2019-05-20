@@ -68,6 +68,11 @@
 		BFE3EF182292910B0029DA89 /* BindingTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE3EF162292910B0029DA89 /* BindingTextField.swift */; };
 		BFE3EF1A229291480029DA89 /* LoginVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE3EF19229291480029DA89 /* LoginVM.swift */; };
 		BFE3EF1D2292A6120029DA89 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE3EF1C2292A6120029DA89 /* Reachability.swift */; };
+		BFE3EF1F2292AFA40029DA89 /* SplashVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE3EF1E2292AFA40029DA89 /* SplashVC.swift */; };
+		BFE3EF242292B0BD0029DA89 /* stopwatch.aep in Resources */ = {isa = PBXBuildFile; fileRef = BFE3EF222292B0BC0029DA89 /* stopwatch.aep */; };
+		BFE3EF252292B0BD0029DA89 /* stopwatch.json in Resources */ = {isa = PBXBuildFile; fileRef = BFE3EF232292B0BC0029DA89 /* stopwatch.json */; };
+		BFE3EF272292B0CC0029DA89 /* wave.json in Resources */ = {isa = PBXBuildFile; fileRef = BFE3EF262292B0CC0029DA89 /* wave.json */; };
+		BFE3EF2B2292BCD10029DA89 /* UIView+Gradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE3EF2A2292BCD10029DA89 /* UIView+Gradient.swift */; };
 		CF6825D85FB0D9A7E9A442A9 /* Pods_Timely.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FCF99208C2A9328624F467C /* Pods_Timely.framework */; };
 /* End PBXBuildFile section */
 
@@ -145,6 +150,11 @@
 		BFE3EF162292910B0029DA89 /* BindingTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BindingTextField.swift; sourceTree = "<group>"; };
 		BFE3EF19229291480029DA89 /* LoginVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVM.swift; sourceTree = "<group>"; };
 		BFE3EF1C2292A6120029DA89 /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
+		BFE3EF1E2292AFA40029DA89 /* SplashVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashVC.swift; sourceTree = "<group>"; };
+		BFE3EF222292B0BC0029DA89 /* stopwatch.aep */ = {isa = PBXFileReference; lastKnownFileType = file; path = stopwatch.aep; sourceTree = "<group>"; };
+		BFE3EF232292B0BC0029DA89 /* stopwatch.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = stopwatch.json; sourceTree = "<group>"; };
+		BFE3EF262292B0CC0029DA89 /* wave.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = wave.json; sourceTree = "<group>"; };
+		BFE3EF2A2292BCD10029DA89 /* UIView+Gradient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Gradient.swift"; sourceTree = "<group>"; };
 		F01F6EC1C06B8A93CAEB3494 /* Pods-Timely.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Timely.release.xcconfig"; path = "Pods/Target Support Files/Pods-Timely/Pods-Timely.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -254,6 +264,7 @@
 		BF12870C226ED8B3000DB226 /* ExtensionsAndProtocols */ = {
 			isa = PBXGroup;
 			children = (
+				BFE3EF2A2292BCD10029DA89 /* UIView+Gradient.swift */,
 				BF128717226ED913000DB226 /* HRToast+UIView.swift */,
 				BF128715226ED90E000DB226 /* PlaceholderIcon.swift */,
 				BF128713226ED8FB000DB226 /* DesignableTextField.swift */,
@@ -301,6 +312,7 @@
 				BF02516222718CC10005E0A6 /* HomeVC.swift */,
 				BF02516622718DA90005E0A6 /* SideMenuVC.swift */,
 				BF025171227199890005E0A6 /* RightVC.swift */,
+				BFE3EF1E2292AFA40029DA89 /* SplashVC.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -308,6 +320,7 @@
 		BF128719226EDAEB000DB226 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				BFE3EF202292B09E0029DA89 /* Lottie */,
 				BF128700226DE300000DB226 /* Assets.xcassets */,
 				BF12871A226EDAF3000DB226 /* Fonts */,
 			);
@@ -399,6 +412,24 @@
 			path = Reachability;
 			sourceTree = "<group>";
 		};
+		BFE3EF202292B09E0029DA89 /* Lottie */ = {
+			isa = PBXGroup;
+			children = (
+				BFE3EF212292B0B40029DA89 /* Splash */,
+			);
+			path = Lottie;
+			sourceTree = "<group>";
+		};
+		BFE3EF212292B0B40029DA89 /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				BFE3EF262292B0CC0029DA89 /* wave.json */,
+				BFE3EF222292B0BC0029DA89 /* stopwatch.aep */,
+				BFE3EF232292B0BC0029DA89 /* stopwatch.json */,
+			);
+			path = Splash;
+			sourceTree = "<group>";
+		};
 		C6494A0865D37AC60CB5256E /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -478,7 +509,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF02517E2271B8850005E0A6 /* Lato-Black.ttf in Resources */,
+				BFE3EF272292B0CC0029DA89 /* wave.json in Resources */,
 				BF02517F2271B8850005E0A6 /* Lato-BlackItalic.ttf in Resources */,
+				BFE3EF242292B0BD0029DA89 /* stopwatch.aep in Resources */,
 				BF0251802271B8850005E0A6 /* Lato-Bold.ttf in Resources */,
 				BF0251812271B8850005E0A6 /* Lato-BoldItalic.ttf in Resources */,
 				BF0251822271B8850005E0A6 /* Lato-Hairline.ttf in Resources */,
@@ -486,6 +519,7 @@
 				BF0251842271B8850005E0A6 /* Lato-Italic.ttf in Resources */,
 				BF0251852271B8850005E0A6 /* Lato-Light.ttf in Resources */,
 				BF0E32CE227823F8003C0B8B /* InOutCollectionCell.xib in Resources */,
+				BFE3EF252292B0BD0029DA89 /* stopwatch.json in Resources */,
 				BF0251862271B8850005E0A6 /* Lato-LightItalic.ttf in Resources */,
 				BF0251872271B8850005E0A6 /* Lato-Regular.ttf in Resources */,
 				BF128720226EDBE6000DB226 /* fa-brands-400.ttf in Resources */,
@@ -531,7 +565,9 @@
 				"${BUILT_PRODUCTS_DIR}/AlamofireObjectMapper/AlamofireObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/Charts/Charts.framework",
 				"${BUILT_PRODUCTS_DIR}/DateTimePicker/DateTimePicker.framework",
+				"${BUILT_PRODUCTS_DIR}/FontAwesome.swift/FontAwesome_swift.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/lottie-ios/Lottie.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
@@ -539,7 +575,9 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Charts.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DateTimePicker.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FontAwesome_swift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Lottie.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -575,6 +613,7 @@
 				BF0E32D3227857AF003C0B8B /* TimelyArrayExtensions.swift in Sources */,
 				BF0251972271CCB20005E0A6 /* LargeValueFormatter.swift in Sources */,
 				BF128718226ED913000DB226 /* HRToast+UIView.swift in Sources */,
+				BFE3EF2B2292BCD10029DA89 /* UIView+Gradient.swift in Sources */,
 				BF12873B22717D90000DB226 /* LGSideMenuBorderView.m in Sources */,
 				BF12873A22717D90000DB226 /* LGSideMenuView.m in Sources */,
 				BF02518F2271CC6D0005E0A6 /* BalloonMarker.swift in Sources */,
@@ -587,6 +626,7 @@
 				BF02516722718DA90005E0A6 /* SideMenuVC.swift in Sources */,
 				BF1286FA226DE2FE000DB226 /* AppDelegate.swift in Sources */,
 				BF0251942271CCB20005E0A6 /* DateValueFormatter.swift in Sources */,
+				BFE3EF1F2292AFA40029DA89 /* SplashVC.swift in Sources */,
 				BF39E093228EBDDE00881626 /* LoginService.swift in Sources */,
 				BF12874022717D90000DB226 /* LGSideMenuHelper.m in Sources */,
 				BFE3EF1A229291480029DA89 /* LoginVM.swift in Sources */,

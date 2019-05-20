@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="1BJ-oW-Olx">
     <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -306,6 +306,40 @@
             </objects>
             <point key="canvasLocation" x="73.913043478260875" y="1029.9107142857142"/>
         </scene>
+        <!--SplashVC-->
+        <scene sceneID="CqZ-gl-h5F">
+            <objects>
+                <viewController id="1BJ-oW-Olx" customClass="SplashVC" customModule="Timely" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="y38-eh-kEu">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Timely" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XRk-Ex-7QS">
+                                <rect key="frame" x="20" y="124" width="374" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="UeM-KV-63h"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="35"/>
+                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="i4e-Qe-4jw" firstAttribute="trailing" secondItem="XRk-Ex-7QS" secondAttribute="trailing" constant="20" id="0of-dy-wy2"/>
+                            <constraint firstItem="XRk-Ex-7QS" firstAttribute="top" secondItem="i4e-Qe-4jw" secondAttribute="top" constant="80" id="iQh-zz-a0f"/>
+                            <constraint firstItem="XRk-Ex-7QS" firstAttribute="leading" secondItem="i4e-Qe-4jw" secondAttribute="leading" constant="20" id="nhe-WK-qOC"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="i4e-Qe-4jw"/>
+                    </view>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="splash_to_login" id="vJW-5J-j8D"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4hn-QZ-9oH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-887" y="21"/>
+        </scene>
         <!--AuthenticationVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -590,12 +624,20 @@
                                     <action selector="buttonSwitchModeTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yNy-T0-Yvu"/>
                                 </connections>
                             </button>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="eI0-As-n5F">
+                                <rect key="frame" x="357" y="436" width="24" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="24" id="Y1Z-k6-l9c"/>
+                                    <constraint firstAttribute="height" constant="24" id="et7-OT-cXB"/>
+                                </constraints>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="0vS-St-E8F" secondAttribute="trailing" constant="254" id="0CV-gS-A1r"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="LaX-Vr-Zsb" secondAttribute="trailing" constant="20" id="0f7-z4-aBc"/>
                             <constraint firstAttribute="bottom" secondItem="LaX-Vr-Zsb" secondAttribute="bottom" constant="-214" id="18x-0d-lZB"/>
+                            <constraint firstItem="eI0-As-n5F" firstAttribute="centerX" secondItem="BRZ-sJ-qbd" secondAttribute="centerX" id="340-rv-qYv"/>
                             <constraint firstItem="eB5-vN-ZGc" firstAttribute="top" secondItem="bqD-r9-tUd" secondAttribute="bottom" constant="50" id="6aB-0Q-FeW"/>
                             <constraint firstAttribute="trailing" secondItem="6bD-iq-WlI" secondAttribute="trailing" constant="-206" id="7rc-GP-aNE"/>
                             <constraint firstItem="43Q-H1-K1O" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="25" id="7v7-gp-qw3"/>
@@ -608,6 +650,7 @@
                             <constraint firstItem="0yx-YI-Hqp" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="-25" id="aiX-4E-dnc"/>
                             <constraint firstItem="bqD-r9-tUd" firstAttribute="top" secondItem="43Q-H1-K1O" secondAttribute="bottom" constant="15" id="eii-0o-pCu"/>
                             <constraint firstItem="BRZ-sJ-qbd" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="ftJ-Ws-hcK"/>
+                            <constraint firstItem="eI0-As-n5F" firstAttribute="centerY" secondItem="BRZ-sJ-qbd" secondAttribute="centerY" id="hn2-Sz-how"/>
                             <constraint firstItem="0yx-YI-Hqp" firstAttribute="top" secondItem="eB5-vN-ZGc" secondAttribute="bottom" constant="60" id="i6i-oD-pab"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bqD-r9-tUd" secondAttribute="trailing" constant="20" id="ih9-hk-EKF"/>
                             <constraint firstItem="0vS-St-E8F" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="-160" id="nS2-N1-blU"/>
@@ -617,6 +660,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="activityIndiactor" destination="eI0-As-n5F" id="cpA-vW-Dhf"/>
                         <outlet property="buttonAction" destination="BRZ-sJ-qbd" id="zyA-IB-jgS"/>
                         <outlet property="buttonForgotPassword" destination="7SS-Be-0WX" id="pxm-8a-mxN"/>
                         <outlet property="buttonLogin" destination="43Q-H1-K1O" id="OY9-FK-cir"/>

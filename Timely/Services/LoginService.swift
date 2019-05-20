@@ -16,13 +16,19 @@ class LoginService: NSObject {
     
     func login(requestDict: [String: String], completion: @escaping (LoginResult) -> ()) {
      
-        AF.request("\(TimelyUrls.shared.kServerUrl)\(TimelyUrls.shared.kLoginUrl)", method: .post, parameters: requestDict, encoding: JSONEncoding.default, headers: TimelyUrls.shared.HEADER).responseObject { (response: DataResponse<User>) in
-            print(response.result)
-        }
-        
-//        AF.request("\(TimelyUrls.shared.kServerUrl)\(TimelyUrls.shared.kLoginUrl)", method: .post, parameters: requestDict, encoding: JSONEncoding.default, headers: TimelyUrls.shared.HEADER).responseJSON { (response) in
-//            print(response)
+//        AF.request("\(TimelyUrls.shared.kServerUrl)\(TimelyUrls.shared.kLoginUrl)", method: .post, parameters: requestDict, encoding: JSONEncoding.default, headers: TimelyUrls.shared.HEADER).responseObject { (response: DataResponse<User>) in
+//            print(response.result)
 //        }
+        
+        
+        AF.request("\(TimelyUrls.shared.kServerUrl)\(TimelyUrls.shared.kLoginUrl)", method: .post, parameters: requestDict, encoding: JSONEncoding.default, headers: TimelyUrls.shared.HEADER).responseJSON { (response) in
+            
+            if response.error == nil {
+                let user = Mapper<User>().map(JSON: response.value as! [String : Any])
+                return completion(.success(user!))
+            } else {
+                return completion(.error(response.error!))
+            }
+        }
+        }
     }
-    
-}

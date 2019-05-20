@@ -7,6 +7,8 @@ PODS:
     - Charts/Core (= 3.3.0)
   - Charts/Core (3.3.0)
   - DateTimePicker (2.1.3)
+  - FontAwesome.swift (1.7.0)
+  - lottie-ios (3.0.4)
   - ObjectMapper (3.4.2)
 
 DEPENDENCIES:
@@ -14,6 +16,8 @@ DEPENDENCIES:
   - AlamofireObjectMapper (~> 6.0.0)
   - Charts
   - DateTimePicker
+  - FontAwesome.swift
+  - lottie-ios
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -21,6 +25,8 @@ SPEC REPOS:
     - AlamofireObjectMapper
     - Charts
     - DateTimePicker
+    - FontAwesome.swift
+    - lottie-ios
     - ObjectMapper
 
 SPEC CHECKSUMS:
@@ -28,8 +34,10 @@ SPEC CHECKSUMS:
   AlamofireObjectMapper: 8cf0e01a1b36b485877033f8f6aa733977488da3
   Charts: ec1f57f9340054155691e84d4544a1d239d382c5
   DateTimePicker: 1d34181c5e9cd6a32ca87174fdf66c9710e483ef
+  FontAwesome.swift: 9f377615aa61381796dca143cddfd2a388723ea1
+  lottie-ios: 55a2de40418f8de2b155efaba4d4d1a025a5c570
   ObjectMapper: 0d4402610f4e468903ae64629eec4784531e5c51
 
-PODFILE CHECKSUM: eb182d2c2e88627e847864be2db9fabd9eeaaa79
+PODFILE CHECKSUM: 97c0466d8bbf32e7408345b66e316ec1ba27e57c
 
 COCOAPODS: 1.5.3

@@ -13,4 +13,5 @@ class TimelyConstants {
     
     // Seagues
     let segue_auth_to_home = "auth_to_home"
+    let segue_splash_to_login = "splash_to_login"
 }

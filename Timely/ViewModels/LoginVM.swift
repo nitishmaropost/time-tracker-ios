@@ -98,8 +98,16 @@ class LoginVM: NSObject {
     }
     
     func callLoginService(completion: @escaping (LoginResult) -> ()) {
-        LoginService.shared.login(requestDict: ["username": self.username ?? "", "password": self.password ?? ""]) { (result) in
-            print(result)
+        LoginService.shared.login(requestDict: ["username": self.username ?? "saurabh.thukral@maropost.com", "password": self.password ?? "saurabh.thukral@maropost.com"]) { (result) in
+            
+            switch result {
+            case .success(let user):
+                return completion(.success(user))
+            case .error(let error):
+                return completion(.error(error))
+            @unknown default:
+                print("default")
+            }
         }
     }
 }

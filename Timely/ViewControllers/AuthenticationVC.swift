@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FontAwesome_swift
 
 class AuthenticationVC: UIViewController {
     
@@ -30,7 +31,7 @@ class AuthenticationVC: UIViewController {
     @IBOutlet weak var viewLineBottom: UIView!
     @IBOutlet weak var buttonForgotPassword: UIButton!
     @IBOutlet weak var buttonRegister: UIButton!
-    
+    @IBOutlet weak var activityIndiactor: UIActivityIndicatorView!
     
     @IBOutlet weak var constraint_height_viewTextFields: NSLayoutConstraint!
     @IBOutlet weak var constraint_bottom_Label: NSLayoutConstraint!
@@ -44,6 +45,7 @@ class AuthenticationVC: UIViewController {
         self.buttonForgotPassword.isHidden = false
         self.buttonRegister.isHidden = true
         self.buttonLogin.isHidden = true
+        self.activityIndiactor.isHidden = true
         self.setupUI()
     }
     
@@ -63,9 +65,41 @@ class AuthenticationVC: UIViewController {
         self.textFieldUsername.resignFirstResponder()
         self.textFieldPassword.resignFirstResponder()
         if self.viewModel.checkValidations(view: self.view) && self.viewModel.isConnectedToInternet(view: self.view) {
+            self.activityIndiactor.isHidden = false
+            self.activityIndiactor.startAnimating()
+            self.buttonAction.setTitle("", for: .normal)
             self.viewModel.callLoginService { (result) in
                 print(result)
-                self.performSegue(withIdentifier: TimelyConstants.shared.segue_auth_to_home, sender: nil)
+                switch result {
+                case .success(_):
+                    let group = DispatchGroup()
+                    group.enter()
+                    
+                    DispatchQueue.main.async {
+                        self.activityIndiactor.stopAnimating()
+                        self.activityIndiactor.isHidden = true
+                        self.buttonAction.backgroundColor = UIColor(red: 44.0/255.0, green: 197.0/255.0, blue: 94.0/255.0, alpha: 1.0)
+                        self.buttonAction.setTitle(String.fontAwesomeIcon(name: .check), for: .normal)
+                        group.leave()
+                    }
+                    
+                    group.notify(queue: .main) {
+                        DispatchQueue.main.async {
+                            
+                            
+                            let delaySeconds = 1.0
+                            DispatchQueue.main.asyncAfter(deadline: .now() + delaySeconds) {
+                                self.performSegue(withIdentifier: TimelyConstants.shared.segue_auth_to_home, sender: nil)
+                            }
+                        }
+                    }
+                    
+                case .error(_):
+                    print("error")
+                default:
+                    print("default")
+                }
+                
             }
         }
     }
@@ -84,7 +118,7 @@ class AuthenticationVC: UIViewController {
     
     func animateViewOnSwitch(tag: Int) {
         if tag == 1 {
-//            // Show login
+            //            // Show login
             UIView.animate(withDuration: 0) {
                 self.labelTitle.text = "Login"
                 self.buttonForgotPassword.isHidden = false
