@@ -67,17 +67,15 @@ class AuthenticationVC: UIViewController {
         if self.viewModel.checkValidations(view: self.view) && self.viewModel.isConnectedToInternet(view: self.view) {
             self.activityIndiactor.isHidden = false
             self.activityIndiactor.startAnimating()
-            self.buttonAction.setTitle("", for: .normal)
             self.viewModel.callLoginService { (result) in
-                print(result)
+                self.activityIndiactor.stopAnimating()
+                self.activityIndiactor.isHidden = true
                 switch result {
                 case .success(_):
                     let group = DispatchGroup()
                     group.enter()
-                    
                     DispatchQueue.main.async {
-                        self.activityIndiactor.stopAnimating()
-                        self.activityIndiactor.isHidden = true
+                        self.buttonAction.setTitle("", for: .normal)
                         self.buttonAction.backgroundColor = UIColor(red: 44.0/255.0, green: 197.0/255.0, blue: 94.0/255.0, alpha: 1.0)
                         self.buttonAction.setTitle(String.fontAwesomeIcon(name: .check), for: .normal)
                         group.leave()
@@ -85,8 +83,6 @@ class AuthenticationVC: UIViewController {
                     
                     group.notify(queue: .main) {
                         DispatchQueue.main.async {
-                            
-                            
                             let delaySeconds = 1.0
                             DispatchQueue.main.asyncAfter(deadline: .now() + delaySeconds) {
                                 self.performSegue(withIdentifier: TimelyConstants.shared.segue_auth_to_home, sender: nil)
@@ -94,8 +90,8 @@ class AuthenticationVC: UIViewController {
                         }
                     }
                     
-                case .error(_):
-                    print("error")
+                case .error(let error):
+                    self.viewModel.setErrorMessage(message: error, view: self.view)
                 default:
                     print("default")
                 }
@@ -118,7 +114,7 @@ class AuthenticationVC: UIViewController {
     
     func animateViewOnSwitch(tag: Int) {
         if tag == 1 {
-            //            // Show login
+            // Show login
             UIView.animate(withDuration: 0) {
                 self.labelTitle.text = "Login"
                 self.buttonForgotPassword.isHidden = false

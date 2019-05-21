@@ -10,5 +10,5 @@ import Foundation
 
 enum LoginResult {
     case success(User)
-    case error(Error)
+    case error(String)
 }
