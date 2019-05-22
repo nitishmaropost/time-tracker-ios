@@ -361,6 +361,7 @@
                         <outlet property="barChartView" destination="Y86-AV-gAg" id="HpL-Su-50o"/>
                         <outlet property="buttonHistory" destination="W4Y-Es-ibm" id="BRH-RW-mC8"/>
                         <outlet property="collectionViewInOut" destination="LYx-bI-WQt" id="qNo-Lc-N4O"/>
+                        <outlet property="containerView" destination="ckv-aC-AWD" id="MyR-ya-XCg"/>
                         <outlet property="scrollViewHome" destination="ag5-DZ-c9U" id="J8p-Ge-acX"/>
                         <segue destination="nm1-sA-GTs" kind="show" identifier="home_to_history" id="Xwf-jq-trR"/>
                     </connections>

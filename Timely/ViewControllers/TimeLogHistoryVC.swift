@@ -42,12 +42,12 @@ extension TimeLogHistoryVC: UITableViewDelegate {
     
 }
 
-extension TimeLogHistoryVC: UITableViewDataSource {
+extension TimeLogHistoryVC: SkeletonTableViewDataSource {
     
   
-//    func collectionSkeletonView(_ skeletonView: UITableView, cellIdentifierForRowAt indexPath: IndexPath) -> ReusableCellIdentifier {
-//        return "timeLogHistoryCell"
-//    }
+    func collectionSkeletonView(_ skeletonView: UITableView, cellIdentifierForRowAt indexPath: IndexPath) -> ReusableCellIdentifier {
+        return "timeLogHistoryCell"
+    }
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -61,6 +61,10 @@ extension TimeLogHistoryVC: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "timeLogHistoryCell") as? TimeLogHistoryCell
         cell!.selectionStyle = .none
+        cell?.hideSkeleton()
+        cell?.contentView.backgroundColor = UIColor(hexString: "#E8E8E8")
+        cell?.labelTime.backgroundColor = UIColor(hexString: "#E8E8E8")
+        cell?.labelPinType.backgroundColor = UIColor(hexString: "#E8E8E8")
         let timeLog = self.viewModel.timeLogDetails?.rows![indexPath.row]
         let previousRow: TimeLog!
         if indexPath.row > 0 {

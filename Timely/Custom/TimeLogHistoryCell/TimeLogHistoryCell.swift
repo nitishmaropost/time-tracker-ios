@@ -18,6 +18,18 @@ class TimeLogHistoryCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        self.labelPinType.backgroundColor = UIColor.white
+        self.labelTime.backgroundColor = UIColor.white
+        self.contentView.backgroundColor = UIColor.white
+        self.labelPinType.showAnimatedGradientSkeleton()
+        self.labelTime.showAnimatedGradientSkeleton()
+        self.labelHeader.showAnimatedGradientSkeleton()
+    }
+    
+    func hideSkeleton() {
+        self.labelTime.hideSkeleton()
+        self.labelPinType.hideSkeleton()
+        self.labelHeader.hideSkeleton()
     }
 
     override func prepareForReuse() {

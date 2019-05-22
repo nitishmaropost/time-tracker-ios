@@ -17,7 +17,7 @@ class HomeVC: UIViewController, ChartViewDelegate {
     @IBOutlet weak var collectionViewInOut: UICollectionView!
     @IBOutlet weak var buttonHistory: RoundedButton!
     @IBOutlet weak var scrollViewHome: UIScrollView!
-    
+    @IBOutlet weak var containerView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,8 +31,9 @@ class HomeVC: UIViewController, ChartViewDelegate {
         self.setDataCount()
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        //self.scrollViewHome.contentSize = self.containerView.frame.size
         self.scrollViewHome.contentSize = CGSize(width: self.view.frame.size.width, height: self.view.frame.size.height + 88)
     }
     
