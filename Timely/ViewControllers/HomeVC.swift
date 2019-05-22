@@ -16,6 +16,8 @@ class HomeVC: UIViewController, ChartViewDelegate {
     @IBOutlet weak var barChartView: BarChartView!
     @IBOutlet weak var collectionViewInOut: UICollectionView!
     @IBOutlet weak var buttonHistory: RoundedButton!
+    @IBOutlet weak var scrollViewHome: UIScrollView!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,6 +29,11 @@ class HomeVC: UIViewController, ChartViewDelegate {
         self.collectionViewInOut.contentInset = UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 10)
         self.configureChart()
         self.setDataCount()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        self.scrollViewHome.contentSize = CGSize(width: self.view.frame.size.width, height: self.view.frame.size.height + 88)
     }
     
     @IBAction func showHistory(_ sender: RoundedButton) {

@@ -14,6 +14,7 @@ class TimeLogHistoryVC: UIViewController {
     @IBOutlet weak var tableLogs: UITableView!
     @IBOutlet weak var viewModel: TimeLogHistoryVM!
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setupUI()
