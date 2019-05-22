@@ -15,6 +15,7 @@ class HomeVC: UIViewController, ChartViewDelegate {
     // IBOutlets
     @IBOutlet weak var barChartView: BarChartView!
     @IBOutlet weak var collectionViewInOut: UICollectionView!
+    @IBOutlet weak var buttonHistory: RoundedButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,6 +27,10 @@ class HomeVC: UIViewController, ChartViewDelegate {
         self.collectionViewInOut.contentInset = UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 10)
         self.configureChart()
         self.setDataCount()
+    }
+    
+    @IBAction func showHistory(_ sender: RoundedButton) {
+        self.performSegue(withIdentifier: TimelyConstants.shared.segue_home_to_history, sender: nil)
     }
     
     func setDataCount() {
@@ -93,7 +98,7 @@ class HomeVC: UIViewController, ChartViewDelegate {
         leftAxis.valueFormatter = DefaultAxisValueFormatter(formatter: leftAxisFormatter)
         leftAxis.labelPosition = .outsideChart
         leftAxis.spaceTop = 9
-        leftAxis.axisMinimum = 0 // FIXME: HUH?? this replaces startAtZero = YES
+        leftAxis.axisMinimum = 0
         
         barChartView.legend.enabled = false
     }

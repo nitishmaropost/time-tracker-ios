@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="TimeLogHistoryCell" customModule="Timely" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="90.5"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="90"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yLY-c6-pu1">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="50" id="hcj-hk-wvc"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
+                        <color key="textColor" red="0.87843137250000003" green="0.086274509799999996" blue="0.054901960780000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="NO"/>
+                        </userDefinedRuntimeAttributes>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yo2-Wy-zHA">
+                        <rect key="frame" x="10" y="50" width="150" height="40"/>
+                        <color key="backgroundColor" red="0.90980392160000001" green="0.90980392160000001" blue="0.90980392160000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="40" id="Mxe-Lu-poX"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="highlightedColor"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="NO"/>
+                        </userDefinedRuntimeAttributes>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CrS-gG-iEa">
+                        <rect key="frame" x="160" y="50" width="150" height="40"/>
+                        <color key="backgroundColor" red="0.90980392156862744" green="0.90980392156862744" blue="0.90980392156862744" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="40" id="5SQ-jj-iOI"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="highlightedColor"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="NO"/>
+                        </userDefinedRuntimeAttributes>
+                    </label>
+                </subviews>
+                <color key="backgroundColor" red="0.90980392156862744" green="0.90980392156862744" blue="0.90980392156862744" alpha="1" colorSpace="calibratedRGB"/>
+                <constraints>
+                    <constraint firstItem="CrS-gG-iEa" firstAttribute="top" secondItem="yo2-Wy-zHA" secondAttribute="top" id="1Ho-Vh-DAK"/>
+                    <constraint firstItem="CrS-gG-iEa" firstAttribute="top" secondItem="yLY-c6-pu1" secondAttribute="bottom" id="MIw-vp-IfN"/>
+                    <constraint firstItem="yLY-c6-pu1" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="TWZ-Jj-89F"/>
+                    <constraint firstItem="CrS-gG-iEa" firstAttribute="width" secondItem="yo2-Wy-zHA" secondAttribute="width" id="Vyh-hZ-tc9"/>
+                    <constraint firstItem="yLY-c6-pu1" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="Yqf-mt-N2p"/>
+                    <constraint firstItem="CrS-gG-iEa" firstAttribute="leading" secondItem="yo2-Wy-zHA" secondAttribute="trailing" id="daY-UD-FWo"/>
+                    <constraint firstItem="yo2-Wy-zHA" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="g4O-V0-Tr8"/>
+                    <constraint firstAttribute="trailing" secondItem="CrS-gG-iEa" secondAttribute="trailing" constant="10" id="gK5-Uq-1cv"/>
+                    <constraint firstAttribute="bottom" secondItem="CrS-gG-iEa" secondAttribute="bottom" id="guY-bz-0Rg"/>
+                    <constraint firstItem="yo2-Wy-zHA" firstAttribute="top" secondItem="yLY-c6-pu1" secondAttribute="bottom" id="iJj-0Q-YUD"/>
+                    <constraint firstAttribute="trailing" secondItem="yLY-c6-pu1" secondAttribute="trailing" id="tVJ-Cc-xBy"/>
+                    <constraint firstAttribute="bottom" secondItem="yo2-Wy-zHA" secondAttribute="bottom" id="vFw-oI-koI"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <accessibility key="accessibilityConfiguration" identifier="timeLogHistory"/>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="constrint_height_header" destination="hcj-hk-wvc" id="hJQ-t4-pGo"/>
+                <outlet property="labelHeader" destination="yLY-c6-pu1" id="Rgh-0c-mpO"/>
+                <outlet property="labelPinType" destination="CrS-gG-iEa" id="eMG-RI-Cpr"/>
+                <outlet property="labelTime" destination="yo2-Wy-zHA" id="dQR-g8-KpB"/>
+            </connections>
+            <point key="canvasLocation" x="137.68115942028987" y="124.55357142857142"/>
+        </tableViewCell>
+    </objects>
+</document>

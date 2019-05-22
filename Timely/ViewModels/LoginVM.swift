@@ -97,7 +97,7 @@ class LoginVM: NSObject {
         }
     }
     
-    func callLoginService(completion: @escaping (LoginResult) -> ()) {
+    func callLoginService(completion: @escaping (TimelyAPIResult) -> ()) {
         LoginService.shared.login(requestDict: ["username": self.username ?? "saurabh.thukral@maropost.com", "password": self.password ?? "saurabh.thukral@maropost.com"]) { (result) in
             
             switch result {

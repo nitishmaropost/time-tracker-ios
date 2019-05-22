@@ -13,5 +13,8 @@ pod 'Alamofire', '~> 5.0.0-beta.5'
 pod 'AlamofireObjectMapper', '~> 6.0.0'
 pod 'lottie-ios'
 pod 'FontAwesome.swift'
+pod 'SwiftKeychainWrapper'
+pod 'SwiftDate', '~> 5.0'
+pod "SkeletonView"
 
 end

@@ -8,7 +8,9 @@
 
 import Foundation
 
-enum LoginResult {
-    case success(User)
+enum TimelyAPIResult {
+    case success(Any)
     case error(String)
 }
+
+

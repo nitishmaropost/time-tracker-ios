@@ -51,6 +51,13 @@ class AuthenticationVC: UIViewController {
     
     func setupUI() {
         self.labelTitle.text = "Login"
+        // For test
+        self.textFieldUsername.text = "saurabh.thukral@maropost.com"
+        self.textFieldPassword.text = "saurabh.thukral@maropost.com"
+        self.viewModel.username = "saurabh.thukral@maropost.com"
+        self.viewModel.password = "saurabh.thukral@maropost.com"
+        //
+        
         self.buttonForgotPassword.isHidden = false
         self.constraint_center_viewTextFields.constant = -30
         self.constraint_center_buttonAction.constant = -30
@@ -66,6 +73,7 @@ class AuthenticationVC: UIViewController {
         self.textFieldPassword.resignFirstResponder()
         if self.viewModel.checkValidations(view: self.view) && self.viewModel.isConnectedToInternet(view: self.view) {
             self.activityIndiactor.isHidden = false
+            self.buttonAction.setTitle("", for: .normal)
             self.activityIndiactor.startAnimating()
             self.viewModel.callLoginService { (result) in
                 self.activityIndiactor.stopAnimating()
@@ -75,7 +83,6 @@ class AuthenticationVC: UIViewController {
                     let group = DispatchGroup()
                     group.enter()
                     DispatchQueue.main.async {
-                        self.buttonAction.setTitle("", for: .normal)
                         self.buttonAction.backgroundColor = UIColor(red: 44.0/255.0, green: 197.0/255.0, blue: 94.0/255.0, alpha: 1.0)
                         self.buttonAction.setTitle(String.fontAwesomeIcon(name: .check), for: .normal)
                         group.leave()
@@ -91,6 +98,7 @@ class AuthenticationVC: UIViewController {
                     }
                     
                 case .error(let error):
+                    self.buttonAction.setTitle(String.fontAwesomeIcon(name: .arrowRight), for: .normal)
                     self.viewModel.setErrorMessage(message: error, view: self.view)
                 default:
                     print("default")

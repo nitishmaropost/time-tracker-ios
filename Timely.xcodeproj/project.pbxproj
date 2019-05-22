@@ -64,6 +64,13 @@
 		BF39E093228EBDDE00881626 /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF39E092228EBDDE00881626 /* LoginService.swift */; };
 		BF39E095228ECD6200881626 /* ResponseEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF39E094228ECD6200881626 /* ResponseEnums.swift */; };
 		BF39E097228ED02000881626 /* TimelyUrls.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF39E096228ED02000881626 /* TimelyUrls.swift */; };
+		BFE0A01E2293C7BB00B5A0E8 /* TimeLogHistoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE0A01D2293C7BB00B5A0E8 /* TimeLogHistoryVC.swift */; };
+		BFE0A0202293CB5300B5A0E8 /* TimeLogService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE0A01F2293CB5300B5A0E8 /* TimeLogService.swift */; };
+		BFE0A0222293CC8900B5A0E8 /* TimeLogDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE0A0212293CC8900B5A0E8 /* TimeLogDetails.swift */; };
+		BFE0A0252293DCED00B5A0E8 /* KeychainHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE0A0242293DCED00B5A0E8 /* KeychainHelper.swift */; };
+		BFE0A0272293F68400B5A0E8 /* TimeLogHistoryVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE0A0262293F68400B5A0E8 /* TimeLogHistoryVM.swift */; };
+		BFE0A02D229414B000B5A0E8 /* TimeLogHistoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE0A02B229414B000B5A0E8 /* TimeLogHistoryCell.swift */; };
+		BFE0A02E229414B000B5A0E8 /* TimeLogHistoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BFE0A02C229414B000B5A0E8 /* TimeLogHistoryCell.xib */; };
 		BFE3EF172292910B0029DA89 /* Binding.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE3EF152292910B0029DA89 /* Binding.swift */; };
 		BFE3EF182292910B0029DA89 /* BindingTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE3EF162292910B0029DA89 /* BindingTextField.swift */; };
 		BFE3EF1A229291480029DA89 /* LoginVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE3EF19229291480029DA89 /* LoginVM.swift */; };
@@ -146,6 +153,13 @@
 		BF39E092228EBDDE00881626 /* LoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
 		BF39E094228ECD6200881626 /* ResponseEnums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseEnums.swift; sourceTree = "<group>"; };
 		BF39E096228ED02000881626 /* TimelyUrls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelyUrls.swift; sourceTree = "<group>"; };
+		BFE0A01D2293C7BB00B5A0E8 /* TimeLogHistoryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeLogHistoryVC.swift; sourceTree = "<group>"; };
+		BFE0A01F2293CB5300B5A0E8 /* TimeLogService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeLogService.swift; sourceTree = "<group>"; };
+		BFE0A0212293CC8900B5A0E8 /* TimeLogDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeLogDetails.swift; sourceTree = "<group>"; };
+		BFE0A0242293DCED00B5A0E8 /* KeychainHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainHelper.swift; sourceTree = "<group>"; };
+		BFE0A0262293F68400B5A0E8 /* TimeLogHistoryVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeLogHistoryVM.swift; sourceTree = "<group>"; };
+		BFE0A02B229414B000B5A0E8 /* TimeLogHistoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeLogHistoryCell.swift; sourceTree = "<group>"; };
+		BFE0A02C229414B000B5A0E8 /* TimeLogHistoryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TimeLogHistoryCell.xib; sourceTree = "<group>"; };
 		BFE3EF152292910B0029DA89 /* Binding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Binding.swift; sourceTree = "<group>"; };
 		BFE3EF162292910B0029DA89 /* BindingTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BindingTextField.swift; sourceTree = "<group>"; };
 		BFE3EF19229291480029DA89 /* LoginVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVM.swift; sourceTree = "<group>"; };
@@ -233,6 +247,7 @@
 		BF1286F8226DE2FE000DB226 /* Timely */ = {
 			isa = PBXGroup;
 			children = (
+				BFE0A0232293DCD600B5A0E8 /* Utility */,
 				BFE3EF1B2292A6070029DA89 /* Reachability */,
 				BF39E091228EBDC900881626 /* Services */,
 				BF12872922717D6A000DB226 /* Custom */,
@@ -281,6 +296,7 @@
 			isa = PBXGroup;
 			children = (
 				BF39E08F228EB97800881626 /* User.swift */,
+				BFE0A0212293CC8900B5A0E8 /* TimeLogDetails.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -290,6 +306,7 @@
 			children = (
 				BFE3EF14229290FD0029DA89 /* Binding */,
 				BFE3EF19229291480029DA89 /* LoginVM.swift */,
+				BFE0A0262293F68400B5A0E8 /* TimeLogHistoryVM.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -313,6 +330,7 @@
 				BF02516622718DA90005E0A6 /* SideMenuVC.swift */,
 				BF025171227199890005E0A6 /* RightVC.swift */,
 				BFE3EF1E2292AFA40029DA89 /* SplashVC.swift */,
+				BFE0A01D2293C7BB00B5A0E8 /* TimeLogHistoryVC.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -358,6 +376,7 @@
 		BF12872922717D6A000DB226 /* Custom */ = {
 			isa = PBXGroup;
 			children = (
+				BFE0A02A2294148100B5A0E8 /* TimeLogHistoryCell */,
 				BF0E32C6227817E7003C0B8B /* InOutCell */,
 				BF0251992271CCE50005E0A6 /* New Group */,
 				BF12872A22717D81000DB226 /* LGSideMenuController */,
@@ -389,10 +408,28 @@
 		BF39E091228EBDC900881626 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				BF39E092228EBDDE00881626 /* LoginService.swift */,
 				BF39E094228ECD6200881626 /* ResponseEnums.swift */,
+				BF39E092228EBDDE00881626 /* LoginService.swift */,
+				BFE0A01F2293CB5300B5A0E8 /* TimeLogService.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		BFE0A0232293DCD600B5A0E8 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				BFE0A0242293DCED00B5A0E8 /* KeychainHelper.swift */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		BFE0A02A2294148100B5A0E8 /* TimeLogHistoryCell */ = {
+			isa = PBXGroup;
+			children = (
+				BFE0A02B229414B000B5A0E8 /* TimeLogHistoryCell.swift */,
+				BFE0A02C229414B000B5A0E8 /* TimeLogHistoryCell.xib */,
+			);
+			path = TimeLogHistoryCell;
 			sourceTree = "<group>";
 		};
 		BFE3EF14229290FD0029DA89 /* Binding */ = {
@@ -523,6 +560,7 @@
 				BF0251862271B8850005E0A6 /* Lato-LightItalic.ttf in Resources */,
 				BF0251872271B8850005E0A6 /* Lato-Regular.ttf in Resources */,
 				BF128720226EDBE6000DB226 /* fa-brands-400.ttf in Resources */,
+				BFE0A02E229414B000B5A0E8 /* TimeLogHistoryCell.xib in Resources */,
 				BF128721226EDBE6000DB226 /* fa-regular-400.ttf in Resources */,
 				BF128722226EDBE6000DB226 /* fa-solid-900.ttf in Resources */,
 				BF128723226EDBE6000DB226 /* FontAwesome.otf in Resources */,
@@ -567,6 +605,9 @@
 				"${BUILT_PRODUCTS_DIR}/DateTimePicker/DateTimePicker.framework",
 				"${BUILT_PRODUCTS_DIR}/FontAwesome.swift/FontAwesome_swift.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/SkeletonView/SkeletonView.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftDate/SwiftDate.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftKeychainWrapper/SwiftKeychainWrapper.framework",
 				"${BUILT_PRODUCTS_DIR}/lottie-ios/Lottie.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -577,6 +618,9 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DateTimePicker.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FontAwesome_swift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SkeletonView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftDate.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftKeychainWrapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Lottie.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -592,6 +636,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF02518E2271CC6D0005E0A6 /* RadarMarkerView.swift in Sources */,
+				BFE0A0222293CC8900B5A0E8 /* TimeLogDetails.swift in Sources */,
 				BF1286FC226DE2FE000DB226 /* ViewController.swift in Sources */,
 				BF0251692271928D0005E0A6 /* TimelyColors.swift in Sources */,
 				BF128716226ED90E000DB226 /* PlaceholderIcon.swift in Sources */,
@@ -600,6 +645,7 @@
 				BF02516B2271929C0005E0A6 /* TimelyConstants.swift in Sources */,
 				BFE3EF172292910B0029DA89 /* Binding.swift in Sources */,
 				BF0251952271CCB20005E0A6 /* IntAxisValueFormatter.swift in Sources */,
+				BFE0A0202293CB5300B5A0E8 /* TimeLogService.swift in Sources */,
 				BF128728226EE8B5000DB226 /* AuthenticationVC.swift in Sources */,
 				BF02516322718CC10005E0A6 /* HomeVC.swift in Sources */,
 				BF02516D227192AB0005E0A6 /* TimelyFonts.swift in Sources */,
@@ -613,12 +659,14 @@
 				BF0E32D3227857AF003C0B8B /* TimelyArrayExtensions.swift in Sources */,
 				BF0251972271CCB20005E0A6 /* LargeValueFormatter.swift in Sources */,
 				BF128718226ED913000DB226 /* HRToast+UIView.swift in Sources */,
+				BFE0A02D229414B000B5A0E8 /* TimeLogHistoryCell.swift in Sources */,
 				BFE3EF2B2292BCD10029DA89 /* UIView+Gradient.swift in Sources */,
 				BF12873B22717D90000DB226 /* LGSideMenuBorderView.m in Sources */,
 				BF12873A22717D90000DB226 /* LGSideMenuView.m in Sources */,
 				BF02518F2271CC6D0005E0A6 /* BalloonMarker.swift in Sources */,
 				BF0E32CD227823F8003C0B8B /* InOutCollectionCell.swift in Sources */,
 				BF12873E22717D90000DB226 /* UIViewController+LGSideMenuController.m in Sources */,
+				BFE0A01E2293C7BB00B5A0E8 /* TimeLogHistoryVC.swift in Sources */,
 				BF128712226ED8F2000DB226 /* RoundedButton.swift in Sources */,
 				BF025170227198040005E0A6 /* TimelyColorsExtension.swift in Sources */,
 				BF39E097228ED02000881626 /* TimelyUrls.swift in Sources */,
@@ -631,6 +679,8 @@
 				BF12874022717D90000DB226 /* LGSideMenuHelper.m in Sources */,
 				BFE3EF1A229291480029DA89 /* LoginVM.swift in Sources */,
 				BF128714226ED8FC000DB226 /* DesignableTextField.swift in Sources */,
+				BFE0A0272293F68400B5A0E8 /* TimeLogHistoryVM.swift in Sources */,
+				BFE0A0252293DCED00B5A0E8 /* KeychainHelper.swift in Sources */,
 				BF39E095228ECD6200881626 /* ResponseEnums.swift in Sources */,
 				BFE3EF182292910B0029DA89 /* BindingTextField.swift in Sources */,
 				BF39E090228EB97800881626 /* User.swift in Sources */,
