@@ -32,6 +32,8 @@
 		BF0251962271CCB20005E0A6 /* DayAxisValueFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0251922271CCB20005E0A6 /* DayAxisValueFormatter.swift */; };
 		BF0251972271CCB20005E0A6 /* LargeValueFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0251932271CCB20005E0A6 /* LargeValueFormatter.swift */; };
 		BF02519B2276FE190005E0A6 /* ColoredImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF02519A2276FE190005E0A6 /* ColoredImageView.swift */; };
+		BF085B25229567DF002BFE9E /* TimelyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF085B24229567DF002BFE9E /* TimelyTests.swift */; };
+		BF085B2D2295682D002BFE9E /* LoginTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF085B2C2295682D002BFE9E /* LoginTests.swift */; };
 		BF0E32C922781BA2003C0B8B /* InOutCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0E32C722781BA2003C0B8B /* InOutCell.swift */; };
 		BF0E32CA22781BA2003C0B8B /* InOutCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF0E32C822781BA2003C0B8B /* InOutCell.xib */; };
 		BF0E32CD227823F8003C0B8B /* InOutCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0E32CB227823F8003C0B8B /* InOutCollectionCell.swift */; };
@@ -83,6 +85,16 @@
 		CF6825D85FB0D9A7E9A442A9 /* Pods_Timely.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FCF99208C2A9328624F467C /* Pods_Timely.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		BF085B27229567DF002BFE9E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BF1286EE226DE2FE000DB226 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BF1286F5226DE2FE000DB226;
+			remoteInfo = Timely;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		2521F61836ACAF313370B923 /* Pods-Timely.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Timely.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Timely/Pods-Timely.debug.xcconfig"; sourceTree = "<group>"; };
 		6FCF99208C2A9328624F467C /* Pods_Timely.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Timely.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -112,6 +124,10 @@
 		BF0251922271CCB20005E0A6 /* DayAxisValueFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DayAxisValueFormatter.swift; path = ../DayAxisValueFormatter.swift; sourceTree = "<group>"; };
 		BF0251932271CCB20005E0A6 /* LargeValueFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LargeValueFormatter.swift; path = ../LargeValueFormatter.swift; sourceTree = "<group>"; };
 		BF02519A2276FE190005E0A6 /* ColoredImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColoredImageView.swift; sourceTree = "<group>"; };
+		BF085B22229567DF002BFE9E /* TimelyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TimelyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BF085B24229567DF002BFE9E /* TimelyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelyTests.swift; sourceTree = "<group>"; };
+		BF085B26229567DF002BFE9E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BF085B2C2295682D002BFE9E /* LoginTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginTests.swift; sourceTree = "<group>"; };
 		BF0E32C722781BA2003C0B8B /* InOutCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InOutCell.swift; sourceTree = "<group>"; };
 		BF0E32C822781BA2003C0B8B /* InOutCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InOutCell.xib; sourceTree = "<group>"; };
 		BF0E32CB227823F8003C0B8B /* InOutCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InOutCollectionCell.swift; sourceTree = "<group>"; };
@@ -173,6 +189,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		BF085B1F229567DF002BFE9E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		BF1286F3226DE2FE000DB226 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -215,6 +238,16 @@
 			path = "New Group";
 			sourceTree = "<group>";
 		};
+		BF085B23229567DF002BFE9E /* TimelyTests */ = {
+			isa = PBXGroup;
+			children = (
+				BF085B24229567DF002BFE9E /* TimelyTests.swift */,
+				BF085B26229567DF002BFE9E /* Info.plist */,
+				BF085B2C2295682D002BFE9E /* LoginTests.swift */,
+			);
+			path = TimelyTests;
+			sourceTree = "<group>";
+		};
 		BF0E32C6227817E7003C0B8B /* InOutCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -230,6 +263,7 @@
 			isa = PBXGroup;
 			children = (
 				BF1286F8226DE2FE000DB226 /* Timely */,
+				BF085B23229567DF002BFE9E /* TimelyTests */,
 				BF1286F7226DE2FE000DB226 /* Products */,
 				C6494A0865D37AC60CB5256E /* Pods */,
 				E8197BD881125B65BB5FDD71 /* Frameworks */,
@@ -240,6 +274,7 @@
 			isa = PBXGroup;
 			children = (
 				BF1286F6226DE2FE000DB226 /* Timely.app */,
+				BF085B22229567DF002BFE9E /* TimelyTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -487,6 +522,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		BF085B21229567DF002BFE9E /* TimelyTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BF085B2B229567DF002BFE9E /* Build configuration list for PBXNativeTarget "TimelyTests" */;
+			buildPhases = (
+				BF085B1E229567DF002BFE9E /* Sources */,
+				BF085B1F229567DF002BFE9E /* Frameworks */,
+				BF085B20229567DF002BFE9E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BF085B28229567DF002BFE9E /* PBXTargetDependency */,
+			);
+			name = TimelyTests;
+			productName = TimelyTests;
+			productReference = BF085B22229567DF002BFE9E /* TimelyTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		BF1286F5226DE2FE000DB226 /* Timely */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = BF128708226DE300000DB226 /* Build configuration list for PBXNativeTarget "Timely" */;
@@ -516,6 +569,10 @@
 				LastUpgradeCheck = 1020;
 				ORGANIZATIONNAME = maropost;
 				TargetAttributes = {
+					BF085B21229567DF002BFE9E = {
+						CreatedOnToolsVersion = 10.2.1;
+						TestTargetID = BF1286F5226DE2FE000DB226;
+					};
 					BF1286F5226DE2FE000DB226 = {
 						CreatedOnToolsVersion = 10.2;
 						LastSwiftMigration = 1020;
@@ -536,11 +593,19 @@
 			projectRoot = "";
 			targets = (
 				BF1286F5226DE2FE000DB226 /* Timely */,
+				BF085B21229567DF002BFE9E /* TimelyTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		BF085B20229567DF002BFE9E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		BF1286F4226DE2FE000DB226 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -631,6 +696,15 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		BF085B1E229567DF002BFE9E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BF085B25229567DF002BFE9E /* TimelyTests.swift in Sources */,
+				BF085B2D2295682D002BFE9E /* LoginTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		BF1286F2226DE2FE000DB226 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -690,6 +764,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		BF085B28229567DF002BFE9E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BF1286F5226DE2FE000DB226 /* Timely */;
+			targetProxy = BF085B27229567DF002BFE9E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		BF1286FD226DE2FE000DB226 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -710,6 +792,46 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		BF085B29229567DF002BFE9E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = TimelyTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Maropost.TimelyTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Timely.app/Timely";
+			};
+			name = Debug;
+		};
+		BF085B2A229567DF002BFE9E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = TimelyTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Maropost.TimelyTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Timely.app/Timely";
+			};
+			name = Release;
+		};
 		BF128706226DE300000DB226 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -876,6 +998,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		BF085B2B229567DF002BFE9E /* Build configuration list for PBXNativeTarget "TimelyTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BF085B29229567DF002BFE9E /* Debug */,
+				BF085B2A229567DF002BFE9E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		BF1286F1226DE2FE000DB226 /* Build configuration list for PBXProject "Timely" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
