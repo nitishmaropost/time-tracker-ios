@@ -60,19 +60,25 @@ class TimeLogHistoryVM : NSObject {
     }
     
     func getTimeLogHistory(completion: @escaping (TimelyAPIResult) -> ()) {
-        TimeLogService.shared.getTimeLogHistory { (result) in
-            switch result {
-            case .success(let timeLogHistory):
-                let history = timeLogHistory as? TimeLogDetails
-                self.timeLogDetails = history
-
-                
-                return completion(.success(timeLogHistory))
-            case .error(let error):
-                return completion(.error(error))
-            @unknown default:
-                print("default")
+        do {
+            try TimeLogService.shared.getTimeLogHistory { (result) in
+                switch result {
+                case .success(let timeLogHistory):
+                    let history = timeLogHistory as? TimeLogDetails
+                    self.timeLogDetails = history
+                    
+                    
+                    return completion(.success(timeLogHistory))
+                case .error(let error):
+                    return completion(.error(error))
+                @unknown default:
+                    print("default")
+                }
             }
+        }  catch {
+            print("error")
         }
+        
+        
     }
 }

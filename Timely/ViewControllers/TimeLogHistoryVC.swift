@@ -81,7 +81,7 @@ extension TimeLogHistoryVC: SkeletonTableViewDataSource {
         }
         
         cell?.labelTime.text = self.viewModel.getTimeString(dateString: timeLog!.punchTime!)
-        cell?.labelPinType.text = self.viewModel.returnPinTypeString(pinType: "\(timeLog?.pinType ?? 0)")
+        cell?.labelPinType.text = timeLog?.pinType // self.viewModel.returnPinTypeString(pinType: "\(timeLog?.pinType ?? "")")
     
         return cell!
     }
