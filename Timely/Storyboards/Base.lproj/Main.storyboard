@@ -139,6 +139,7 @@
                                                     </label>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="run_in" translatesAutoresizingMaskIntoConstraints="NO" id="S0c-3p-0iF">
                                                         <rect key="frame" x="44" y="58" width="32" height="32"/>
+                                                        <color key="tintColor" red="0.25882352941176467" green="0.54509803921568623" blue="0.15686274509803921" alpha="1" colorSpace="calibratedRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="32" id="00p-ns-CjG"/>
                                                             <constraint firstAttribute="width" constant="32" id="7ic-sM-v4d"/>
@@ -188,6 +189,7 @@
                                                     </label>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="run_out" translatesAutoresizingMaskIntoConstraints="NO" id="Ww8-JG-DjW">
                                                         <rect key="frame" x="44" y="58" width="32" height="32"/>
+                                                        <color key="tintColor" red="0.74901960784313726" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="32" id="3d5-2P-HoN"/>
                                                             <constraint firstAttribute="height" constant="32" id="M3r-iU-Y5L"/>
@@ -362,6 +364,8 @@
                         <outlet property="buttonHistory" destination="W4Y-Es-ibm" id="BRH-RW-mC8"/>
                         <outlet property="collectionViewInOut" destination="LYx-bI-WQt" id="qNo-Lc-N4O"/>
                         <outlet property="containerView" destination="ckv-aC-AWD" id="MyR-ya-XCg"/>
+                        <outlet property="imageViewIn" destination="S0c-3p-0iF" id="yRh-tu-ctj"/>
+                        <outlet property="imageViewOut" destination="Ww8-JG-DjW" id="TD5-h0-2xP"/>
                         <outlet property="scrollViewHome" destination="ag5-DZ-c9U" id="J8p-Ge-acX"/>
                         <segue destination="nm1-sA-GTs" kind="show" identifier="home_to_history" id="Xwf-jq-trR"/>
                     </connections>

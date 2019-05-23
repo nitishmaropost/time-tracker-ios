@@ -18,6 +18,8 @@ class HomeVC: UIViewController, ChartViewDelegate {
     @IBOutlet weak var buttonHistory: RoundedButton!
     @IBOutlet weak var scrollViewHome: UIScrollView!
     @IBOutlet weak var containerView: UIView!
+    @IBOutlet weak var imageViewIn: UIImageView!
+    @IBOutlet weak var imageViewOut: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,6 +29,8 @@ class HomeVC: UIViewController, ChartViewDelegate {
         self.collectionViewInOut.register(InOutCollectionCell.self, forCellWithReuseIdentifier: "inOutCell")
         self.collectionViewInOut.register(UINib(nibName: "InOutCollectionCell", bundle: Bundle.main), forCellWithReuseIdentifier: "inOutCell")
         self.collectionViewInOut.contentInset = UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 10)
+        TimelyColorsUtility.shared.changeTint(forImage: self.imageViewIn, color: TimelyColors.shared.kInTint)
+        TimelyColorsUtility.shared.changeTint(forImage: self.imageViewOut, color: TimelyColors.shared.kOutTint)
         self.configureChart()
         self.setDataCount()
     }

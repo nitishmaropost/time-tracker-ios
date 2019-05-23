@@ -41,9 +41,9 @@ class TimeLogHistoryVM : NSObject {
     }
     
     func getTimeString(dateString: String) -> String {
-        let dateStringWithoutMilisec = dateString.components(separatedBy: ".")[0]
+        //let dateStringWithoutMilisec = dateString.components(separatedBy: ".")[0]
         dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss"
-        let date = dateFormatter.date(from: dateStringWithoutMilisec)
+        let date = dateFormatter.date(from: dateString)
         dateFormatter.dateFormat = "hh:mm a"
         let timeString = dateFormatter.string(from: date!)
         return timeString

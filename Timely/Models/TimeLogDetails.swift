@@ -45,7 +45,7 @@ class TimeLog : Mappable {
         self.id <- map["_id"]
         self.employeeCode <- map["emp_code"]
         self.logId <- map["log_id"]
-        self.punchTime <- map["punch_time"]
+        self.punchTime <- map["punch_time_str"]
         self.pinType <- map["pin_type"]
         self.status <- map["status"]
         self.__v <- map["__v"]

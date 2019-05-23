@@ -9,6 +9,9 @@
 import UIKit
 
 class InOutCollectionCell: UICollectionViewCell {
+    
+    @IBOutlet weak var imageViewIn: UIImageView!
+    @IBOutlet weak var imageViewOut: UIImageView!
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -19,6 +22,9 @@ class InOutCollectionCell: UICollectionViewCell {
         self.layer.shadowOffset = CGSize(width: 2, height: 2)
         self.layer.shadowColor = UIColor.lightGray.cgColor
         self.layer.cornerRadius = 8
+        
+        TimelyColorsUtility.shared.changeTint(forImage: self.imageViewIn, color: TimelyColors.shared.kInTint)
+        TimelyColorsUtility.shared.changeTint(forImage: self.imageViewOut, color: TimelyColors.shared.kOutTint)
     }
 
 }

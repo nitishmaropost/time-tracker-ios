@@ -66,6 +66,9 @@
 		BF39E093228EBDDE00881626 /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF39E092228EBDDE00881626 /* LoginService.swift */; };
 		BF39E095228ECD6200881626 /* ResponseEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF39E094228ECD6200881626 /* ResponseEnums.swift */; };
 		BF39E097228ED02000881626 /* TimelyUrls.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF39E096228ED02000881626 /* TimelyUrls.swift */; };
+		BF5E9AB8229675ED0080B093 /* person_out.svg in Resources */ = {isa = PBXBuildFile; fileRef = BF5E9AB6229675ED0080B093 /* person_out.svg */; };
+		BF5E9AB9229675ED0080B093 /* person_in.svg in Resources */ = {isa = PBXBuildFile; fileRef = BF5E9AB7229675ED0080B093 /* person_in.svg */; };
+		BF5E9ABB22967C9D0080B093 /* TimelyColorsUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5E9ABA22967C9D0080B093 /* TimelyColorsUtility.swift */; };
 		BFE0A01E2293C7BB00B5A0E8 /* TimeLogHistoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE0A01D2293C7BB00B5A0E8 /* TimeLogHistoryVC.swift */; };
 		BFE0A0202293CB5300B5A0E8 /* TimeLogService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE0A01F2293CB5300B5A0E8 /* TimeLogService.swift */; };
 		BFE0A0222293CC8900B5A0E8 /* TimeLogDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE0A0212293CC8900B5A0E8 /* TimeLogDetails.swift */; };
@@ -169,6 +172,9 @@
 		BF39E092228EBDDE00881626 /* LoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
 		BF39E094228ECD6200881626 /* ResponseEnums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseEnums.swift; sourceTree = "<group>"; };
 		BF39E096228ED02000881626 /* TimelyUrls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelyUrls.swift; sourceTree = "<group>"; };
+		BF5E9AB6229675ED0080B093 /* person_out.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = person_out.svg; sourceTree = "<group>"; };
+		BF5E9AB7229675ED0080B093 /* person_in.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = person_in.svg; sourceTree = "<group>"; };
+		BF5E9ABA22967C9D0080B093 /* TimelyColorsUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelyColorsUtility.swift; sourceTree = "<group>"; };
 		BFE0A01D2293C7BB00B5A0E8 /* TimeLogHistoryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeLogHistoryVC.swift; sourceTree = "<group>"; };
 		BFE0A01F2293CB5300B5A0E8 /* TimeLogService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeLogService.swift; sourceTree = "<group>"; };
 		BFE0A0212293CC8900B5A0E8 /* TimeLogDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeLogDetails.swift; sourceTree = "<group>"; };
@@ -373,6 +379,7 @@
 		BF128719226EDAEB000DB226 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				BF5E9AB5229675A20080B093 /* SVG */,
 				BFE3EF202292B09E0029DA89 /* Lottie */,
 				BF128700226DE300000DB226 /* Assets.xcassets */,
 				BF12871A226EDAF3000DB226 /* Fonts */,
@@ -450,10 +457,20 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
+		BF5E9AB5229675A20080B093 /* SVG */ = {
+			isa = PBXGroup;
+			children = (
+				BF5E9AB7229675ED0080B093 /* person_in.svg */,
+				BF5E9AB6229675ED0080B093 /* person_out.svg */,
+			);
+			path = SVG;
+			sourceTree = "<group>";
+		};
 		BFE0A0232293DCD600B5A0E8 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
 				BFE0A0242293DCED00B5A0E8 /* KeychainHelper.swift */,
+				BF5E9ABA22967C9D0080B093 /* TimelyColorsUtility.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -612,6 +629,7 @@
 			files = (
 				BF02517E2271B8850005E0A6 /* Lato-Black.ttf in Resources */,
 				BFE3EF272292B0CC0029DA89 /* wave.json in Resources */,
+				BF5E9AB8229675ED0080B093 /* person_out.svg in Resources */,
 				BF02517F2271B8850005E0A6 /* Lato-BlackItalic.ttf in Resources */,
 				BFE3EF242292B0BD0029DA89 /* stopwatch.aep in Resources */,
 				BF0251802271B8850005E0A6 /* Lato-Bold.ttf in Resources */,
@@ -628,6 +646,7 @@
 				BFE0A02E229414B000B5A0E8 /* TimeLogHistoryCell.xib in Resources */,
 				BF128721226EDBE6000DB226 /* fa-regular-400.ttf in Resources */,
 				BF128722226EDBE6000DB226 /* fa-solid-900.ttf in Resources */,
+				BF5E9AB9229675ED0080B093 /* person_in.svg in Resources */,
 				BF128723226EDBE6000DB226 /* FontAwesome.otf in Resources */,
 				BF128704226DE300000DB226 /* LaunchScreen.storyboard in Resources */,
 				BF0E32CA22781BA2003C0B8B /* InOutCell.xib in Resources */,
@@ -711,6 +730,7 @@
 			files = (
 				BF02518E2271CC6D0005E0A6 /* RadarMarkerView.swift in Sources */,
 				BFE0A0222293CC8900B5A0E8 /* TimeLogDetails.swift in Sources */,
+				BF5E9ABB22967C9D0080B093 /* TimelyColorsUtility.swift in Sources */,
 				BF1286FC226DE2FE000DB226 /* ViewController.swift in Sources */,
 				BF0251692271928D0005E0A6 /* TimelyColors.swift in Sources */,
 				BF128716226ED90E000DB226 /* PlaceholderIcon.swift in Sources */,
