@@ -16,5 +16,6 @@ pod 'FontAwesome.swift'
 pod 'SwiftKeychainWrapper'
 pod 'SwiftDate', '~> 5.0'
 pod "SkeletonView"
+pod 'Persei', '~> 3.0'
 
 end

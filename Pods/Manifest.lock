@@ -10,6 +10,7 @@ PODS:
   - FontAwesome.swift (1.7.0)
   - lottie-ios (3.0.4)
   - ObjectMapper (3.4.2)
+  - Persei (3.1.1)
   - SkeletonView (1.5)
   - SwiftDate (5.1.0)
   - SwiftKeychainWrapper (3.2.0)
@@ -21,6 +22,7 @@ DEPENDENCIES:
   - DateTimePicker
   - FontAwesome.swift
   - lottie-ios
+  - Persei (~> 3.0)
   - SkeletonView
   - SwiftDate (~> 5.0)
   - SwiftKeychainWrapper
@@ -34,6 +36,7 @@ SPEC REPOS:
     - FontAwesome.swift
     - lottie-ios
     - ObjectMapper
+    - Persei
     - SkeletonView
     - SwiftDate
     - SwiftKeychainWrapper
@@ -46,10 +49,11 @@ SPEC CHECKSUMS:
   FontAwesome.swift: 9f377615aa61381796dca143cddfd2a388723ea1
   lottie-ios: 55a2de40418f8de2b155efaba4d4d1a025a5c570
   ObjectMapper: 0d4402610f4e468903ae64629eec4784531e5c51
+  Persei: 6d36b54e40eccd437211548d3f897269c85d3a13
   SkeletonView: 6cbb80f82f8bdee3f9093e2fa03b84819b4bd826
   SwiftDate: 6329e58969a2de31cea7f1ee1143b247693196e7
   SwiftKeychainWrapper: 82c4c02cdc36f9a24f7edfcaab3e336401caa1a1
 
-PODFILE CHECKSUM: ab291cc4d20fe7f9aaa794825b16cd37e8077949
+PODFILE CHECKSUM: c0741f489363babc8baee4a13a1c05ef9058d639
 
 COCOAPODS: 1.5.3

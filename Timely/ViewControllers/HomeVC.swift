@@ -33,6 +33,15 @@ class HomeVC: UIViewController, ChartViewDelegate {
         TimelyColorsUtility.shared.changeTint(forImage: self.imageViewOut, color: TimelyColors.shared.kOutTint)
         self.configureChart()
         self.setDataCount()
+        let loadingView = DGElasticPullToRefreshLoadingViewCircle()
+        loadingView.tintColor = UIColor.white
+        scrollViewHome.dg_addPullToRefreshWithActionHandler({ [weak self] () -> Void in
+            // Add your logic here
+            // Do not forget to call dg_stopLoading() at the end
+            self?.scrollViewHome.dg_stopLoading()
+            }, loadingView: loadingView)
+        scrollViewHome.dg_setPullToRefreshFillColor(TimelyColors.shared.kColorNavTitleColor)
+        scrollViewHome.dg_setPullToRefreshBackgroundColor(UIColor.white)
     }
     
     override func viewDidLayoutSubviews() {

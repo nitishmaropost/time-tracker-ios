@@ -69,6 +69,11 @@
 		BF5E9AB8229675ED0080B093 /* person_out.svg in Resources */ = {isa = PBXBuildFile; fileRef = BF5E9AB6229675ED0080B093 /* person_out.svg */; };
 		BF5E9AB9229675ED0080B093 /* person_in.svg in Resources */ = {isa = PBXBuildFile; fileRef = BF5E9AB7229675ED0080B093 /* person_in.svg */; };
 		BF5E9ABB22967C9D0080B093 /* TimelyColorsUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5E9ABA22967C9D0080B093 /* TimelyColorsUtility.swift */; };
+		BF854307229BBBE600960B4D /* DGElasticPullToRefreshLoadingViewCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF854302229BBBE500960B4D /* DGElasticPullToRefreshLoadingViewCircle.swift */; };
+		BF854308229BBBE600960B4D /* DGElasticPullToRefreshLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF854303229BBBE500960B4D /* DGElasticPullToRefreshLoadingView.swift */; };
+		BF854309229BBBE600960B4D /* DGElasticPullToRefreshExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF854304229BBBE500960B4D /* DGElasticPullToRefreshExtensions.swift */; };
+		BF85430A229BBBE600960B4D /* DGElasticPullToRefreshConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF854305229BBBE500960B4D /* DGElasticPullToRefreshConstants.swift */; };
+		BF85430B229BBBE600960B4D /* DGElasticPullToRefreshView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF854306229BBBE600960B4D /* DGElasticPullToRefreshView.swift */; };
 		BFE0A01E2293C7BB00B5A0E8 /* TimeLogHistoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE0A01D2293C7BB00B5A0E8 /* TimeLogHistoryVC.swift */; };
 		BFE0A0202293CB5300B5A0E8 /* TimeLogService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE0A01F2293CB5300B5A0E8 /* TimeLogService.swift */; };
 		BFE0A0222293CC8900B5A0E8 /* TimeLogDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE0A0212293CC8900B5A0E8 /* TimeLogDetails.swift */; };
@@ -175,6 +180,11 @@
 		BF5E9AB6229675ED0080B093 /* person_out.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = person_out.svg; sourceTree = "<group>"; };
 		BF5E9AB7229675ED0080B093 /* person_in.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = person_in.svg; sourceTree = "<group>"; };
 		BF5E9ABA22967C9D0080B093 /* TimelyColorsUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelyColorsUtility.swift; sourceTree = "<group>"; };
+		BF854302229BBBE500960B4D /* DGElasticPullToRefreshLoadingViewCircle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DGElasticPullToRefreshLoadingViewCircle.swift; sourceTree = "<group>"; };
+		BF854303229BBBE500960B4D /* DGElasticPullToRefreshLoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DGElasticPullToRefreshLoadingView.swift; sourceTree = "<group>"; };
+		BF854304229BBBE500960B4D /* DGElasticPullToRefreshExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DGElasticPullToRefreshExtensions.swift; sourceTree = "<group>"; };
+		BF854305229BBBE500960B4D /* DGElasticPullToRefreshConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DGElasticPullToRefreshConstants.swift; sourceTree = "<group>"; };
+		BF854306229BBBE600960B4D /* DGElasticPullToRefreshView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DGElasticPullToRefreshView.swift; sourceTree = "<group>"; };
 		BFE0A01D2293C7BB00B5A0E8 /* TimeLogHistoryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeLogHistoryVC.swift; sourceTree = "<group>"; };
 		BFE0A01F2293CB5300B5A0E8 /* TimeLogService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeLogService.swift; sourceTree = "<group>"; };
 		BFE0A0212293CC8900B5A0E8 /* TimeLogDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeLogDetails.swift; sourceTree = "<group>"; };
@@ -418,6 +428,7 @@
 		BF12872922717D6A000DB226 /* Custom */ = {
 			isa = PBXGroup;
 			children = (
+				BF854301229BBBDA00960B4D /* DGElasticPullToRefresh */,
 				BFE0A02A2294148100B5A0E8 /* TimeLogHistoryCell */,
 				BF0E32C6227817E7003C0B8B /* InOutCell */,
 				BF0251992271CCE50005E0A6 /* New Group */,
@@ -464,6 +475,18 @@
 				BF5E9AB6229675ED0080B093 /* person_out.svg */,
 			);
 			path = SVG;
+			sourceTree = "<group>";
+		};
+		BF854301229BBBDA00960B4D /* DGElasticPullToRefresh */ = {
+			isa = PBXGroup;
+			children = (
+				BF854305229BBBE500960B4D /* DGElasticPullToRefreshConstants.swift */,
+				BF854304229BBBE500960B4D /* DGElasticPullToRefreshExtensions.swift */,
+				BF854303229BBBE500960B4D /* DGElasticPullToRefreshLoadingView.swift */,
+				BF854302229BBBE500960B4D /* DGElasticPullToRefreshLoadingViewCircle.swift */,
+				BF854306229BBBE600960B4D /* DGElasticPullToRefreshView.swift */,
+			);
+			path = DGElasticPullToRefresh;
 			sourceTree = "<group>";
 		};
 		BFE0A0232293DCD600B5A0E8 /* Utility */ = {
@@ -689,6 +712,7 @@
 				"${BUILT_PRODUCTS_DIR}/DateTimePicker/DateTimePicker.framework",
 				"${BUILT_PRODUCTS_DIR}/FontAwesome.swift/FontAwesome_swift.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/Persei/Persei.framework",
 				"${BUILT_PRODUCTS_DIR}/SkeletonView/SkeletonView.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftDate/SwiftDate.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftKeychainWrapper/SwiftKeychainWrapper.framework",
@@ -702,6 +726,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DateTimePicker.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FontAwesome_swift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Persei.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SkeletonView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftDate.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftKeychainWrapper.framework",
@@ -732,6 +757,8 @@
 				BFE0A0222293CC8900B5A0E8 /* TimeLogDetails.swift in Sources */,
 				BF5E9ABB22967C9D0080B093 /* TimelyColorsUtility.swift in Sources */,
 				BF1286FC226DE2FE000DB226 /* ViewController.swift in Sources */,
+				BF854309229BBBE600960B4D /* DGElasticPullToRefreshExtensions.swift in Sources */,
+				BF854308229BBBE600960B4D /* DGElasticPullToRefreshLoadingView.swift in Sources */,
 				BF0251692271928D0005E0A6 /* TimelyColors.swift in Sources */,
 				BF128716226ED90E000DB226 /* PlaceholderIcon.swift in Sources */,
 				BF12873C22717D90000DB226 /* LGSideMenuController.m in Sources */,
@@ -744,6 +771,7 @@
 				BF02516322718CC10005E0A6 /* HomeVC.swift in Sources */,
 				BF02516D227192AB0005E0A6 /* TimelyFonts.swift in Sources */,
 				BF0251962271CCB20005E0A6 /* DayAxisValueFormatter.swift in Sources */,
+				BF85430A229BBBE600960B4D /* DGElasticPullToRefreshConstants.swift in Sources */,
 				BF1287422271828E000DB226 /* MainVC.swift in Sources */,
 				BFE3EF1D2292A6120029DA89 /* Reachability.swift in Sources */,
 				BF02519B2276FE190005E0A6 /* ColoredImageView.swift in Sources */,
@@ -751,6 +779,7 @@
 				BF02518D2271CC6D0005E0A6 /* XYMarkerView.swift in Sources */,
 				BF12873F22717D90000DB226 /* LGSideMenuSegue.m in Sources */,
 				BF0E32D3227857AF003C0B8B /* TimelyArrayExtensions.swift in Sources */,
+				BF85430B229BBBE600960B4D /* DGElasticPullToRefreshView.swift in Sources */,
 				BF0251972271CCB20005E0A6 /* LargeValueFormatter.swift in Sources */,
 				BF128718226ED913000DB226 /* HRToast+UIView.swift in Sources */,
 				BFE0A02D229414B000B5A0E8 /* TimeLogHistoryCell.swift in Sources */,
@@ -762,6 +791,7 @@
 				BF12873E22717D90000DB226 /* UIViewController+LGSideMenuController.m in Sources */,
 				BFE0A01E2293C7BB00B5A0E8 /* TimeLogHistoryVC.swift in Sources */,
 				BF128712226ED8F2000DB226 /* RoundedButton.swift in Sources */,
+				BF854307229BBBE600960B4D /* DGElasticPullToRefreshLoadingViewCircle.swift in Sources */,
 				BF025170227198040005E0A6 /* TimelyColorsExtension.swift in Sources */,
 				BF39E097228ED02000881626 /* TimelyUrls.swift in Sources */,
 				BF0E32C922781BA2003C0B8B /* InOutCell.swift in Sources */,
