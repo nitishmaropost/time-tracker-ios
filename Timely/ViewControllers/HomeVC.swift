@@ -25,6 +25,7 @@ class HomeVC: UIViewController, ChartViewDelegate {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
+        print("\(Date().millisecondsSince1970)")
         self.title = "Timely"
         self.collectionViewInOut.register(InOutCollectionCell.self, forCellWithReuseIdentifier: "inOutCell")
         self.collectionViewInOut.register(UINib(nibName: "InOutCollectionCell", bundle: Bundle.main), forCellWithReuseIdentifier: "inOutCell")

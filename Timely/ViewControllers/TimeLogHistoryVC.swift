@@ -8,12 +8,14 @@
 
 import UIKit
 import SkeletonView
+import DateTimePicker
 
 class TimeLogHistoryVC: UIViewController {
 
     @IBOutlet weak var tableLogs: UITableView!
     @IBOutlet weak var viewModel: TimeLogHistoryVM!
-    
+    @IBOutlet weak var constraint_top_filter: NSLayoutConstraint!
+    @IBOutlet weak var constraint_height_filter: NSLayoutConstraint!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,8 +27,8 @@ class TimeLogHistoryVC: UIViewController {
         self.tableLogs.register(TimeLogHistoryCell.self, forCellReuseIdentifier: "timeLogHistoryCell")
         self.tableLogs.register(UINib(nibName: "TimeLogHistoryCell", bundle: nil), forCellReuseIdentifier: "timeLogHistoryCell")
         self.tableLogs.estimatedRowHeight = 80
-        
-        
+        self.constraint_top_filter.constant = -40
+        self.constraint_height_filter.constant = 0
         self.viewModel.getTimeLogHistory { (result) in
             switch result {
             case .success(_):
@@ -37,6 +39,37 @@ class TimeLogHistoryVC: UIViewController {
                 print(error)
             }
         }
+    }
+    
+    @IBAction func displayFilter(_ sender: UIBarButtonItem) {
+        
+        UIView.animate(withDuration: 0.5) {
+            if self.constraint_height_filter.constant == 0 {
+                self.constraint_height_filter.constant = 60
+                self.constraint_top_filter.constant = 20
+            } else {
+                self.constraint_height_filter.constant = 0
+                self.constraint_top_filter.constant = -40
+            }
+            
+            self.view.layoutIfNeeded()
+        }
+    }
+    
+    @IBAction func showDatePicker(_ sender: UIButton) {
+        let min = Date()
+        let max = Date().addingTimeInterval(60 * 60 * 24 * 1000)
+        let picker = DateTimePicker.create(minimumDate: min, maximumDate: max)
+        
+        picker.highlightColor = TimelyColors.shared.kColorNavTitleColor
+        picker.doneBackgroundColor = TimelyColors.shared.kColorNavTitleColor
+        picker.isDatePickerOnly = true
+        picker.dateFormat = "dd/MM/YYYY"
+        picker.completionHandler = { date in
+            // do something after tapping done
+        }
+        
+        picker.show()
     }
 }
 
