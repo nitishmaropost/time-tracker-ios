@@ -27,7 +27,7 @@ class TimeLogHistoryVC: UIViewController {
         self.tableLogs.register(TimeLogHistoryCell.self, forCellReuseIdentifier: "timeLogHistoryCell")
         self.tableLogs.register(UINib(nibName: "TimeLogHistoryCell", bundle: nil), forCellReuseIdentifier: "timeLogHistoryCell")
         self.tableLogs.estimatedRowHeight = 80
-        self.constraint_top_filter.constant = -40
+        self.constraint_top_filter.constant = -80
         self.constraint_height_filter.constant = 0
         self.viewModel.getTimeLogHistory { (result) in
             switch result {
@@ -45,11 +45,11 @@ class TimeLogHistoryVC: UIViewController {
         
         UIView.animate(withDuration: 0.5) {
             if self.constraint_height_filter.constant == 0 {
-                self.constraint_height_filter.constant = 60
+                self.constraint_height_filter.constant = 105
                 self.constraint_top_filter.constant = 20
             } else {
                 self.constraint_height_filter.constant = 0
-                self.constraint_top_filter.constant = -40
+                self.constraint_top_filter.constant = -80
             }
             
             self.view.layoutIfNeeded()

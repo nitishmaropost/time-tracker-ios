@@ -383,92 +383,128 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="1pX-pV-6id">
-                                <rect key="frame" x="10" y="188" width="394" height="708"/>
+                                <rect key="frame" x="10" y="233" width="394" height="663"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
                                     <outlet property="dataSource" destination="nm1-sA-GTs" id="6db-7C-fHJ"/>
                                     <outlet property="delegate" destination="nm1-sA-GTs" id="7cK-Qm-TTz"/>
                                 </connections>
                             </tableView>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="k1p-MZ-DOY">
-                                <rect key="frame" x="10" y="108" width="394" height="60"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DhB-da-SQv">
+                                <rect key="frame" x="10" y="108" width="394" height="105"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="arx-Ql-2va" customClass="RoundedButton" customModule="Timely" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="194.5" height="60"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="k1p-MZ-DOY">
+                                        <rect key="frame" x="0.0" y="0.0" width="394" height="60"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="arx-Ql-2va" customClass="RoundedButton" customModule="Timely" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="194.5" height="60"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="60" id="qRx-SG-0ms"/>
+                                                </constraints>
+                                                <state key="normal">
+                                                    <string key="title">Start Date
+27/05/2019</string>
+                                                    <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="8"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                                        <real key="value" value="8"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                                        <real key="value" value="6"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                                        <size key="value" width="3" height="3"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                                        <color key="value" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="showDatePicker:" destination="nm1-sA-GTs" eventType="touchUpInside" id="1DD-yk-HCK"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="ADL-64-F5Y" customClass="RoundedButton" customModule="Timely" customModuleProvider="target">
+                                                <rect key="frame" x="199.5" y="0.0" width="194.5" height="60"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal">
+                                                    <string key="title">End Date
+27/05/2019</string>
+                                                    <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="8"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                                        <real key="value" value="8"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                                        <real key="value" value="6"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                                        <size key="value" width="3" height="3"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                                        <color key="value" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="showDatePicker:" destination="nm1-sA-GTs" eventType="touchUpInside" id="kme-UP-pdB"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="60" id="qRx-SG-0ms"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="60" id="gmE-xp-7RT"/>
+                                            <constraint firstAttribute="height" constant="60" id="znj-jR-ruR"/>
                                         </constraints>
-                                        <state key="normal">
-                                            <string key="title">Start Date
-27/05/2019</string>
-                                            <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="8"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
-                                                <real key="value" value="8"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
-                                                <real key="value" value="6"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
-                                                <size key="value" width="3" height="3"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
-                                                <color key="value" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="showDatePicker:" destination="nm1-sA-GTs" eventType="touchUpInside" id="1DD-yk-HCK"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="ADL-64-F5Y" customClass="RoundedButton" customModule="Timely" customModuleProvider="target">
-                                        <rect key="frame" x="199.5" y="0.0" width="194.5" height="60"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <state key="normal">
-                                            <string key="title">End Date
-27/05/2019</string>
-                                            <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="8"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
-                                                <real key="value" value="8"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
-                                                <real key="value" value="6"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
-                                                <size key="value" width="3" height="3"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
-                                                <color key="value" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="showDatePicker:" destination="nm1-sA-GTs" eventType="touchUpInside" id="kme-UP-pdB"/>
-                                        </connections>
-                                    </button>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Ti0-oT-amp">
+                                        <rect key="frame" x="0.0" y="70" width="394" height="30"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WRx-aM-vvB">
+                                                <rect key="frame" x="0.0" y="0.0" width="194.5" height="30"/>
+                                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Cancel">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="crv-lB-tRh">
+                                                <rect key="frame" x="199.5" y="0.0" width="194.5" height="30"/>
+                                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Apply">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
                                 </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="znj-jR-ruR"/>
+                                    <constraint firstAttribute="trailing" secondItem="k1p-MZ-DOY" secondAttribute="trailing" id="7NQ-8W-sqB"/>
+                                    <constraint firstAttribute="trailing" secondItem="Ti0-oT-amp" secondAttribute="trailing" id="7bQ-QM-Di6"/>
+                                    <constraint firstAttribute="height" constant="105" id="HZs-fl-Dt0"/>
+                                    <constraint firstItem="k1p-MZ-DOY" firstAttribute="leading" secondItem="DhB-da-SQv" secondAttribute="leading" id="h8o-KK-8Qw"/>
+                                    <constraint firstAttribute="bottom" secondItem="Ti0-oT-amp" secondAttribute="bottom" constant="5" id="nGU-xi-OKk"/>
+                                    <constraint firstItem="Ti0-oT-amp" firstAttribute="leading" secondItem="DhB-da-SQv" secondAttribute="leading" id="rhI-Ni-j0i"/>
+                                    <constraint firstItem="k1p-MZ-DOY" firstAttribute="top" secondItem="DhB-da-SQv" secondAttribute="top" id="vEG-yJ-sOC"/>
+                                    <constraint firstItem="Ti0-oT-amp" firstAttribute="top" secondItem="k1p-MZ-DOY" secondAttribute="bottom" constant="10" id="xh6-NQ-DJ6"/>
                                 </constraints>
-                            </stackView>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="DhB-da-SQv" secondAttribute="trailing" constant="10" id="6uU-k9-lpA"/>
                             <constraint firstItem="yvf-KB-15h" firstAttribute="trailing" secondItem="1pX-pV-6id" secondAttribute="trailing" constant="10" id="9f2-w7-Kop"/>
-                            <constraint firstItem="k1p-MZ-DOY" firstAttribute="leading" secondItem="yvf-KB-15h" secondAttribute="leading" constant="10" id="ABX-Qh-D3z"/>
-                            <constraint firstItem="yvf-KB-15h" firstAttribute="trailing" secondItem="k1p-MZ-DOY" secondAttribute="trailing" constant="10" id="JQG-du-Lwe"/>
-                            <constraint firstItem="k1p-MZ-DOY" firstAttribute="top" secondItem="yvf-KB-15h" secondAttribute="top" constant="20" id="Ngh-AJ-jPD"/>
-                            <constraint firstItem="1pX-pV-6id" firstAttribute="top" secondItem="k1p-MZ-DOY" secondAttribute="bottom" constant="20" id="PtG-DV-OPP"/>
+                            <constraint firstItem="1pX-pV-6id" firstAttribute="top" secondItem="DhB-da-SQv" secondAttribute="bottom" constant="20" id="KXP-uF-cRi"/>
+                            <constraint firstItem="DhB-da-SQv" firstAttribute="top" secondItem="yvf-KB-15h" secondAttribute="top" constant="20" id="LIh-FI-X98"/>
                             <constraint firstAttribute="bottom" secondItem="1pX-pV-6id" secondAttribute="bottom" id="Q6j-u3-1ST"/>
                             <constraint firstItem="1pX-pV-6id" firstAttribute="leading" secondItem="yvf-KB-15h" secondAttribute="leading" constant="10" id="dQr-gQ-Roi"/>
+                            <constraint firstItem="DhB-da-SQv" firstAttribute="leading" secondItem="4UH-We-bGT" secondAttribute="leading" constant="10" id="kSG-Ee-DV7"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="yvf-KB-15h"/>
                         <userDefinedRuntimeAttributes>
@@ -486,8 +522,8 @@
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="constraint_height_filter" destination="znj-jR-ruR" id="7lG-e6-Eea"/>
-                        <outlet property="constraint_top_filter" destination="Ngh-AJ-jPD" id="TKq-gg-j4V"/>
+                        <outlet property="constraint_height_filter" destination="HZs-fl-Dt0" id="6hq-Ux-ioq"/>
+                        <outlet property="constraint_top_filter" destination="LIh-FI-X98" id="8bC-0I-50x"/>
                         <outlet property="tableLogs" destination="1pX-pV-6id" id="30d-nI-tPC"/>
                         <outlet property="viewModel" destination="ktW-Bb-IHR" id="q3O-HS-eBq"/>
                     </connections>

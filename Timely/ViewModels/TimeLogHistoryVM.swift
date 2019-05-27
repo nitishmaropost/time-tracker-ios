@@ -14,6 +14,8 @@ class TimeLogHistoryVM : NSObject {
     var dictLogDates: [String: Any]?
     var timeLogDetails: TimeLogDetails!
     let dateFormatter = DateFormatter()
+    var startDateString: String!
+    var endDateString: String!
     
     override init() {
         self.dictLogDates = [String: Any]()
@@ -41,7 +43,6 @@ class TimeLogHistoryVM : NSObject {
     }
     
     func getTimeString(dateString: String) -> String {
-        //let dateStringWithoutMilisec = dateString.components(separatedBy: ".")[0]
         dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss"
         let date = dateFormatter.date(from: dateString)
         dateFormatter.dateFormat = "hh:mm a"
