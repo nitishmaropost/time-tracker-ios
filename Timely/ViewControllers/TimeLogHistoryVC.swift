@@ -25,6 +25,8 @@ class TimeLogHistoryVC: UIViewController {
         self.tableLogs.register(TimeLogHistoryCell.self, forCellReuseIdentifier: "timeLogHistoryCell")
         self.tableLogs.register(UINib(nibName: "TimeLogHistoryCell", bundle: nil), forCellReuseIdentifier: "timeLogHistoryCell")
         self.tableLogs.estimatedRowHeight = 80
+        
+        
         self.viewModel.getTimeLogHistory { (result) in
             switch result {
             case .success(_):

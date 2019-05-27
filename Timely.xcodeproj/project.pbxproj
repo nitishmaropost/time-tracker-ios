@@ -69,6 +69,15 @@
 		BF5E9AB8229675ED0080B093 /* person_out.svg in Resources */ = {isa = PBXBuildFile; fileRef = BF5E9AB6229675ED0080B093 /* person_out.svg */; };
 		BF5E9AB9229675ED0080B093 /* person_in.svg in Resources */ = {isa = PBXBuildFile; fileRef = BF5E9AB7229675ED0080B093 /* person_in.svg */; };
 		BF5E9ABB22967C9D0080B093 /* TimelyColorsUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5E9ABA22967C9D0080B093 /* TimelyColorsUtility.swift */; };
+		BF787A9A229BDD8700705819 /* NavigationDropdownMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF787A99229BDD8700705819 /* NavigationDropdownMenu.swift */; };
+		BF787AA1229BE23C00705819 /* StickyHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF787A9F229BE23B00705819 /* StickyHeaderView.swift */; };
+		BF787AA2229BE23C00705819 /* HeaderShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF787AA0229BE23C00705819 /* HeaderShadowView.swift */; };
+		BF787AA5229BE24400705819 /* UIEdgeInsets+Equatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF787AA3229BE24300705819 /* UIEdgeInsets+Equatable.swift */; };
+		BF787AA6229BE24400705819 /* UIScrollView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF787AA4229BE24400705819 /* UIScrollView+Extension.swift */; };
+		BF787AAB229BE24C00705819 /* MenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF787AA7229BE24C00705819 /* MenuCell.swift */; };
+		BF787AAC229BE24C00705819 /* MenuViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF787AA8229BE24C00705819 /* MenuViewDelegate.swift */; };
+		BF787AAD229BE24C00705819 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF787AA9229BE24C00705819 /* MenuView.swift */; };
+		BF787AAE229BE24C00705819 /* MenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF787AAA229BE24C00705819 /* MenuItem.swift */; };
 		BF854307229BBBE600960B4D /* DGElasticPullToRefreshLoadingViewCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF854302229BBBE500960B4D /* DGElasticPullToRefreshLoadingViewCircle.swift */; };
 		BF854308229BBBE600960B4D /* DGElasticPullToRefreshLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF854303229BBBE500960B4D /* DGElasticPullToRefreshLoadingView.swift */; };
 		BF854309229BBBE600960B4D /* DGElasticPullToRefreshExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF854304229BBBE500960B4D /* DGElasticPullToRefreshExtensions.swift */; };
@@ -180,6 +189,15 @@
 		BF5E9AB6229675ED0080B093 /* person_out.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = person_out.svg; sourceTree = "<group>"; };
 		BF5E9AB7229675ED0080B093 /* person_in.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = person_in.svg; sourceTree = "<group>"; };
 		BF5E9ABA22967C9D0080B093 /* TimelyColorsUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelyColorsUtility.swift; sourceTree = "<group>"; };
+		BF787A99229BDD8700705819 /* NavigationDropdownMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationDropdownMenu.swift; sourceTree = "<group>"; };
+		BF787A9F229BE23B00705819 /* StickyHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StickyHeaderView.swift; sourceTree = "<group>"; };
+		BF787AA0229BE23C00705819 /* HeaderShadowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderShadowView.swift; sourceTree = "<group>"; };
+		BF787AA3229BE24300705819 /* UIEdgeInsets+Equatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIEdgeInsets+Equatable.swift"; sourceTree = "<group>"; };
+		BF787AA4229BE24400705819 /* UIScrollView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIScrollView+Extension.swift"; sourceTree = "<group>"; };
+		BF787AA7229BE24C00705819 /* MenuCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuCell.swift; sourceTree = "<group>"; };
+		BF787AA8229BE24C00705819 /* MenuViewDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewDelegate.swift; sourceTree = "<group>"; };
+		BF787AA9229BE24C00705819 /* MenuView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
+		BF787AAA229BE24C00705819 /* MenuItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuItem.swift; sourceTree = "<group>"; };
 		BF854302229BBBE500960B4D /* DGElasticPullToRefreshLoadingViewCircle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DGElasticPullToRefreshLoadingViewCircle.swift; sourceTree = "<group>"; };
 		BF854303229BBBE500960B4D /* DGElasticPullToRefreshLoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DGElasticPullToRefreshLoadingView.swift; sourceTree = "<group>"; };
 		BF854304229BBBE500960B4D /* DGElasticPullToRefreshExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DGElasticPullToRefreshExtensions.swift; sourceTree = "<group>"; };
@@ -428,6 +446,8 @@
 		BF12872922717D6A000DB226 /* Custom */ = {
 			isa = PBXGroup;
 			children = (
+				BF787A9B229BE21600705819 /* Persei */,
+				BF787A98229BDD4200705819 /* NavigationDropdownMenu */,
 				BF854301229BBBDA00960B4D /* DGElasticPullToRefresh */,
 				BFE0A02A2294148100B5A0E8 /* TimeLogHistoryCell */,
 				BF0E32C6227817E7003C0B8B /* InOutCell */,
@@ -475,6 +495,53 @@
 				BF5E9AB6229675ED0080B093 /* person_out.svg */,
 			);
 			path = SVG;
+			sourceTree = "<group>";
+		};
+		BF787A98229BDD4200705819 /* NavigationDropdownMenu */ = {
+			isa = PBXGroup;
+			children = (
+				BF787A99229BDD8700705819 /* NavigationDropdownMenu.swift */,
+			);
+			path = NavigationDropdownMenu;
+			sourceTree = "<group>";
+		};
+		BF787A9B229BE21600705819 /* Persei */ = {
+			isa = PBXGroup;
+			children = (
+				BF787A9E229BE23200705819 /* Menu */,
+				BF787A9D229BE22900705819 /* Extension */,
+				BF787A9C229BE22400705819 /* Core */,
+			);
+			path = Persei;
+			sourceTree = "<group>";
+		};
+		BF787A9C229BE22400705819 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				BF787AA0229BE23C00705819 /* HeaderShadowView.swift */,
+				BF787A9F229BE23B00705819 /* StickyHeaderView.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		BF787A9D229BE22900705819 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				BF787AA3229BE24300705819 /* UIEdgeInsets+Equatable.swift */,
+				BF787AA4229BE24400705819 /* UIScrollView+Extension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		BF787A9E229BE23200705819 /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				BF787AA7229BE24C00705819 /* MenuCell.swift */,
+				BF787AAA229BE24C00705819 /* MenuItem.swift */,
+				BF787AA9229BE24C00705819 /* MenuView.swift */,
+				BF787AA8229BE24C00705819 /* MenuViewDelegate.swift */,
+			);
+			path = Menu;
 			sourceTree = "<group>";
 		};
 		BF854301229BBBDA00960B4D /* DGElasticPullToRefresh */ = {
@@ -716,7 +783,9 @@
 				"${BUILT_PRODUCTS_DIR}/SkeletonView/SkeletonView.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftDate/SwiftDate.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftKeychainWrapper/SwiftKeychainWrapper.framework",
+				"${BUILT_PRODUCTS_DIR}/fluid-slider/fluid_slider.framework",
 				"${BUILT_PRODUCTS_DIR}/lottie-ios/Lottie.framework",
+				"${BUILT_PRODUCTS_DIR}/pop/pop.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
@@ -730,7 +799,9 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SkeletonView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftDate.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftKeychainWrapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/fluid_slider.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Lottie.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/pop.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -755,9 +826,12 @@
 			files = (
 				BF02518E2271CC6D0005E0A6 /* RadarMarkerView.swift in Sources */,
 				BFE0A0222293CC8900B5A0E8 /* TimeLogDetails.swift in Sources */,
+				BF787AAB229BE24C00705819 /* MenuCell.swift in Sources */,
 				BF5E9ABB22967C9D0080B093 /* TimelyColorsUtility.swift in Sources */,
+				BF787AA5229BE24400705819 /* UIEdgeInsets+Equatable.swift in Sources */,
 				BF1286FC226DE2FE000DB226 /* ViewController.swift in Sources */,
 				BF854309229BBBE600960B4D /* DGElasticPullToRefreshExtensions.swift in Sources */,
+				BF787AAC229BE24C00705819 /* MenuViewDelegate.swift in Sources */,
 				BF854308229BBBE600960B4D /* DGElasticPullToRefreshLoadingView.swift in Sources */,
 				BF0251692271928D0005E0A6 /* TimelyColors.swift in Sources */,
 				BF128716226ED90E000DB226 /* PlaceholderIcon.swift in Sources */,
@@ -769,25 +843,30 @@
 				BFE0A0202293CB5300B5A0E8 /* TimeLogService.swift in Sources */,
 				BF128728226EE8B5000DB226 /* AuthenticationVC.swift in Sources */,
 				BF02516322718CC10005E0A6 /* HomeVC.swift in Sources */,
+				BF787AAE229BE24C00705819 /* MenuItem.swift in Sources */,
 				BF02516D227192AB0005E0A6 /* TimelyFonts.swift in Sources */,
 				BF0251962271CCB20005E0A6 /* DayAxisValueFormatter.swift in Sources */,
 				BF85430A229BBBE600960B4D /* DGElasticPullToRefreshConstants.swift in Sources */,
 				BF1287422271828E000DB226 /* MainVC.swift in Sources */,
 				BFE3EF1D2292A6120029DA89 /* Reachability.swift in Sources */,
 				BF02519B2276FE190005E0A6 /* ColoredImageView.swift in Sources */,
+				BF787AAD229BE24C00705819 /* MenuView.swift in Sources */,
 				BF128725226EDFCF000DB226 /* RoundedView.swift in Sources */,
 				BF02518D2271CC6D0005E0A6 /* XYMarkerView.swift in Sources */,
+				BF787A9A229BDD8700705819 /* NavigationDropdownMenu.swift in Sources */,
 				BF12873F22717D90000DB226 /* LGSideMenuSegue.m in Sources */,
 				BF0E32D3227857AF003C0B8B /* TimelyArrayExtensions.swift in Sources */,
 				BF85430B229BBBE600960B4D /* DGElasticPullToRefreshView.swift in Sources */,
 				BF0251972271CCB20005E0A6 /* LargeValueFormatter.swift in Sources */,
 				BF128718226ED913000DB226 /* HRToast+UIView.swift in Sources */,
+				BF787AA1229BE23C00705819 /* StickyHeaderView.swift in Sources */,
 				BFE0A02D229414B000B5A0E8 /* TimeLogHistoryCell.swift in Sources */,
 				BFE3EF2B2292BCD10029DA89 /* UIView+Gradient.swift in Sources */,
 				BF12873B22717D90000DB226 /* LGSideMenuBorderView.m in Sources */,
 				BF12873A22717D90000DB226 /* LGSideMenuView.m in Sources */,
 				BF02518F2271CC6D0005E0A6 /* BalloonMarker.swift in Sources */,
 				BF0E32CD227823F8003C0B8B /* InOutCollectionCell.swift in Sources */,
+				BF787AA6229BE24400705819 /* UIScrollView+Extension.swift in Sources */,
 				BF12873E22717D90000DB226 /* UIViewController+LGSideMenuController.m in Sources */,
 				BFE0A01E2293C7BB00B5A0E8 /* TimeLogHistoryVC.swift in Sources */,
 				BF128712226ED8F2000DB226 /* RoundedButton.swift in Sources */,
@@ -798,6 +877,7 @@
 				BF02516722718DA90005E0A6 /* SideMenuVC.swift in Sources */,
 				BF1286FA226DE2FE000DB226 /* AppDelegate.swift in Sources */,
 				BF0251942271CCB20005E0A6 /* DateValueFormatter.swift in Sources */,
+				BF787AA2229BE23C00705819 /* HeaderShadowView.swift in Sources */,
 				BFE3EF1F2292AFA40029DA89 /* SplashVC.swift in Sources */,
 				BF39E093228EBDDE00881626 /* LoginService.swift in Sources */,
 				BF12874022717D90000DB226 /* LGSideMenuHelper.m in Sources */,

@@ -129,8 +129,8 @@ class HomeVC: UIViewController, ChartViewDelegate {
         let max = Date().addingTimeInterval(60 * 60 * 24 * 1000)
         let picker = DateTimePicker.create(minimumDate: min, maximumDate: max)
         
-        picker.highlightColor = TimelyColors.shared.kColorOrangeTheme
-        picker.doneBackgroundColor = TimelyColors.shared.kColorOrangeTheme
+        picker.highlightColor = TimelyColors.shared.kColorNavTitleColor
+        picker.doneBackgroundColor = TimelyColors.shared.kColorNavTitleColor
         picker.isDatePickerOnly = true
         picker.dateFormat = "dd/MM/YYYY"
         picker.completionHandler = { date in

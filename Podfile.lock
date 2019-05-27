@@ -7,10 +7,13 @@ PODS:
     - Charts/Core (= 3.3.0)
   - Charts/Core (3.3.0)
   - DateTimePicker (2.1.3)
+  - fluid-slider (1.1.0):
+    - pop
   - FontAwesome.swift (1.7.0)
   - lottie-ios (3.0.4)
   - ObjectMapper (3.4.2)
   - Persei (3.1.1)
+  - pop (1.0.12)
   - SkeletonView (1.5)
   - SwiftDate (5.1.0)
   - SwiftKeychainWrapper (3.2.0)
@@ -20,6 +23,7 @@ DEPENDENCIES:
   - AlamofireObjectMapper (~> 6.0.0)
   - Charts
   - DateTimePicker
+  - fluid-slider
   - FontAwesome.swift
   - lottie-ios
   - Persei (~> 3.0)
@@ -33,10 +37,12 @@ SPEC REPOS:
     - AlamofireObjectMapper
     - Charts
     - DateTimePicker
+    - fluid-slider
     - FontAwesome.swift
     - lottie-ios
     - ObjectMapper
     - Persei
+    - pop
     - SkeletonView
     - SwiftDate
     - SwiftKeychainWrapper
@@ -46,14 +52,16 @@ SPEC CHECKSUMS:
   AlamofireObjectMapper: 8cf0e01a1b36b485877033f8f6aa733977488da3
   Charts: ec1f57f9340054155691e84d4544a1d239d382c5
   DateTimePicker: 1d34181c5e9cd6a32ca87174fdf66c9710e483ef
+  fluid-slider: 68037ac7247f16a89f3e24ff5d0167c8eea6f50b
   FontAwesome.swift: 9f377615aa61381796dca143cddfd2a388723ea1
   lottie-ios: 55a2de40418f8de2b155efaba4d4d1a025a5c570
   ObjectMapper: 0d4402610f4e468903ae64629eec4784531e5c51
   Persei: 6d36b54e40eccd437211548d3f897269c85d3a13
+  pop: d582054913807fd11fd50bfe6a539d91c7e1a55a
   SkeletonView: 6cbb80f82f8bdee3f9093e2fa03b84819b4bd826
   SwiftDate: 6329e58969a2de31cea7f1ee1143b247693196e7
   SwiftKeychainWrapper: 82c4c02cdc36f9a24f7edfcaab3e336401caa1a1
 
-PODFILE CHECKSUM: c0741f489363babc8baee4a13a1c05ef9058d639
+PODFILE CHECKSUM: 0ab7e743ae0dfc1bc8b2887ff8ddfae1f9fa8559
 
 COCOAPODS: 1.5.3
