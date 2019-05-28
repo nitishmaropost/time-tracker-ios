@@ -9,10 +9,11 @@
 import UIKit
 import SkeletonView
 import DateTimePicker
+import HGPlaceholders
 
 class TimeLogHistoryVC: UIViewController {
 
-    @IBOutlet weak var tableLogs: UITableView!
+    @IBOutlet weak var tableLogs: TableView!
     @IBOutlet weak var viewModel: TimeLogHistoryVM!
     @IBOutlet weak var constraint_top_filter: NSLayoutConstraint!
     @IBOutlet weak var constraint_height_filter: NSLayoutConstraint!
@@ -29,20 +30,12 @@ class TimeLogHistoryVC: UIViewController {
         self.title = "Time Log"
         self.tableLogs.register(TimeLogHistoryCell.self, forCellReuseIdentifier: "timeLogHistoryCell")
         self.tableLogs.register(UINib(nibName: "TimeLogHistoryCell", bundle: nil), forCellReuseIdentifier: "timeLogHistoryCell")
+        self.tableLogs.placeholderDelegate = self
         self.tableLogs.estimatedRowHeight = 80
         self.constraint_top_filter.constant = -80
         self.constraint_height_filter.constant = 0
         self.setDateButtonTexts()
-        self.viewModel.getTimeLogHistory(requestDict: ["start_date": self.viewModel.startDateString, "end_date": self.viewModel.endDateString]) { (result) in
-            switch result {
-            case .success(_):
-                DispatchQueue.main.async {
-                    self.tableLogs.reloadData()
-                }
-            case .error(let error):
-                print(error)
-            }
-        }
+        self.callTimeDetailsAPI()
     }
     
     @IBAction func displayFilter(_ sender: UIBarButtonItem) {
@@ -65,15 +58,15 @@ class TimeLogHistoryVC: UIViewController {
         self.buttonFilterEndDate.setTitle("End Date\n\(self.viewModel.endDateDisplayString ?? "")", for: .normal)
     }
     
-    @IBAction func applyFilter(_ sender: UIButton) {
-        self.viewModel.startDateString = self.viewModel.startDateMilliSeconds(startDate: self.viewModel.startDate)
-        self.viewModel.endDateString = self.viewModel.endDateMilliSeconds(endDate: self.viewModel.endDate)
-        self.setDateButtonTexts()
+    func callTimeDetailsAPI() {
         self.viewModel.getTimeLogHistory(requestDict: ["start_date": self.viewModel.startDateString, "end_date": self.viewModel.endDateString]) { (result) in
             switch result {
             case .success(_):
                 DispatchQueue.main.async {
                     self.tableLogs.reloadData()
+                    if self.viewModel.timeLogDetails.rows?.count == 0 {
+                        self.tableLogs.showNoResultsPlaceholder()
+                    }
                 }
             case .error(let error):
                 print(error)
@@ -81,19 +74,17 @@ class TimeLogHistoryVC: UIViewController {
         }
     }
     
+    @IBAction func applyFilter(_ sender: UIButton) {
+        self.viewModel.startDateString = self.viewModel.startDateMilliSeconds(startDate: self.viewModel.startDate)
+        self.viewModel.endDateString = self.viewModel.endDateMilliSeconds(endDate: self.viewModel.endDate)
+        self.setDateButtonTexts()
+        self.callTimeDetailsAPI()
+    }
+    
     @IBAction func clearFilter(_ sender: UIButton) {
         self.viewModel.setDefaultFilter()
         self.setDateButtonTexts()
-        self.viewModel.getTimeLogHistory(requestDict: ["start_date": self.viewModel.startDateString, "end_date": self.viewModel.endDateString]) { (result) in
-            switch result {
-            case .success(_):
-                DispatchQueue.main.async {
-                    self.tableLogs.reloadData()
-                }
-            case .error(let error):
-                print(error)
-            }
-        }
+        self.callTimeDetailsAPI()
     }
     
     @IBAction func showDatePicker(_ sender: UIButton) {
@@ -175,4 +166,12 @@ extension TimeLogHistoryVC: SkeletonTableViewDataSource {
     
         return cell!
     }
+}
+
+extension TimeLogHistoryVC: PlaceholderDelegate {
+    func view(_ view: Any, actionButtonTappedFor placeholder: Placeholder) {
+        self.callTimeDetailsAPI()
+    }
+    
+    
 }

@@ -268,7 +268,7 @@
                                                 </connections>
                                             </button>
                                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="LYx-bI-WQt">
-                                                <rect key="frame" x="20" y="284" width="374" height="120"/>
+                                                <rect key="frame" x="10" y="284" width="384" height="120"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="120" id="feC-YY-xTZ"/>
@@ -309,7 +309,7 @@
                                             <constraint firstItem="Y86-AV-gAg" firstAttribute="top" secondItem="LYx-bI-WQt" secondAttribute="bottom" constant="30" id="DBP-dg-WoY"/>
                                             <constraint firstItem="SmS-ZM-trb" firstAttribute="leading" secondItem="ckv-aC-AWD" secondAttribute="leading" constant="20" id="HCk-7u-lDY"/>
                                             <constraint firstAttribute="trailing" secondItem="LYx-bI-WQt" secondAttribute="trailing" constant="20" id="LkO-tL-8hd"/>
-                                            <constraint firstItem="LYx-bI-WQt" firstAttribute="leading" secondItem="ckv-aC-AWD" secondAttribute="leading" constant="20" id="PBc-Xf-g6W"/>
+                                            <constraint firstItem="LYx-bI-WQt" firstAttribute="leading" secondItem="ckv-aC-AWD" secondAttribute="leading" constant="10" id="PBc-Xf-g6W"/>
                                             <constraint firstItem="Y86-AV-gAg" firstAttribute="leading" secondItem="ckv-aC-AWD" secondAttribute="leading" constant="20" id="PL1-8t-bQG"/>
                                             <constraint firstItem="U30-4a-RwJ" firstAttribute="top" secondItem="ckv-aC-AWD" secondAttribute="top" constant="20" id="RDk-SH-kLV"/>
                                             <constraint firstItem="U30-4a-RwJ" firstAttribute="leading" secondItem="ckv-aC-AWD" secondAttribute="leading" constant="20" id="TkE-Km-Myw"/>
@@ -382,7 +382,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="1pX-pV-6id">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="1pX-pV-6id" customClass="TableView" customModule="HGPlaceholders">
                                 <rect key="frame" x="10" y="233" width="394" height="663"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>

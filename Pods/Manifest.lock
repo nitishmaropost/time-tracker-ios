@@ -10,6 +10,7 @@ PODS:
   - fluid-slider (1.1.0):
     - pop
   - FontAwesome.swift (1.7.0)
+  - HGPlaceholders (0.4.0)
   - lottie-ios (3.0.4)
   - ObjectMapper (3.4.2)
   - Persei (3.1.1)
@@ -25,6 +26,7 @@ DEPENDENCIES:
   - DateTimePicker
   - fluid-slider
   - FontAwesome.swift
+  - HGPlaceholders
   - lottie-ios
   - Persei (~> 3.0)
   - SkeletonView
@@ -39,6 +41,7 @@ SPEC REPOS:
     - DateTimePicker
     - fluid-slider
     - FontAwesome.swift
+    - HGPlaceholders
     - lottie-ios
     - ObjectMapper
     - Persei
@@ -54,6 +57,7 @@ SPEC CHECKSUMS:
   DateTimePicker: 1d34181c5e9cd6a32ca87174fdf66c9710e483ef
   fluid-slider: 68037ac7247f16a89f3e24ff5d0167c8eea6f50b
   FontAwesome.swift: 9f377615aa61381796dca143cddfd2a388723ea1
+  HGPlaceholders: fd580aaf6050782bf2ee51eb62ed499ded6615b7
   lottie-ios: 55a2de40418f8de2b155efaba4d4d1a025a5c570
   ObjectMapper: 0d4402610f4e468903ae64629eec4784531e5c51
   Persei: 6d36b54e40eccd437211548d3f897269c85d3a13
@@ -62,6 +66,6 @@ SPEC CHECKSUMS:
   SwiftDate: 6329e58969a2de31cea7f1ee1143b247693196e7
   SwiftKeychainWrapper: 82c4c02cdc36f9a24f7edfcaab3e336401caa1a1
 
-PODFILE CHECKSUM: 0ab7e743ae0dfc1bc8b2887ff8ddfae1f9fa8559
+PODFILE CHECKSUM: ceaa7c39db7457d154e0ec230fd20387be217fec
 
 COCOAPODS: 1.5.3
