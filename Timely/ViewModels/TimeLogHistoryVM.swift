@@ -18,6 +18,8 @@ class TimeLogHistoryVM : NSObject {
     var endDateString: String!
     var startDate: Date!
     var endDate: Date!
+    var startDateDisplayString: String!
+    var endDateDisplayString: String!
     
     override init() {
         super.init()
@@ -59,6 +61,13 @@ class TimeLogHistoryVM : NSObject {
         self.endDate = Date().endOfWeek
         self.startDateString = self.startDateMilliSeconds(startDate: self.startDate)
         self.endDateString = self.endDateMilliSeconds(endDate: self.endDate)
+        self.setDisplayStrings()
+    }
+    
+    func setDisplayStrings() {
+        self.dateFormatter.dateFormat = "dd-MM-yyyy"
+        self.startDateDisplayString = self.dateFormatter.string(from: self.startDate)
+        self.endDateDisplayString = self.dateFormatter.string(from: self.endDate)
     }
     
     func getTimeString(dateString: String) -> String {

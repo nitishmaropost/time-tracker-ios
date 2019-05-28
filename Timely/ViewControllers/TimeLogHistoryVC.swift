@@ -61,8 +61,8 @@ class TimeLogHistoryVC: UIViewController {
     }
     
     func setDateButtonTexts() {
-        self.buttonFilterStartDate.setTitle("Start Date\n\(self.viewModel.startDateString ?? "")", for: .normal)
-        self.buttonFilterEndDate.setTitle("End Date\n\(self.viewModel.endDateString ?? "")", for: .normal)
+        self.buttonFilterStartDate.setTitle("Start Date\n\(self.viewModel.startDateDisplayString ?? "")", for: .normal)
+        self.buttonFilterEndDate.setTitle("End Date\n\(self.viewModel.endDateDisplayString ?? "")", for: .normal)
     }
     
     @IBAction func applyFilter(_ sender: UIButton) {
@@ -97,22 +97,31 @@ class TimeLogHistoryVC: UIViewController {
     }
     
     @IBAction func showDatePicker(_ sender: UIButton) {
-        let min = Date()
+//        let min = Date()
+        let min = Calendar.current.date(
+            byAdding: .year,
+            value: -1,
+            to: Date())
         let max = Date().addingTimeInterval(60 * 60 * 24 * 1000)
         self.picker = DateTimePicker.create(minimumDate: min, maximumDate: max)
         
         picker.highlightColor = TimelyColors.shared.kColorNavTitleColor
         picker.doneBackgroundColor = TimelyColors.shared.kColorNavTitleColor
-        picker.isDatePickerOnly = true
+       // picker.isDatePickerOnly = true
         picker.dateFormat = "dd/MM/YYYY"
         picker.completionHandler = { date in
             // do something after tapping done
             if sender.tag == 1 {
                 // Start date
                 self.viewModel.startDate = date
+                self.viewModel.setDisplayStrings()
             } else {
                 self.viewModel.endDate = date
+                self.buttonFilterEndDate.setTitle("Start Date\n\(self.picker.selectedDateString)", for: .normal)
+                self.viewModel.setDisplayStrings()
             }
+            
+            self.setDateButtonTexts()
         }
         
         picker.show()

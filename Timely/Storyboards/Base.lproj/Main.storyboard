@@ -472,6 +472,9 @@
                                                 <state key="normal" title="Clear">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="clearFilter:" destination="nm1-sA-GTs" eventType="touchUpInside" id="WoX-Gm-f6k"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="crv-lB-tRh">
                                                 <rect key="frame" x="199.5" y="0.0" width="194.5" height="30"/>
@@ -479,6 +482,9 @@
                                                 <state key="normal" title="Apply">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="applyFilter:" destination="nm1-sA-GTs" eventType="touchUpInside" id="fKM-Dj-jMZ"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
