@@ -396,7 +396,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="k1p-MZ-DOY">
                                         <rect key="frame" x="0.0" y="0.0" width="394" height="60"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="arx-Ql-2va" customClass="RoundedButton" customModule="Timely" customModuleProvider="target">
+                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="arx-Ql-2va" customClass="RoundedButton" customModule="Timely" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="194.5" height="60"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
@@ -428,7 +428,7 @@
                                                     <action selector="showDatePicker:" destination="nm1-sA-GTs" eventType="touchUpInside" id="1DD-yk-HCK"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="ADL-64-F5Y" customClass="RoundedButton" customModule="Timely" customModuleProvider="target">
+                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="ADL-64-F5Y" customClass="RoundedButton" customModule="Timely" customModuleProvider="target">
                                                 <rect key="frame" x="199.5" y="0.0" width="194.5" height="60"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal">
@@ -469,7 +469,7 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WRx-aM-vvB">
                                                 <rect key="frame" x="0.0" y="0.0" width="194.5" height="30"/>
                                                 <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <state key="normal" title="Cancel">
+                                                <state key="normal" title="Clear">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                             </button>
@@ -522,6 +522,8 @@
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="buttonFilterEndDate" destination="ADL-64-F5Y" id="ax8-9M-Ptv"/>
+                        <outlet property="buttonFilterStartDate" destination="arx-Ql-2va" id="lKm-us-KZO"/>
                         <outlet property="constraint_height_filter" destination="HZs-fl-Dt0" id="6hq-Ux-ioq"/>
                         <outlet property="constraint_top_filter" destination="LIh-FI-X98" id="8bC-0I-50x"/>
                         <outlet property="tableLogs" destination="1pX-pV-6id" id="30d-nI-tPC"/>

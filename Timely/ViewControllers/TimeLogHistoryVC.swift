@@ -16,6 +16,9 @@ class TimeLogHistoryVC: UIViewController {
     @IBOutlet weak var viewModel: TimeLogHistoryVM!
     @IBOutlet weak var constraint_top_filter: NSLayoutConstraint!
     @IBOutlet weak var constraint_height_filter: NSLayoutConstraint!
+    @IBOutlet weak var buttonFilterStartDate: UIButton!
+    @IBOutlet weak var buttonFilterEndDate: UIButton!
+    var picker: DateTimePicker!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,7 +32,8 @@ class TimeLogHistoryVC: UIViewController {
         self.tableLogs.estimatedRowHeight = 80
         self.constraint_top_filter.constant = -80
         self.constraint_height_filter.constant = 0
-        self.viewModel.getTimeLogHistory { (result) in
+        self.setDateButtonTexts()
+        self.viewModel.getTimeLogHistory(requestDict: ["start_date": self.viewModel.startDateString, "end_date": self.viewModel.endDateString]) { (result) in
             switch result {
             case .success(_):
                 DispatchQueue.main.async {
@@ -56,10 +60,46 @@ class TimeLogHistoryVC: UIViewController {
         }
     }
     
+    func setDateButtonTexts() {
+        self.buttonFilterStartDate.setTitle("Start Date\n\(self.viewModel.startDateString ?? "")", for: .normal)
+        self.buttonFilterEndDate.setTitle("End Date\n\(self.viewModel.endDateString ?? "")", for: .normal)
+    }
+    
+    @IBAction func applyFilter(_ sender: UIButton) {
+        self.viewModel.startDateString = self.viewModel.startDateMilliSeconds(startDate: self.viewModel.startDate)
+        self.viewModel.endDateString = self.viewModel.endDateMilliSeconds(endDate: self.viewModel.endDate)
+        self.setDateButtonTexts()
+        self.viewModel.getTimeLogHistory(requestDict: ["start_date": self.viewModel.startDateString, "end_date": self.viewModel.endDateString]) { (result) in
+            switch result {
+            case .success(_):
+                DispatchQueue.main.async {
+                    self.tableLogs.reloadData()
+                }
+            case .error(let error):
+                print(error)
+            }
+        }
+    }
+    
+    @IBAction func clearFilter(_ sender: UIButton) {
+        self.viewModel.setDefaultFilter()
+        self.setDateButtonTexts()
+        self.viewModel.getTimeLogHistory(requestDict: ["start_date": self.viewModel.startDateString, "end_date": self.viewModel.endDateString]) { (result) in
+            switch result {
+            case .success(_):
+                DispatchQueue.main.async {
+                    self.tableLogs.reloadData()
+                }
+            case .error(let error):
+                print(error)
+            }
+        }
+    }
+    
     @IBAction func showDatePicker(_ sender: UIButton) {
         let min = Date()
         let max = Date().addingTimeInterval(60 * 60 * 24 * 1000)
-        let picker = DateTimePicker.create(minimumDate: min, maximumDate: max)
+        self.picker = DateTimePicker.create(minimumDate: min, maximumDate: max)
         
         picker.highlightColor = TimelyColors.shared.kColorNavTitleColor
         picker.doneBackgroundColor = TimelyColors.shared.kColorNavTitleColor
@@ -67,6 +107,12 @@ class TimeLogHistoryVC: UIViewController {
         picker.dateFormat = "dd/MM/YYYY"
         picker.completionHandler = { date in
             // do something after tapping done
+            if sender.tag == 1 {
+                // Start date
+                self.viewModel.startDate = date
+            } else {
+                self.viewModel.endDate = date
+            }
         }
         
         picker.show()
@@ -116,7 +162,7 @@ extension TimeLogHistoryVC: SkeletonTableViewDataSource {
         }
         
         cell?.labelTime.text = self.viewModel.getTimeString(dateString: timeLog!.punchTime!)
-        cell?.labelPinType.text = timeLog?.pinType // self.viewModel.returnPinTypeString(pinType: "\(timeLog?.pinType ?? "")")
+        cell?.labelPinType.text = timeLog?.pinType
     
         return cell!
     }

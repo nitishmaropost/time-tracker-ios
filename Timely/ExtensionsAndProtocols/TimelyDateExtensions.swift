@@ -16,4 +16,17 @@ extension Date {
     init(milliseconds:Int) {
         self = Date(timeIntervalSince1970: TimeInterval(milliseconds) / 1000)
     }
+    
+    var startOfWeek: Date? {
+        let gregorian = Calendar(identifier: .gregorian)
+        guard let sunday = gregorian.date(from: gregorian.dateComponents([.yearForWeekOfYear, .weekOfYear], from: self)) else { return nil }
+        return gregorian.date(byAdding: .day, value: 1, to: sunday)
+    }
+    
+    var endOfWeek: Date? {
+        let gregorian = Calendar(identifier: .gregorian)
+        guard let sunday = gregorian.date(from: gregorian.dateComponents([.yearForWeekOfYear, .weekOfYear], from: self)) else { return nil }
+        return gregorian.date(byAdding: .day, value: 7, to: sunday)
+    }
 }
+

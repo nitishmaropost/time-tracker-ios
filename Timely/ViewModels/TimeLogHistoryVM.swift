@@ -16,9 +16,13 @@ class TimeLogHistoryVM : NSObject {
     let dateFormatter = DateFormatter()
     var startDateString: String!
     var endDateString: String!
+    var startDate: Date!
+    var endDate: Date!
     
     override init() {
+        super.init()
         self.dictLogDates = [String: Any]()
+        self.setDefaultFilter()
     }
     
     func convertDateStringToDate(logString: String) -> DateInRegion {
@@ -42,6 +46,21 @@ class TimeLogHistoryVM : NSObject {
         return pintText
     }
     
+    func startDateMilliSeconds(startDate: Date) -> String {
+        return "\(startDate.millisecondsSince1970)"
+    }
+    
+    func endDateMilliSeconds(endDate: Date) -> String {
+        return "\(endDate.millisecondsSince1970)"
+    }
+    
+    func setDefaultFilter() {
+        self.startDate = Date().startOfWeek
+        self.endDate = Date().endOfWeek
+        self.startDateString = self.startDateMilliSeconds(startDate: self.startDate)
+        self.endDateString = self.endDateMilliSeconds(endDate: self.endDate)
+    }
+    
     func getTimeString(dateString: String) -> String {
         dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss"
         let date = dateFormatter.date(from: dateString)
@@ -60,9 +79,9 @@ class TimeLogHistoryVM : NSObject {
         return true
     }
     
-    func getTimeLogHistory(completion: @escaping (TimelyAPIResult) -> ()) {
+    func getTimeLogHistory(requestDict: [String: String]?, completion: @escaping (TimelyAPIResult) -> ()) {
         do {
-            try TimeLogService.shared.getTimeLogHistory { (result) in
+            try TimeLogService.shared.getTimeLogHistory(requestDict: requestDict) { (result) in
                 switch result {
                 case .success(let timeLogHistory):
                     let history = timeLogHistory as? TimeLogDetails
