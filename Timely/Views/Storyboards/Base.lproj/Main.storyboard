@@ -105,7 +105,7 @@
         <!--HomeVC-->
         <scene sceneID="6dY-Pc-X6D">
             <objects>
-                <viewController id="kjS-x3-15c" customClass="HomeVC" customModule="Timely" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="kjS-x3-15c" customClass="HomeVC" customModule="Timely" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ihe-Io-JaP">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -231,7 +231,7 @@
                                                 <constraints>
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="80" id="QEB-j1-ruL"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="20"/>
                                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -304,8 +304,8 @@
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstItem="ljh-NI-In2" firstAttribute="top" secondItem="SmS-ZM-trb" secondAttribute="bottom" constant="30" id="1zO-8h-Ast"/>
                                             <constraint firstItem="ljh-NI-In2" firstAttribute="leading" secondItem="ckv-aC-AWD" secondAttribute="leading" constant="20" id="4Sc-nX-6NC"/>
+                                            <constraint firstItem="ljh-NI-In2" firstAttribute="top" secondItem="SmS-ZM-trb" secondAttribute="bottom" constant="30" id="BhS-wc-WWN"/>
                                             <constraint firstItem="Y86-AV-gAg" firstAttribute="top" secondItem="LYx-bI-WQt" secondAttribute="bottom" constant="30" id="DBP-dg-WoY"/>
                                             <constraint firstItem="SmS-ZM-trb" firstAttribute="leading" secondItem="ckv-aC-AWD" secondAttribute="leading" constant="20" id="HCk-7u-lDY"/>
                                             <constraint firstAttribute="trailing" secondItem="LYx-bI-WQt" secondAttribute="trailing" constant="20" id="LkO-tL-8hd"/>
@@ -327,9 +327,9 @@
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="ckv-aC-AWD" secondAttribute="trailing" id="2VJ-AU-PMQ"/>
-                                    <constraint firstItem="ckv-aC-AWD" firstAttribute="centerY" secondItem="ag5-DZ-c9U" secondAttribute="centerY" id="APZ-a9-P9J"/>
+                                    <constraint firstItem="ckv-aC-AWD" firstAttribute="centerY" secondItem="ag5-DZ-c9U" secondAttribute="centerY" priority="250" id="APZ-a9-P9J"/>
                                     <constraint firstItem="ckv-aC-AWD" firstAttribute="top" secondItem="ag5-DZ-c9U" secondAttribute="top" id="aE5-Nm-Zvd"/>
-                                    <constraint firstAttribute="bottom" secondItem="ckv-aC-AWD" secondAttribute="bottom" id="fSQ-HF-eXv"/>
+                                    <constraint firstAttribute="bottom" secondItem="ckv-aC-AWD" secondAttribute="bottom" priority="250" id="fSQ-HF-eXv"/>
                                     <constraint firstItem="ckv-aC-AWD" firstAttribute="centerX" secondItem="ag5-DZ-c9U" secondAttribute="centerX" id="lN5-HJ-Yri"/>
                                     <constraint firstItem="ckv-aC-AWD" firstAttribute="leading" secondItem="ag5-DZ-c9U" secondAttribute="leading" id="qpM-T6-aKF"/>
                                 </constraints>

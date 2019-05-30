@@ -23,8 +23,6 @@ class HomeVC: UIViewController, ChartViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Do any additional setup after loading the view.
-        print("\(Date().millisecondsSince1970)")
         self.title = "Timely"
         self.collectionViewInOut.register(InOutCollectionCell.self, forCellWithReuseIdentifier: "inOutCell")
         self.collectionViewInOut.register(UINib(nibName: "InOutCollectionCell", bundle: Bundle.main), forCellWithReuseIdentifier: "inOutCell")
@@ -36,18 +34,10 @@ class HomeVC: UIViewController, ChartViewDelegate {
         let loadingView = DGElasticPullToRefreshLoadingViewCircle()
         loadingView.tintColor = UIColor.white
         scrollViewHome.dg_addPullToRefreshWithActionHandler({ [weak self] () -> Void in
-            // Add your logic here
-            // Do not forget to call dg_stopLoading() at the end
             self?.scrollViewHome.dg_stopLoading()
             }, loadingView: loadingView)
         scrollViewHome.dg_setPullToRefreshFillColor(TimelyColors.shared.kColorNavTitleColor)
         scrollViewHome.dg_setPullToRefreshBackgroundColor(UIColor.white)
-    }
-    
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-        //self.scrollViewHome.contentSize = self.containerView.frame.size
-        self.scrollViewHome.contentSize = CGSize(width: self.view.frame.size.width, height: self.view.frame.size.height + 88)
     }
     
     @IBAction func showHistory(_ sender: RoundedButton) {
@@ -157,33 +147,6 @@ extension HomeVC: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "inOutCell", for: indexPath) as! InOutCollectionCell
-        
-//        switch indexPath.row {
-//        case 0:
-//            cell.backgroundColor = TimelyColors.shared.kColorArray[0]
-//        case 1:
-//            cell.backgroundColor = TimelyColors.shared.kColorArray[1]
-//        case 2:
-//            cell.backgroundColor = TimelyColors.shared.kColorArray[2]
-//        case 3:
-//            cell.backgroundColor = TimelyColors.shared.kColorArray[3]
-//        case 4:
-//            cell.backgroundColor = TimelyColors.shared.kColorArray[4]
-//        case 5:
-//            cell.backgroundColor = TimelyColors.shared.kColorArray[2]
-//        case 6:
-//            cell.backgroundColor = TimelyColors.shared.kColorArray[0]
-//        case 7:
-//            cell.backgroundColor = TimelyColors.shared.kColorArray[4]
-//        case 8:
-//            cell.backgroundColor = TimelyColors.shared.kColorArray[1]
-//        case 9:
-//            cell.backgroundColor = TimelyColors.shared.kColorArray[3]
-//        default:
-//            cell.backgroundColor = TimelyColors.shared.kColorArray[0]
-//        }
-        
-        
         return cell
     }
     
