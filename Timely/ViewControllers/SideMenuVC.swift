@@ -75,8 +75,6 @@ class SideMenuVC: UITableViewController {
             cell.textLabel?.text = "Leave"
         case 5:
             cell.textLabel?.text = "About Us"
-        case 6:
-            cell.textLabel?.text = "About Us"
             
         default:
             print("")
@@ -89,6 +87,13 @@ class SideMenuVC: UITableViewController {
         return cell
     }
     
+//    override func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+//        let labelFooter = UILabel(frame: CGRect(x: 10, y: 10, width: self.view.frame.size.height, height: 20))
+//        labelFooter.text = "\(Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") ?? "")"
+//        labelFooter.textColor = UIColor.lightGray
+//        return labelFooter
+//    }
+//
 
     /*
     // Override to support conditional editing of the table view.

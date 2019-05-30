@@ -19,16 +19,21 @@ class HomeVC: UIViewController, ChartViewDelegate {
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var imageViewIn: UIImageView!
     @IBOutlet weak var imageViewOut: UIImageView!
+    @IBOutlet weak var viewTodayHours: RoundedView!
+    @IBOutlet weak var viewWeekHours: RoundedView!
+    @IBOutlet weak var viewMonthHours: RoundedView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.title = "Timely"
-        self.collectionViewInOut.register(InOutCollectionCell.self, forCellWithReuseIdentifier: "inOutCell")
-        self.collectionViewInOut.register(UINib(nibName: "InOutCollectionCell", bundle: Bundle.main), forCellWithReuseIdentifier: "inOutCell")
-        self.collectionViewInOut.contentInset = UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 10)
-        TimelyColorsUtility.shared.changeTint(forImage: self.imageViewIn, color: TimelyColors.shared.kInTint)
-        TimelyColorsUtility.shared.changeTint(forImage: self.imageViewOut, color: TimelyColors.shared.kOutTint)
+//        TimelyColorsUtility.shared.changeTint(forImage: self.imageViewIn, color: TimelyColors.shared.kInTint)
+//        TimelyColorsUtility.shared.changeTint(forImage: self.imageViewOut, color: TimelyColors.shared.kOutTint)
+        
+        TimelyColorsUtility.shared.changeTint(forImage: self.imageViewIn, color: UIColor.white)
+        TimelyColorsUtility.shared.changeTint(forImage: self.imageViewOut, color: UIColor.white)
+        
+        
         self.configureChart()
         self.setDataCount()
         let loadingView = DGElasticPullToRefreshLoadingViewCircle()
@@ -131,24 +136,24 @@ class HomeVC: UIViewController, ChartViewDelegate {
     }
 }
 
-extension HomeVC: UICollectionViewDelegate {
-    
-}
-
-extension HomeVC: UICollectionViewDataSource {
-    
-    func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 1
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "inOutCell", for: indexPath) as! InOutCollectionCell
-        return cell
-    }
-    
-    
-}
+//extension HomeVC: UICollectionViewDelegate {
+//
+//}
+//
+//extension HomeVC: UICollectionViewDataSource {
+//
+//    func numberOfSections(in collectionView: UICollectionView) -> Int {
+//        return 1
+//    }
+//
+//    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+//        return 10
+//    }
+//
+//    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+//        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "inOutCell", for: indexPath) as! InOutCollectionCell
+//        return cell
+//    }
+//
+//
+//}
