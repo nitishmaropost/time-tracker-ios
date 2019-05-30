@@ -8,18 +8,19 @@
 
 import UIKit
 import SkeletonView
-import DateTimePicker
 import HGPlaceholders
+import FSCalendar
 
 class TimeLogHistoryVC: UIViewController {
-
+    
     @IBOutlet weak var tableLogs: TableView!
     @IBOutlet weak var viewModel: TimeLogHistoryVM!
     @IBOutlet weak var constraint_top_filter: NSLayoutConstraint!
     @IBOutlet weak var constraint_height_filter: NSLayoutConstraint!
     @IBOutlet weak var buttonFilterStartDate: UIButton!
     @IBOutlet weak var buttonFilterEndDate: UIButton!
-    var picker: DateTimePicker!
+    var viewBlackOverlay: UIView!
+    var filterView: FilterView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,28 +35,53 @@ class TimeLogHistoryVC: UIViewController {
         self.tableLogs.estimatedRowHeight = 80
         self.constraint_top_filter.constant = -80
         self.constraint_height_filter.constant = 0
+        self.addFilterView()
         self.setDateButtonTexts()
         self.callTimeDetailsAPI()
+        
+    }
+    
+    func addFilterView() {
+        self.viewBlackOverlay = UIView(frame: self.view.frame)
+        self.viewBlackOverlay.backgroundColor = UIColor.black
+        self.viewBlackOverlay.alpha = 0.6
+        self.view.addSubview(self.viewBlackOverlay)
+        let gestureDismissFilter = UITapGestureRecognizer(target: self, action: #selector(self.showFilter))
+        self.viewBlackOverlay.addGestureRecognizer(gestureDismissFilter)
+        self.viewBlackOverlay.isHidden = true
+        
+        self.filterView = (FilterView.instanceFromNib() as! FilterView)
+        self.filterView.center = CGPoint(x: self.view.center.x, y: self.view.frame.size.height + self.filterView.frame.size.height/2)
+        self.filterView.buttonStartDate.backgroundColor = TimelyColors.shared.kColorFilterButtonSelected
+        self.view.addSubview(self.filterView)
+        self.filterView.delegate = self
+        self.filterView.calendarFilter.delegate = self
+        self.filterView.buttonStartDate?.titleLabel!.textAlignment = .center
+        self.filterView.buttonEndDate?.titleLabel!.textAlignment = .center
+        self.filterView.calendarFilter.select(self.viewModel.startDate, scrollToDate: true)
     }
     
     @IBAction func displayFilter(_ sender: UIBarButtonItem) {
-        
-        UIView.animate(withDuration: 0.5) {
-            if self.constraint_height_filter.constant == 0 {
-                self.constraint_height_filter.constant = 105
-                self.constraint_top_filter.constant = 20
-            } else {
-                self.constraint_height_filter.constant = 0
-                self.constraint_top_filter.constant = -80
+        self.showFilter()
+    }
+    
+    @objc func showFilter() {
+        if self.viewBlackOverlay.isHidden {
+            self.viewBlackOverlay.isHidden = false
+            UIView.animate(withDuration: 0.6) {
+                self.filterView.center = CGPoint(x: self.filterView.center.x, y: self.view.frame.size.height - self.filterView.frame.size.height/2)
             }
-            
-            self.view.layoutIfNeeded()
+        } else {
+            self.viewBlackOverlay.isHidden = true
+            UIView.animate(withDuration: 0.6) {
+                self.filterView.center = CGPoint(x: self.view.center.x, y: self.view.frame.size.height + self.filterView.frame.size.height/2)
+            }
         }
     }
     
     func setDateButtonTexts() {
-        self.buttonFilterStartDate.setTitle("Start Date\n\(self.viewModel.startDateDisplayString ?? "")", for: .normal)
-        self.buttonFilterEndDate.setTitle("End Date\n\(self.viewModel.endDateDisplayString ?? "")", for: .normal)
+        self.filterView.buttonStartDate.setTitle("Start Date\n\(self.viewModel.startDateDisplayString ?? "")", for: .normal)
+        self.filterView.buttonEndDate.setTitle("End Date\n\(self.viewModel.endDateDisplayString ?? "")", for: .normal)
     }
     
     func callTimeDetailsAPI() {
@@ -74,48 +100,12 @@ class TimeLogHistoryVC: UIViewController {
         }
     }
     
-    @IBAction func applyFilter(_ sender: UIButton) {
-        self.viewModel.startDateString = self.viewModel.startDateMilliSeconds(startDate: self.viewModel.startDate)
-        self.viewModel.endDateString = self.viewModel.endDateMilliSeconds(endDate: self.viewModel.endDate)
-        self.setDateButtonTexts()
-        self.callTimeDetailsAPI()
-    }
-    
-    @IBAction func clearFilter(_ sender: UIButton) {
-        self.viewModel.setDefaultFilter()
-        self.setDateButtonTexts()
-        self.callTimeDetailsAPI()
-    }
-    
     @IBAction func showDatePicker(_ sender: UIButton) {
-//        let min = Date()
-        let min = Calendar.current.date(
-            byAdding: .year,
-            value: -1,
-            to: Date())
-        let max = Date().addingTimeInterval(60 * 60 * 24 * 1000)
-        self.picker = DateTimePicker.create(minimumDate: min, maximumDate: max)
-        
-        picker.highlightColor = TimelyColors.shared.kColorNavTitleColor
-        picker.doneBackgroundColor = TimelyColors.shared.kColorNavTitleColor
-       // picker.isDatePickerOnly = true
-        picker.dateFormat = "dd/MM/YYYY"
-        picker.completionHandler = { date in
-            // do something after tapping done
-            if sender.tag == 1 {
-                // Start date
-                self.viewModel.startDate = date
-                self.viewModel.setDisplayStrings()
-            } else {
-                self.viewModel.endDate = date
-                self.buttonFilterEndDate.setTitle("Start Date\n\(self.picker.selectedDateString)", for: .normal)
-                self.viewModel.setDisplayStrings()
-            }
-            
-            self.setDateButtonTexts()
+        if sender.tag == 1 {
+            self.viewModel.selectedDate = .startDate
+        } else {
+            self.viewModel.selectedDate = .endDate
         }
-        
-        picker.show()
     }
 }
 
@@ -125,7 +115,7 @@ extension TimeLogHistoryVC: UITableViewDelegate {
 
 extension TimeLogHistoryVC: SkeletonTableViewDataSource {
     
-  
+    
     func collectionSkeletonView(_ skeletonView: UITableView, cellIdentifierForRowAt indexPath: IndexPath) -> ReusableCellIdentifier {
         return "timeLogHistoryCell"
     }
@@ -163,7 +153,7 @@ extension TimeLogHistoryVC: SkeletonTableViewDataSource {
         
         cell?.labelTime.text = self.viewModel.getTimeString(dateString: timeLog!.punchTime!)
         cell?.labelPinType.text = timeLog?.pinType
-    
+        
         return cell!
     }
 }
@@ -172,6 +162,51 @@ extension TimeLogHistoryVC: PlaceholderDelegate {
     func view(_ view: Any, actionButtonTappedFor placeholder: Placeholder) {
         self.callTimeDetailsAPI()
     }
+}
+
+extension TimeLogHistoryVC: FSCalendarDelegate {
+    func calendar(_ calendar: FSCalendar, didSelect date: Date, at monthPosition: FSCalendarMonthPosition) {
+        if self.viewModel.selectedDate == .startDate {
+            // Start date
+            self.viewModel.startDate = date
+            self.viewModel.setDisplayStrings()
+        } else {
+            self.viewModel.endDate = date
+            self.viewModel.setDisplayStrings()
+        }
+        
+        self.setDateButtonTexts()
+    }
+}
+
+extension TimeLogHistoryVC: FilterViewDelegate {
+    func dateButtonAction(_ sender: RoundedButton) {
+        if sender.tag == 1 {
+            sender.backgroundColor = TimelyColors.shared.kColorFilterButtonSelected
+            self.filterView.buttonEndDate.backgroundColor = TimelyColors.shared.kColorFilterButtonNormal
+            self.viewModel.selectedDate = .startDate
+            self.filterView.calendarFilter.select(self.viewModel.startDate, scrollToDate: true)
+        } else {
+            sender.backgroundColor = TimelyColors.shared.kColorFilterButtonSelected
+            self.filterView.buttonStartDate.backgroundColor = TimelyColors.shared.kColorFilterButtonNormal
+            self.viewModel.selectedDate = .endDate
+            self.filterView.calendarFilter.select(self.viewModel.endDate, scrollToDate: true)
+        }
+    }
     
+    func clearFilter(_ sender: UIButton) {
+        self.viewModel.setDefaultFilter()
+        self.setDateButtonTexts()
+        self.filterView.clearSelectables()
+        self.filterView.calendarFilter.select(self.viewModel.startDate, scrollToDate: true)
+        self.callTimeDetailsAPI()
+    }
     
+    func applyFilter(_ sender: UIButton) {
+        self.viewModel.startDateString = self.viewModel.startDateMilliSeconds(startDate: self.viewModel.startDate)
+        self.viewModel.endDateString = self.viewModel.endDateMilliSeconds(endDate: self.viewModel.endDate)
+        self.setDateButtonTexts()
+        self.showFilter()
+        self.callTimeDetailsAPI()
+    }
 }

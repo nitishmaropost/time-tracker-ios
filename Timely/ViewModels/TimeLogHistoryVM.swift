@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import SwiftDate
 
 class TimeLogHistoryVM : NSObject {
     
@@ -20,16 +19,17 @@ class TimeLogHistoryVM : NSObject {
     var endDate: Date!
     var startDateDisplayString: String!
     var endDateDisplayString: String!
+    enum selectedState {
+        case startDate
+        case endDate
+    }
+    var selectedDate: selectedState!
     
     override init() {
         super.init()
         self.dictLogDates = [String: Any]()
         self.setDefaultFilter()
-    }
-    
-    func convertDateStringToDate(logString: String) -> DateInRegion {
-        let dateString = logString.components(separatedBy: "T")[0]
-        return dateString.toDate()!
+        self.selectedDate = .startDate
     }
     
     func groupDetailsByDate() {

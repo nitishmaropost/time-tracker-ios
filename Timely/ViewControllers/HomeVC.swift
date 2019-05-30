@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import DateTimePicker
 import Charts
 
 class HomeVC: UIViewController, ChartViewDelegate {
@@ -126,19 +125,19 @@ class HomeVC: UIViewController, ChartViewDelegate {
     }
     
     @IBAction func showDatePicker(_ sender: UIBarButtonItem) {
-        let min = Date()
-        let max = Date().addingTimeInterval(60 * 60 * 24 * 1000)
-        let picker = DateTimePicker.create(minimumDate: min, maximumDate: max)
-        
-        picker.highlightColor = TimelyColors.shared.kColorNavTitleColor
-        picker.doneBackgroundColor = TimelyColors.shared.kColorNavTitleColor
-        picker.isDatePickerOnly = true
-        picker.dateFormat = "dd/MM/YYYY"
-        picker.completionHandler = { date in
-            // do something after tapping done
-        }
-        
-        picker.show()
+//        let min = Date()
+//        let max = Date().addingTimeInterval(60 * 60 * 24 * 1000)
+//        let picker = DateTimePicker.create(minimumDate: min, maximumDate: max)
+//
+//        picker.highlightColor = TimelyColors.shared.kColorNavTitleColor
+//        picker.doneBackgroundColor = TimelyColors.shared.kColorNavTitleColor
+//        picker.isDatePickerOnly = true
+//        picker.dateFormat = "dd/MM/YYYY"
+//        picker.completionHandler = { date in
+//            // do something after tapping done
+//        }
+//
+//        picker.show()
     }
 }
 

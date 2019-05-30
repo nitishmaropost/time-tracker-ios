@@ -7,17 +7,14 @@ target 'Timely' do
 
   # Pods for Timely
 
-pod 'DateTimePicker'
 pod 'Charts'
 pod 'Alamofire', '~> 5.0.0-beta.5'
 pod 'AlamofireObjectMapper', '~> 6.0.0'
 pod 'lottie-ios'
 pod 'FontAwesome.swift'
 pod 'SwiftKeychainWrapper'
-pod 'SwiftDate', '~> 5.0'
 pod "SkeletonView"
-pod 'Persei', '~> 3.0'
-pod 'fluid-slider'
 pod 'HGPlaceholders'
+pod 'FSCalendar'
 
 end
