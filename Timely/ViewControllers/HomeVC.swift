@@ -19,7 +19,7 @@ class HomeVC: UIViewController, ChartViewDelegate {
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var imageViewIn: UIImageView!
     @IBOutlet weak var imageViewOut: UIImageView!
-    @IBOutlet weak var viewTodayHours: RoundedView!
+    @IBOutlet weak var viewTodayHours: UIView!
     @IBOutlet weak var viewWeekHours: RoundedView!
     @IBOutlet weak var viewMonthHours: RoundedView!
     
@@ -27,12 +27,8 @@ class HomeVC: UIViewController, ChartViewDelegate {
         super.viewDidLoad()
         
         self.title = "Timely"
-//        TimelyColorsUtility.shared.changeTint(forImage: self.imageViewIn, color: TimelyColors.shared.kInTint)
-//        TimelyColorsUtility.shared.changeTint(forImage: self.imageViewOut, color: TimelyColors.shared.kOutTint)
-        
-        TimelyColorsUtility.shared.changeTint(forImage: self.imageViewIn, color: UIColor.white)
-        TimelyColorsUtility.shared.changeTint(forImage: self.imageViewOut, color: UIColor.white)
-        
+        TimelyColorsUtility.shared.changeTint(forImage: self.imageViewIn, color: TimelyColors.shared.kInTint)
+        TimelyColorsUtility.shared.changeTint(forImage: self.imageViewOut, color: TimelyColors.shared.kOutTint)
         
         self.configureChart()
         self.setDataCount()
@@ -43,6 +39,19 @@ class HomeVC: UIViewController, ChartViewDelegate {
             }, loadingView: loadingView)
         scrollViewHome.dg_setPullToRefreshFillColor(TimelyColors.shared.kColorNavTitleColor)
         scrollViewHome.dg_setPullToRefreshBackgroundColor(UIColor.white)
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        self.viewTodayHours.setNeedsLayout()
+        self.viewTodayHours.layoutIfNeeded()
+        self.viewWeekHours.setNeedsLayout()
+        self.viewWeekHours.layoutIfNeeded()
+        self.viewMonthHours.setNeedsLayout()
+        self.viewMonthHours.layoutIfNeeded()
+        self.viewTodayHours.setGradientColor(topColor: UIColor(hexString: "#DF342E"), bottomColor: UIColor(hexString: "#ee9491"), cornerRadius: 10, shadowRadius: 4, shadowOffset: CGSize(width: 1, height: 1), shadowOpacity: 3, shadowColor: UIColor.lightGray, parentView: self.viewTodayHours)
+        self.viewWeekHours.setGradientColor(topColor: UIColor(hexString: "#428B28"), bottomColor: UIColor(hexString: "#8fd775"), cornerRadius: 10, shadowRadius: 4, shadowOffset: CGSize(width: 1, height: 1), shadowOpacity: 3, shadowColor: UIColor.lightGray, parentView: self.viewWeekHours)
+        self.viewMonthHours.setGradientColor(topColor: UIColor(hexString: "#007AFF"), bottomColor: UIColor(hexString: "#80bdff"), cornerRadius: 10, shadowRadius: 4, shadowOffset: CGSize(width: 1, height: 1), shadowOpacity: 3, shadowColor: UIColor.lightGray, parentView: self.viewMonthHours)
     }
     
     @IBAction func showHistory(_ sender: RoundedButton) {
@@ -62,6 +71,7 @@ class HomeVC: UIViewController, ChartViewDelegate {
         let set11 = BarChartDataSet(entries: [entry1, entry2, entry3, entry4, entry5, entry6, entry7], label: "")
         
         set11.colors = ChartColorTemplates.material()
+        
         set11.drawValuesEnabled = false
         let data = BarChartData(dataSet: set11)
         data.setValueFont(UIFont(name: "HelveticaNeue-Light", size: 10)!)
