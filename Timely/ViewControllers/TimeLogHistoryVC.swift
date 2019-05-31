@@ -123,7 +123,7 @@ extension TimeLogHistoryVC: SkeletonTableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         guard let count = self.viewModel.timeLogDetails?.rows!.count else {
-            return 0
+            return 8
         }
         
         return count
@@ -132,27 +132,34 @@ extension TimeLogHistoryVC: SkeletonTableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "timeLogHistoryCell") as? TimeLogHistoryCell
         cell!.selectionStyle = .none
-        cell?.hideSkeleton()
-        cell?.contentView.backgroundColor = UIColor(hexString: "#E8E8E8")
-        cell?.labelTime.backgroundColor = UIColor(hexString: "#E8E8E8")
-        cell?.labelPinType.backgroundColor = UIColor(hexString: "#E8E8E8")
-        let timeLog = self.viewModel.timeLogDetails?.rows![indexPath.row]
-        let previousRow: TimeLog!
-        if indexPath.row > 0 {
-            previousRow = self.viewModel.timeLogDetails?.rows![indexPath.row - 1]
-            let datesSame = self.viewModel.dateStringDifferent(currentRowDateString: timeLog!.punchTime!, previousRowDateString: previousRow.punchTime!)
-            if datesSame == false{
-                cell?.constrint_height_header.constant = 0
+        if self.viewModel.timeLogDetails != nil && self.viewModel.timeLogDetails.rows!.count > 0 {
+            cell?.hideSkeleton()
+            cell?.contentView.backgroundColor = UIColor(hexString: "#E8E8E8")
+            cell?.labelTime.backgroundColor = UIColor(hexString: "#E8E8E8")
+            cell?.labelPinType.backgroundColor = UIColor(hexString: "#E8E8E8")
+            let timeLog = self.viewModel.timeLogDetails?.rows![indexPath.row]
+            let previousRow: TimeLog!
+            if indexPath.row > 0 {
+                previousRow = self.viewModel.timeLogDetails?.rows![indexPath.row - 1]
+                let datesSame = self.viewModel.dateStringDifferent(currentRowDateString: timeLog!.punchTime!, previousRowDateString: previousRow.punchTime!)
+                if datesSame == false{
+                    cell?.constrint_height_header.constant = 0
+                } else {
+                    cell?.labelHeader.text = "  \(timeLog?.punchTime?.components(separatedBy: "T")[0] ?? "")"
+                }
             } else {
                 cell?.labelHeader.text = "  \(timeLog?.punchTime?.components(separatedBy: "T")[0] ?? "")"
+                cell?.constrint_height_header.constant = 50
             }
+
+            cell?.labelTime.text = self.viewModel.getTimeString(dateString: timeLog!.punchTime!)
+            cell?.labelPinType.text = timeLog?.pinType
         } else {
-            cell?.labelHeader.text = "  \(timeLog?.punchTime?.components(separatedBy: "T")[0] ?? "")"
-            cell?.constrint_height_header.constant = 50
+            cell?.labelTime.showAnimatedGradientSkeleton()
+            cell?.labelHeader.showAnimatedGradientSkeleton()
+            cell?.labelPinType.showAnimatedGradientSkeleton()
         }
         
-        cell?.labelTime.text = self.viewModel.getTimeString(dateString: timeLog!.punchTime!)
-        cell?.labelPinType.text = timeLog?.pinType
         
         return cell!
     }
