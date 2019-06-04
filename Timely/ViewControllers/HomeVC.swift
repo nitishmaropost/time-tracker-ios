@@ -23,6 +23,14 @@ class HomeVC: UIViewController, ChartViewDelegate {
     @IBOutlet weak var viewWeekHours: RoundedView!
     @IBOutlet weak var viewMonthHours: RoundedView!
     
+    enum Navigations {
+     case today
+    case week
+    case month
+    }
+    
+    var navType: Navigations!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -39,6 +47,50 @@ class HomeVC: UIViewController, ChartViewDelegate {
             }, loadingView: loadingView)
         scrollViewHome.dg_setPullToRefreshFillColor(TimelyColors.shared.kColorNavTitleColor)
         scrollViewHome.dg_setPullToRefreshBackgroundColor(UIColor.white)
+        self.addViewGestures()
+    }
+    
+    func addViewGestures() {
+        var tap = UITapGestureRecognizer(target: self, action: #selector(self.checkLogDetails(_:)))
+        self.viewTodayHours.addGestureRecognizer(tap)
+        tap = UITapGestureRecognizer(target: self, action: #selector(self.checkLogDetails(_:)))
+        self.viewWeekHours.addGestureRecognizer(tap)
+        tap = UITapGestureRecognizer(target: self, action: #selector(self.checkLogDetails(_:)))
+        self.viewMonthHours.addGestureRecognizer(tap)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        super.prepare(for: segue, sender: sender)
+        let vc = segue.destination as! TimeLogHistoryVC
+        switch self.navType {
+        case .today?:
+            vc.viewModel.startDate = Date()
+            vc.viewModel.endDate = Date()
+        case .week?:
+            vc.viewModel.startDate = Date().startOfWeek
+            vc.viewModel.endDate = Date().endOfWeek
+        case .month?:
+            vc.viewModel.startDate = Date().startOfMonth
+            vc.viewModel.endDate = Date().endOfMonth
+        default:
+            print("Error")
+        }
+    }
+    
+   @objc func checkLogDetails(_ gesture: UITapGestureRecognizer) {
+        let view = gesture.view
+        switch view?.tag {
+        case 1:
+            self.navType = .today
+        case 2:
+            self.navType = .week
+        case 3:
+            self.navType = .month
+        default:
+            print("Error showing the log details")
+        }
+        
+        self.performSegue(withIdentifier: TimelyConstants.shared.segue_home_to_history, sender: nil)
     }
     
     override func viewDidLayoutSubviews() {
@@ -130,40 +182,6 @@ class HomeVC: UIViewController, ChartViewDelegate {
     }
     
     @IBAction func showDatePicker(_ sender: UIBarButtonItem) {
-//        let min = Date()
-//        let max = Date().addingTimeInterval(60 * 60 * 24 * 1000)
-//        let picker = DateTimePicker.create(minimumDate: min, maximumDate: max)
-//
-//        picker.highlightColor = TimelyColors.shared.kColorNavTitleColor
-//        picker.doneBackgroundColor = TimelyColors.shared.kColorNavTitleColor
-//        picker.isDatePickerOnly = true
-//        picker.dateFormat = "dd/MM/YYYY"
-//        picker.completionHandler = { date in
-//            // do something after tapping done
-//        }
-//
-//        picker.show()
+
     }
 }
-
-//extension HomeVC: UICollectionViewDelegate {
-//
-//}
-//
-//extension HomeVC: UICollectionViewDataSource {
-//
-//    func numberOfSections(in collectionView: UICollectionView) -> Int {
-//        return 1
-//    }
-//
-//    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-//        return 10
-//    }
-//
-//    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-//        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "inOutCell", for: indexPath) as! InOutCollectionCell
-//        return cell
-//    }
-//
-//
-//}

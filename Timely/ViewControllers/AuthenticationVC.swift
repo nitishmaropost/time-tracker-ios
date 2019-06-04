@@ -11,6 +11,7 @@ import FontAwesome_swift
 
 class AuthenticationVC: UIViewController {
     
+    // IBOutlets
     @IBOutlet weak var viewModel: LoginVM!
     @IBOutlet weak var viewTextFields: RoundedView!
     @IBOutlet weak var textFieldUsername: BindingTextField! {
@@ -23,6 +24,30 @@ class AuthenticationVC: UIViewController {
             textFieldPassword.bind { self.viewModel.password = $0 }
         }
     }
+    
+    // Constraints
+    @IBOutlet weak var constraint_left_viewTopOrange: NSLayoutConstraint!
+    @IBOutlet weak var constraint_top_viewTopOrange: NSLayoutConstraint!
+    @IBOutlet weak var constraint_top_viewTopRed: NSLayoutConstraint!
+    @IBOutlet weak var constraint_left_viewTopRed: NSLayoutConstraint!
+    @IBOutlet weak var constraint_right_viewBottomOrange: NSLayoutConstraint!
+    @IBOutlet weak var constraint_bottom_viewBottomOrange: NSLayoutConstraint!
+    @IBOutlet weak var constraint_right_viewBottomRed: NSLayoutConstraint!
+    @IBOutlet weak var constraint_bottom_viewBottomRed: NSLayoutConstraint!
+    
+    @IBOutlet weak var constraint_height_viewTopOrange: NSLayoutConstraint!
+    @IBOutlet weak var constraint_width_viewTopOrange: NSLayoutConstraint!
+    @IBOutlet weak var constraint_height_viewTopRed: NSLayoutConstraint!
+    @IBOutlet weak var constraint_width_viewTopRed: NSLayoutConstraint!
+    @IBOutlet weak var constraint_height_viewBottomOrange: NSLayoutConstraint!
+    @IBOutlet weak var constraint_width_viewBottomOrange: NSLayoutConstraint!
+    @IBOutlet weak var constraint_height_viewBottomRed: NSLayoutConstraint!
+    @IBOutlet weak var constraint_width_viewBottomRed: NSLayoutConstraint!
+    
+    @IBOutlet weak var viewRedTop: RoundedView!
+    @IBOutlet weak var viewOrangeTop: RoundedView!
+    @IBOutlet weak var viewRedBottom: RoundedView!
+    @IBOutlet weak var viewOrangeBottom: RoundedView!
     
     @IBOutlet weak var textFieldEmail: UITextField!
     @IBOutlet weak var buttonAction: RoundedButton!
@@ -47,6 +72,8 @@ class AuthenticationVC: UIViewController {
         self.buttonLogin.isHidden = true
         self.activityIndiactor.isHidden = true
         self.setupUI()
+        
+        
     }
     
     func setupUI() {
@@ -56,7 +83,12 @@ class AuthenticationVC: UIViewController {
         self.textFieldPassword.text = "saurabh.thukral@maropost.com"
         self.viewModel.username = "saurabh.thukral@maropost.com"
         self.viewModel.password = "saurabh.thukral@maropost.com"
-        //
+        
+        self.textFieldUsername.setRightPaddingPoints(40)
+        self.textFieldPassword.setRightPaddingPoints(40)
+        
+//        self.textFieldEmail.rightView = UIView(frame: CGRect(x: 0, y: 0, width: 15, height: textField.frame.height))
+//        textField.rightViewMode = .always
         
         self.buttonForgotPassword.isHidden = false
         self.constraint_center_viewTextFields.constant = -30
@@ -66,6 +98,26 @@ class AuthenticationVC: UIViewController {
         self.viewLineBottom.isHidden = true
         self.viewTextFields.layoutIfNeeded()
         self.view.layoutIfNeeded()
+        
+        // Small screen devices
+        if UIScreen.main.bounds.size.height <= 568 {
+            self.constraint_height_viewTopRed.constant = 150
+            self.constraint_width_viewTopRed.constant = 150
+            self.constraint_height_viewTopOrange.constant = 150
+            self.constraint_width_viewTopOrange.constant = 150
+            
+            self.constraint_height_viewBottomRed.constant = 150
+            self.constraint_width_viewBottomRed.constant = 150
+            self.constraint_height_viewBottomOrange.constant = 150
+            self.constraint_width_viewBottomOrange.constant = 150
+            
+            self.constraint_top_viewTopOrange.constant = self.constraint_top_viewTopOrange.constant - 20
+            
+            self.viewRedTop.cornerRadius = 75
+            self.viewOrangeTop.cornerRadius = 75
+            self.viewRedBottom.cornerRadius = 75
+            self.viewOrangeBottom.cornerRadius = 75
+        }
     }
     
     @IBAction func buttonActionTapped(_ sender: RoundedButton) {

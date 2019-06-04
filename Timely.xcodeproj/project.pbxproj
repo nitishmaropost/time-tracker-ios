@@ -68,6 +68,7 @@
 		BF39E097228ED02000881626 /* TimelyUrls.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF39E096228ED02000881626 /* TimelyUrls.swift */; };
 		BF4085C2229E57190030B6C1 /* FilterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF4085C1229E57190030B6C1 /* FilterView.xib */; };
 		BF4085C4229E5BF70030B6C1 /* FilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4085C3229E5BF70030B6C1 /* FilterView.swift */; };
+		BF53C56A22A5520200A1E917 /* DeviceExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF53C56922A5520200A1E917 /* DeviceExtension.swift */; };
 		BF5E9AB8229675ED0080B093 /* person_out.svg in Resources */ = {isa = PBXBuildFile; fileRef = BF5E9AB6229675ED0080B093 /* person_out.svg */; };
 		BF5E9AB9229675ED0080B093 /* person_in.svg in Resources */ = {isa = PBXBuildFile; fileRef = BF5E9AB7229675ED0080B093 /* person_in.svg */; };
 		BF5E9ABB22967C9D0080B093 /* TimelyColorsUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5E9ABA22967C9D0080B093 /* TimelyColorsUtility.swift */; };
@@ -77,6 +78,8 @@
 		BF854309229BBBE600960B4D /* DGElasticPullToRefreshExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF854304229BBBE500960B4D /* DGElasticPullToRefreshExtensions.swift */; };
 		BF85430A229BBBE600960B4D /* DGElasticPullToRefreshConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF854305229BBBE500960B4D /* DGElasticPullToRefreshConstants.swift */; };
 		BF85430B229BBBE600960B4D /* DGElasticPullToRefreshView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF854306229BBBE600960B4D /* DGElasticPullToRefreshView.swift */; };
+		BFA8973922A51E3400A51517 /* SemiCircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA8973822A51E3400A51517 /* SemiCircleView.swift */; };
+		BFAE039622A63D3D008FBE04 /* TimelyTextFieldExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAE039522A63D3D008FBE04 /* TimelyTextFieldExtensions.swift */; };
 		BFD56217229FB18300A2905F /* TimelyButtonExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD56216229FB18300A2905F /* TimelyButtonExtensions.swift */; };
 		BFE0A01E2293C7BB00B5A0E8 /* TimeLogHistoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE0A01D2293C7BB00B5A0E8 /* TimeLogHistoryVC.swift */; };
 		BFE0A0202293CB5300B5A0E8 /* TimeLogService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE0A01F2293CB5300B5A0E8 /* TimeLogService.swift */; };
@@ -183,6 +186,7 @@
 		BF39E096228ED02000881626 /* TimelyUrls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelyUrls.swift; sourceTree = "<group>"; };
 		BF4085C1229E57190030B6C1 /* FilterView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FilterView.xib; sourceTree = "<group>"; };
 		BF4085C3229E5BF70030B6C1 /* FilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterView.swift; sourceTree = "<group>"; };
+		BF53C56922A5520200A1E917 /* DeviceExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceExtension.swift; sourceTree = "<group>"; };
 		BF5E9AB6229675ED0080B093 /* person_out.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = person_out.svg; sourceTree = "<group>"; };
 		BF5E9AB7229675ED0080B093 /* person_in.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = person_in.svg; sourceTree = "<group>"; };
 		BF5E9ABA22967C9D0080B093 /* TimelyColorsUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelyColorsUtility.swift; sourceTree = "<group>"; };
@@ -192,6 +196,8 @@
 		BF854304229BBBE500960B4D /* DGElasticPullToRefreshExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DGElasticPullToRefreshExtensions.swift; sourceTree = "<group>"; };
 		BF854305229BBBE500960B4D /* DGElasticPullToRefreshConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DGElasticPullToRefreshConstants.swift; sourceTree = "<group>"; };
 		BF854306229BBBE600960B4D /* DGElasticPullToRefreshView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DGElasticPullToRefreshView.swift; sourceTree = "<group>"; };
+		BFA8973822A51E3400A51517 /* SemiCircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SemiCircleView.swift; sourceTree = "<group>"; };
+		BFAE039522A63D3D008FBE04 /* TimelyTextFieldExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelyTextFieldExtensions.swift; sourceTree = "<group>"; };
 		BFD56216229FB18300A2905F /* TimelyButtonExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelyButtonExtensions.swift; sourceTree = "<group>"; };
 		BFE0A01D2293C7BB00B5A0E8 /* TimeLogHistoryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeLogHistoryVC.swift; sourceTree = "<group>"; };
 		BFE0A01F2293CB5300B5A0E8 /* TimeLogService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeLogService.swift; sourceTree = "<group>"; };
@@ -349,6 +355,8 @@
 				BF0E32D2227857AF003C0B8B /* TimelyArrayExtensions.swift */,
 				BF787AB1229C017800705819 /* TimelyDateExtensions.swift */,
 				BFD56216229FB18300A2905F /* TimelyButtonExtensions.swift */,
+				BF53C56922A5520200A1E917 /* DeviceExtension.swift */,
+				BFAE039522A63D3D008FBE04 /* TimelyTextFieldExtensions.swift */,
 			);
 			path = ExtensionsAndProtocols;
 			sourceTree = "<group>";
@@ -438,6 +446,7 @@
 		BF12872922717D6A000DB226 /* Custom */ = {
 			isa = PBXGroup;
 			children = (
+				BFA8973522A51DF200A51517 /* SemiCircleView */,
 				BF854301229BBBDA00960B4D /* DGElasticPullToRefresh */,
 				BFE0A02A2294148100B5A0E8 /* TimeLogHistoryCell */,
 				BF0E32C6227817E7003C0B8B /* InOutCell */,
@@ -515,6 +524,14 @@
 				BF854306229BBBE600960B4D /* DGElasticPullToRefreshView.swift */,
 			);
 			path = DGElasticPullToRefresh;
+			sourceTree = "<group>";
+		};
+		BFA8973522A51DF200A51517 /* SemiCircleView */ = {
+			isa = PBXGroup;
+			children = (
+				BFA8973822A51E3400A51517 /* SemiCircleView.swift */,
+			);
+			path = SemiCircleView;
 			sourceTree = "<group>";
 		};
 		BFE0A0232293DCD600B5A0E8 /* Utility */ = {
@@ -806,6 +823,7 @@
 				BF128725226EDFCF000DB226 /* RoundedView.swift in Sources */,
 				BF02518D2271CC6D0005E0A6 /* XYMarkerView.swift in Sources */,
 				BF787AB2229C017800705819 /* TimelyDateExtensions.swift in Sources */,
+				BFA8973922A51E3400A51517 /* SemiCircleView.swift in Sources */,
 				BF12873F22717D90000DB226 /* LGSideMenuSegue.m in Sources */,
 				BF0E32D3227857AF003C0B8B /* TimelyArrayExtensions.swift in Sources */,
 				BF85430B229BBBE600960B4D /* DGElasticPullToRefreshView.swift in Sources */,
@@ -819,6 +837,8 @@
 				BF0E32CD227823F8003C0B8B /* InOutCollectionCell.swift in Sources */,
 				BF12873E22717D90000DB226 /* UIViewController+LGSideMenuController.m in Sources */,
 				BFE0A01E2293C7BB00B5A0E8 /* TimeLogHistoryVC.swift in Sources */,
+				BF53C56A22A5520200A1E917 /* DeviceExtension.swift in Sources */,
+				BFAE039622A63D3D008FBE04 /* TimelyTextFieldExtensions.swift in Sources */,
 				BF4085C4229E5BF70030B6C1 /* FilterView.swift in Sources */,
 				BF128712226ED8F2000DB226 /* RoundedButton.swift in Sources */,
 				BF854307229BBBE600960B4D /* DGElasticPullToRefreshLoadingViewCircle.swift in Sources */,

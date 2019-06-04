@@ -28,5 +28,18 @@ extension Date {
         guard let sunday = gregorian.date(from: gregorian.dateComponents([.yearForWeekOfYear, .weekOfYear], from: self)) else { return nil }
         return gregorian.date(byAdding: .day, value: 7, to: sunday)
     }
+    
+    var startOfMonth: Date? {
+        let components = Calendar.current.dateComponents([.year, .month], from: self)
+        return Calendar.current.date(from: components)!
+    }
+    
+    var endOfMonth: Date? {
+        let components:NSDateComponents = Calendar.current.dateComponents([.year, .month], from: self) as NSDateComponents
+        components.month += 1
+        components.day = 1
+        components.day -= 1
+        return Calendar.current.date(from: components as DateComponents)!
+    }
 }
 
