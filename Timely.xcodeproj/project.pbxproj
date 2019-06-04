@@ -72,6 +72,8 @@
 		BF5E9AB8229675ED0080B093 /* person_out.svg in Resources */ = {isa = PBXBuildFile; fileRef = BF5E9AB6229675ED0080B093 /* person_out.svg */; };
 		BF5E9AB9229675ED0080B093 /* person_in.svg in Resources */ = {isa = PBXBuildFile; fileRef = BF5E9AB7229675ED0080B093 /* person_in.svg */; };
 		BF5E9ABB22967C9D0080B093 /* TimelyColorsUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5E9ABA22967C9D0080B093 /* TimelyColorsUtility.swift */; };
+		BF7435B022A66E72009A03F7 /* LogDetailsFoldingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7435AE22A66E72009A03F7 /* LogDetailsFoldingCell.swift */; };
+		BF7435B122A66E72009A03F7 /* LogDetailsFoldingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF7435AF22A66E72009A03F7 /* LogDetailsFoldingCell.xib */; };
 		BF787AB2229C017800705819 /* TimelyDateExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF787AB1229C017800705819 /* TimelyDateExtensions.swift */; };
 		BF854307229BBBE600960B4D /* DGElasticPullToRefreshLoadingViewCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF854302229BBBE500960B4D /* DGElasticPullToRefreshLoadingViewCircle.swift */; };
 		BF854308229BBBE600960B4D /* DGElasticPullToRefreshLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF854303229BBBE500960B4D /* DGElasticPullToRefreshLoadingView.swift */; };
@@ -190,6 +192,8 @@
 		BF5E9AB6229675ED0080B093 /* person_out.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = person_out.svg; sourceTree = "<group>"; };
 		BF5E9AB7229675ED0080B093 /* person_in.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = person_in.svg; sourceTree = "<group>"; };
 		BF5E9ABA22967C9D0080B093 /* TimelyColorsUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelyColorsUtility.swift; sourceTree = "<group>"; };
+		BF7435AE22A66E72009A03F7 /* LogDetailsFoldingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogDetailsFoldingCell.swift; sourceTree = "<group>"; };
+		BF7435AF22A66E72009A03F7 /* LogDetailsFoldingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LogDetailsFoldingCell.xib; sourceTree = "<group>"; };
 		BF787AB1229C017800705819 /* TimelyDateExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelyDateExtensions.swift; sourceTree = "<group>"; };
 		BF854302229BBBE500960B4D /* DGElasticPullToRefreshLoadingViewCircle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DGElasticPullToRefreshLoadingViewCircle.swift; sourceTree = "<group>"; };
 		BF854303229BBBE500960B4D /* DGElasticPullToRefreshLoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DGElasticPullToRefreshLoadingView.swift; sourceTree = "<group>"; };
@@ -548,6 +552,8 @@
 			children = (
 				BFE0A02B229414B000B5A0E8 /* TimeLogHistoryCell.swift */,
 				BFE0A02C229414B000B5A0E8 /* TimeLogHistoryCell.xib */,
+				BF7435AE22A66E72009A03F7 /* LogDetailsFoldingCell.swift */,
+				BF7435AF22A66E72009A03F7 /* LogDetailsFoldingCell.xib */,
 			);
 			path = TimeLogHistoryCell;
 			sourceTree = "<group>";
@@ -720,6 +726,7 @@
 				BF128704226DE300000DB226 /* LaunchScreen.storyboard in Resources */,
 				BF0E32CA22781BA2003C0B8B /* InOutCell.xib in Resources */,
 				BF128701226DE300000DB226 /* Assets.xcassets in Resources */,
+				BF7435B122A66E72009A03F7 /* LogDetailsFoldingCell.xib in Resources */,
 				BF1286FF226DE2FE000DB226 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -756,6 +763,7 @@
 				"${BUILT_PRODUCTS_DIR}/AlamofireObjectMapper/AlamofireObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/Charts/Charts.framework",
 				"${BUILT_PRODUCTS_DIR}/FSCalendar/FSCalendar.framework",
+				"${BUILT_PRODUCTS_DIR}/FoldingCell/FoldingCell.framework",
 				"${BUILT_PRODUCTS_DIR}/FontAwesome.swift/FontAwesome_swift.framework",
 				"${BUILT_PRODUCTS_DIR}/HGPlaceholders/HGPlaceholders.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
@@ -769,6 +777,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Charts.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FSCalendar.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FoldingCell.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FontAwesome_swift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HGPlaceholders.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
@@ -813,6 +822,7 @@
 				BFE0A0202293CB5300B5A0E8 /* TimeLogService.swift in Sources */,
 				BF128728226EE8B5000DB226 /* AuthenticationVC.swift in Sources */,
 				BF02516322718CC10005E0A6 /* HomeVC.swift in Sources */,
+				BF7435B022A66E72009A03F7 /* LogDetailsFoldingCell.swift in Sources */,
 				BF02516D227192AB0005E0A6 /* TimelyFonts.swift in Sources */,
 				BF0251962271CCB20005E0A6 /* DayAxisValueFormatter.swift in Sources */,
 				BFD56217229FB18300A2905F /* TimelyButtonExtensions.swift in Sources */,

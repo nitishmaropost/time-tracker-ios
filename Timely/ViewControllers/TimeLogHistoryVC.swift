@@ -110,7 +110,13 @@ class TimeLogHistoryVC: UIViewController {
 }
 
 extension TimeLogHistoryVC: UITableViewDelegate {
-    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        if section == 0 {
+            return 0
+        }
+        
+        return 10
+    }
 }
 
 extension TimeLogHistoryVC: SkeletonTableViewDataSource {
@@ -122,6 +128,10 @@ extension TimeLogHistoryVC: SkeletonTableViewDataSource {
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
+    }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
         guard let count = self.viewModel.timeLogDetails?.rows!.count else {
             return 8
         }
@@ -134,13 +144,13 @@ extension TimeLogHistoryVC: SkeletonTableViewDataSource {
         cell!.selectionStyle = .none
         if self.viewModel.timeLogDetails != nil && self.viewModel.timeLogDetails.rows!.count > 0 {
             cell?.hideSkeleton()
-            cell?.contentView.backgroundColor = UIColor(hexString: "#E8E8E8")
-            cell?.labelTime.backgroundColor = UIColor(hexString: "#E8E8E8")
-            cell?.labelPinType.backgroundColor = UIColor(hexString: "#E8E8E8")
-            let timeLog = self.viewModel.timeLogDetails?.rows![indexPath.row]
+//            cell?.contentView.backgroundColor = UIColor(hexString: "#E8E8E8")
+//            cell?.labelTime.backgroundColor = UIColor(hexString: "#E8E8E8")
+//            cell?.labelPinType.backgroundColor = UIColor(hexString: "#E8E8E8")
+            let timeLog = self.viewModel.timeLogDetails?.rows![indexPath.section]
             let previousRow: TimeLog!
-            if indexPath.row > 0 {
-                previousRow = self.viewModel.timeLogDetails?.rows![indexPath.row - 1]
+            if indexPath.section > 0 {
+                previousRow = self.viewModel.timeLogDetails?.rows![indexPath.section - 1]
                 let datesSame = self.viewModel.dateStringDifferent(currentRowDateString: timeLog!.punchTime!, previousRowDateString: previousRow.punchTime!)
                 if datesSame == false{
                     cell?.constrint_height_header.constant = 0

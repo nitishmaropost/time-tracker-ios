@@ -84,8 +84,8 @@ class AuthenticationVC: UIViewController {
         self.viewModel.username = "saurabh.thukral@maropost.com"
         self.viewModel.password = "saurabh.thukral@maropost.com"
         
-        self.textFieldUsername.setRightPaddingPoints(40)
-        self.textFieldPassword.setRightPaddingPoints(40)
+//        self.textFieldUsername.setRightPaddingPoints(40)
+//        self.textFieldPassword.setRightPaddingPoints(40)
         
 //        self.textFieldEmail.rightView = UIView(frame: CGRect(x: 0, y: 0, width: 15, height: textField.frame.height))
 //        textField.rightViewMode = .always

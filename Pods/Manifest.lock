@@ -6,6 +6,7 @@ PODS:
   - Charts (3.3.0):
     - Charts/Core (= 3.3.0)
   - Charts/Core (3.3.0)
+  - FoldingCell (5.0.1)
   - FontAwesome.swift (1.7.0)
   - FSCalendar (2.8.0)
   - HGPlaceholders (0.4.0)
@@ -18,6 +19,7 @@ DEPENDENCIES:
   - Alamofire (~> 5.0.0-beta.5)
   - AlamofireObjectMapper (~> 6.0.0)
   - Charts
+  - FoldingCell
   - FontAwesome.swift
   - FSCalendar
   - HGPlaceholders
@@ -30,6 +32,7 @@ SPEC REPOS:
     - Alamofire
     - AlamofireObjectMapper
     - Charts
+    - FoldingCell
     - FontAwesome.swift
     - FSCalendar
     - HGPlaceholders
@@ -42,6 +45,7 @@ SPEC CHECKSUMS:
   Alamofire: cd08a4402bd12cacd0c66f23fb12fec8d6b965e4
   AlamofireObjectMapper: 8cf0e01a1b36b485877033f8f6aa733977488da3
   Charts: ec1f57f9340054155691e84d4544a1d239d382c5
+  FoldingCell: 9197b915a415af9e52a857964066797af6a51c2b
   FontAwesome.swift: 9f377615aa61381796dca143cddfd2a388723ea1
   FSCalendar: 3a5ed3636e2ba1b83ebebfcf0c2603105a6f5efe
   HGPlaceholders: fd580aaf6050782bf2ee51eb62ed499ded6615b7
@@ -50,6 +54,6 @@ SPEC CHECKSUMS:
   SkeletonView: 6cbb80f82f8bdee3f9093e2fa03b84819b4bd826
   SwiftKeychainWrapper: 82c4c02cdc36f9a24f7edfcaab3e336401caa1a1
 
-PODFILE CHECKSUM: 2ac7dd5acd580b782c51866cc0dfa59b57a8faa6
+PODFILE CHECKSUM: cb465d45e758eebab2a1d8d7126247dd93b6cc50
 
 COCOAPODS: 1.5.3

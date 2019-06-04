@@ -16,5 +16,6 @@ pod 'SwiftKeychainWrapper'
 pod "SkeletonView"
 pod 'HGPlaceholders'
 pod 'FSCalendar'
+pod 'FoldingCell'
 
 end

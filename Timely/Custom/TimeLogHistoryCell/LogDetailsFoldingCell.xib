@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="637" id="KGk-i7-Jjw" customClass="LogDetailsFoldingCell" customModule="Timely" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="402" height="637"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="402" height="636.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tdD-qz-Txs" customClass="RotatedView" customModule="FoldingCell">
+                        <rect key="frame" x="8" y="8" width="386" height="75"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="75" id="odG-Le-yQb"/>
+                        </constraints>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EVU-mV-qIN">
+                        <rect key="frame" x="8" y="180" width="386" height="456"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="456" id="wM4-9y-aCB"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="tdD-qz-Txs" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="4Db-Ym-WU7"/>
+                    <constraint firstAttribute="trailing" secondItem="EVU-mV-qIN" secondAttribute="trailing" constant="8" id="IFJ-sD-Cwy"/>
+                    <constraint firstItem="EVU-mV-qIN" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="cVT-rp-TT7"/>
+                    <constraint firstItem="tdD-qz-Txs" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="kup-xV-Rec"/>
+                    <constraint firstAttribute="trailing" secondItem="tdD-qz-Txs" secondAttribute="trailing" constant="8" id="l2C-Cr-Kr4"/>
+                    <constraint firstItem="EVU-mV-qIN" firstAttribute="top" secondItem="tdD-qz-Txs" secondAttribute="bottom" constant="97" id="ztv-Tf-9yC"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="containerView" destination="EVU-mV-qIN" id="E3f-LI-KpP"/>
+                <outlet property="containerViewTop" destination="ztv-Tf-9yC" id="yCc-nH-diw"/>
+                <outlet property="foregroundView" destination="tdD-qz-Txs" id="g8n-Ry-IUI"/>
+                <outlet property="foregroundViewTop" destination="kup-xV-Rec" id="lKQ-Na-kB9"/>
+            </connections>
+            <point key="canvasLocation" x="218.84057971014494" y="320.42410714285711"/>
+        </tableViewCell>
+    </objects>
+</document>
