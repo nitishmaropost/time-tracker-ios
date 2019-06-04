@@ -32,7 +32,7 @@ class TimeLogHistoryVC: UIViewController {
         self.tableLogs.register(TimeLogHistoryCell.self, forCellReuseIdentifier: "timeLogHistoryCell")
         self.tableLogs.register(UINib(nibName: "TimeLogHistoryCell", bundle: nil), forCellReuseIdentifier: "timeLogHistoryCell")
         self.tableLogs.placeholderDelegate = self
-        self.tableLogs.estimatedRowHeight = 80
+        self.tableLogs.estimatedRowHeight = 130
         self.constraint_top_filter.constant = -80
         self.constraint_height_filter.constant = 0
         self.addFilterView()

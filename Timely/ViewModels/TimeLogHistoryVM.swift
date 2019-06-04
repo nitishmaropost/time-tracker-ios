@@ -57,10 +57,10 @@ class TimeLogHistoryVM : NSObject {
     }
     
     func setDefaultFilter() {
-        self.startDate = Date().startOfWeek
-        self.endDate = Date().endOfWeek
-        self.startDateString = self.startDateMilliSeconds(startDate: self.startDate)
-        self.endDateString = self.endDateMilliSeconds(endDate: self.endDate)
+        self.startDate = Date()
+        self.endDate = Date()
+        self.startDateString = ""
+        self.endDateString = ""
         self.setDisplayStrings()
     }
     
