@@ -22,4 +22,5 @@ class TimelyColors {
     let kOutTint = UIColor(hexString: "#bf0000")
     let kColorFilterButtonNormal = UIColor(hexString: "#BF0000")
     let kColorFilterButtonSelected = UIColor(hexString: "#800000")
+    let kColorThemeSplash = UIColor(hexString: "#E92C0C")
 }

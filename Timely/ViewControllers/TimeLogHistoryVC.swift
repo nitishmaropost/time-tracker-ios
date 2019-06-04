@@ -144,9 +144,8 @@ extension TimeLogHistoryVC: SkeletonTableViewDataSource {
         cell!.selectionStyle = .none
         if self.viewModel.timeLogDetails != nil && self.viewModel.timeLogDetails.rows!.count > 0 {
             cell?.hideSkeleton()
-//            cell?.contentView.backgroundColor = UIColor(hexString: "#E8E8E8")
-//            cell?.labelTime.backgroundColor = UIColor(hexString: "#E8E8E8")
-//            cell?.labelPinType.backgroundColor = UIColor(hexString: "#E8E8E8")
+            cell?.labelHeader.backgroundColor = TimelyColors.shared.kColorThemeSplash
+            cell?.labelHeader.alpha = 0.8
             let timeLog = self.viewModel.timeLogDetails?.rows![indexPath.section]
             let previousRow: TimeLog!
             if indexPath.section > 0 {
@@ -164,6 +163,11 @@ extension TimeLogHistoryVC: SkeletonTableViewDataSource {
 
             cell?.labelTime.text = self.viewModel.getTimeString(dateString: timeLog!.punchTime!)
             cell?.labelPinType.text = timeLog?.pinType
+            if (timeLog?.pinType?.contains("In"))! {
+                cell?.labelPinType.textColor = TimelyColors.shared.kInTint
+            } else {
+                cell?.labelPinType.textColor = TimelyColors.shared.kOutTint
+            }
         } else {
             cell?.labelTime.showAnimatedGradientSkeleton()
             cell?.labelHeader.showAnimatedGradientSkeleton()

@@ -13,7 +13,7 @@ class SplashVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.setGradientColor(topColor: UIColor(hexString: "#80ff7f7f"), bottomColor: UIColor.white)
+        self.view.setGradientColor(topColor: TimelyColors.shared.kColorThemeSplash, bottomColor: UIColor.white)
         let animationViewClock = AnimationView(name: "stopwatch")
         animationViewClock.frame = CGRect(x: 0, y: 0, width: 400, height: 400)
         animationViewClock.center = self.view.center
