@@ -23,13 +23,41 @@ class TimeLogHistoryVM : NSObject {
         case startDate
         case endDate
     }
+    
     var selectedDate: selectedState!
+    var navType: Navigations!
     
     override init() {
         super.init()
         self.dictLogDates = [String: Any]()
-        self.setDefaultFilter()
         self.selectedDate = .startDate
+        self.setInitialDates()
+    }
+    
+    func setInitialDates() {
+        if self.navType == nil {
+            self.navType = .all
+            self.startDate = Date().historyStartDate
+            self.endDate = Date()
+        } else {
+            switch self.navType {
+            case .today?:
+                self.startDate = Date()
+                self.endDate = Date()
+            case .week?:
+                self.startDate = Date().startOfWeek
+                self.endDate = Date().endOfWeek
+            case .month?:
+                self.startDate = Date().startOfMonth
+                self.endDate = Date().endOfMonth
+            default:
+                print("Error")
+            }
+        }
+        
+        self.startDateString = self.startDateMilliSeconds(startDate: self.startDate)
+        self.endDateString = self.endDateMilliSeconds(endDate: self.endDate)
+        self.setDisplayStrings()
     }
     
     func groupDetailsByDate() {
@@ -59,8 +87,10 @@ class TimeLogHistoryVM : NSObject {
     func setDefaultFilter() {
         self.startDate = Date()
         self.endDate = Date()
-        self.startDateString = ""
-        self.endDateString = ""
+        
+        self.startDateString = self.startDateMilliSeconds(startDate: self.startDate)
+        self.endDateString = self.endDateMilliSeconds(endDate: self.endDate)
+        
         self.setDisplayStrings()
     }
     

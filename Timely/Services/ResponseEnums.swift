@@ -13,4 +13,9 @@ enum TimelyAPIResult {
     case error(String)
 }
 
-
+enum Navigations {
+    case today
+    case week
+    case month
+    case all
+}

@@ -129,7 +129,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Details" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ljh-NI-In2">
-                                                <rect key="frame" x="20" y="340" width="80" height="23.5"/>
+                                                <rect key="frame" x="20" y="340" width="80" height="24"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="80" id="QEB-j1-ruL"/>
                                                 </constraints>
@@ -179,7 +179,7 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="dZS-ct-MeH">
                                                 <rect key="frame" x="20" y="190" width="374" height="120"/>
                                                 <subviews>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ihg-HN-bAF">
+                                                    <view tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ihg-HN-bAF" customClass="RoundedView" customModule="Timely" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="118" height="120"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Today  8 Hrs" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="S32-lw-FfB">
@@ -231,7 +231,7 @@
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oA0-Fs-fAZ" customClass="RoundedView" customModule="Timely" customModuleProvider="target">
+                                                    <view tag="2" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oA0-Fs-fAZ" customClass="RoundedView" customModule="Timely" customModuleProvider="target">
                                                         <rect key="frame" x="128" y="0.0" width="118" height="120"/>
                                                         <subviews>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="time" translatesAutoresizingMaskIntoConstraints="NO" id="bbC-I6-Yam">
@@ -287,7 +287,7 @@
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y9L-A2-Ed1" customClass="RoundedView" customModule="Timely" customModuleProvider="target">
+                                                    <view tag="3" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y9L-A2-Ed1" customClass="RoundedView" customModule="Timely" customModuleProvider="target">
                                                         <rect key="frame" x="256" y="0.0" width="118" height="120"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="aZY-wz-23Q">
@@ -487,9 +487,9 @@
                         <outlet property="imageViewIn" destination="rV4-LS-ahp" id="rtq-Kg-49s"/>
                         <outlet property="imageViewOut" destination="JTn-ic-kGL" id="Ien-pv-Imw"/>
                         <outlet property="scrollViewHome" destination="ag5-DZ-c9U" id="J8p-Ge-acX"/>
-                        <outlet property="viewMonthHours" destination="y9L-A2-Ed1" id="eib-KM-syZ"/>
-                        <outlet property="viewTodayHours" destination="ihg-HN-bAF" id="tPg-92-jVc"/>
-                        <outlet property="viewWeekHours" destination="oA0-Fs-fAZ" id="th3-5N-JtH"/>
+                        <outlet property="viewMonthHours" destination="y9L-A2-Ed1" id="WbQ-yd-brP"/>
+                        <outlet property="viewTodayHours" destination="ihg-HN-bAF" id="vlo-C2-7gh"/>
+                        <outlet property="viewWeekHours" destination="oA0-Fs-fAZ" id="PIU-Vw-IHH"/>
                         <segue destination="nm1-sA-GTs" kind="push" identifier="home_to_history" id="Xwf-jq-trR"/>
                     </connections>
                 </viewController>

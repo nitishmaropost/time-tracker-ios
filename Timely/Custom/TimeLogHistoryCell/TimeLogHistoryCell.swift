@@ -16,6 +16,8 @@ class TimeLogHistoryCell: UITableViewCell {
     @IBOutlet weak var labelPinType: UILabel!
     @IBOutlet weak var constrint_height_header: NSLayoutConstraint!
     
+    var gradientLayer: CAGradientLayer!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         self.layer.masksToBounds = false
@@ -30,7 +32,26 @@ class TimeLogHistoryCell: UITableViewCell {
         self.labelPinType.showAnimatedGradientSkeleton()
         self.labelTime.showAnimatedGradientSkeleton()
         self.labelHeader.showAnimatedGradientSkeleton()
+       // self.addGradient()
     }
+    
+    func addGradient() {
+        gradientLayer = CAGradientLayer()
+        gradientLayer.frame = self.labelHeader.bounds
+        gradientLayer.colors = [TimelyColors.shared.kColorThemeSplash.cgColor, UIColor(hexString: "#ff530e").cgColor]
+        gradientLayer.locations = [0.0, 1.0]
+//        gradientLayer.shadowRadius = shadowRadius
+//        gradientLayer.shadowOffset = shadowOffset
+//        gradientLayer.shadowOpacity = Float(shadowOpacity)
+//        gradientLayer.shadowColor = shadowColor.cgColor
+        
+        self.labelHeader.layer.insertSublayer(gradientLayer, at: 0)
+    }
+    
+//    override func layoutSubviews() {
+//        super.layoutSubviews()
+//        gradientLayer.frame = self.labelHeader.bounds
+//    }
     
     func hideSkeleton() {
         self.labelTime.hideSkeleton()
@@ -45,6 +66,5 @@ class TimeLogHistoryCell: UITableViewCell {
         self.labelPinType.text = nil
         self.labelPinType.textColor = UIColor.black
         self.constrint_height_header.constant = 50
-        
     }
 }

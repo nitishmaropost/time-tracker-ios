@@ -19,15 +19,11 @@ class HomeVC: UIViewController, ChartViewDelegate {
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var imageViewIn: UIImageView!
     @IBOutlet weak var imageViewOut: UIImageView!
-    @IBOutlet weak var viewTodayHours: UIView!
+    @IBOutlet weak var viewTodayHours: RoundedView!
     @IBOutlet weak var viewWeekHours: RoundedView!
     @IBOutlet weak var viewMonthHours: RoundedView!
     
-    enum Navigations {
-     case today
-    case week
-    case month
-    }
+    
     
     var navType: Navigations!
     
@@ -62,19 +58,8 @@ class HomeVC: UIViewController, ChartViewDelegate {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         super.prepare(for: segue, sender: sender)
         let vc = segue.destination as! TimeLogHistoryVC
-        switch self.navType {
-        case .today?:
-            vc.viewModel.startDate = Date()
-            vc.viewModel.endDate = Date()
-        case .week?:
-            vc.viewModel.startDate = Date().startOfWeek
-            vc.viewModel.endDate = Date().endOfWeek
-        case .month?:
-            vc.viewModel.startDate = Date().startOfMonth
-            vc.viewModel.endDate = Date().endOfMonth
-        default:
-            print("Error")
-        }
+        vc.viewModel.navType = self.navType
+        vc.viewModel.setInitialDates()
     }
     
    @objc func checkLogDetails(_ gesture: UITapGestureRecognizer) {
@@ -107,6 +92,7 @@ class HomeVC: UIViewController, ChartViewDelegate {
     }
     
     @IBAction func showHistory(_ sender: RoundedButton) {
+        self.navType = .all
         self.performSegue(withIdentifier: TimelyConstants.shared.segue_home_to_history, sender: nil)
     }
     
