@@ -125,6 +125,7 @@ class HomeVC: UIViewController, ChartViewDelegate {
         set11.colors = ChartColorTemplates.material()
         
         set11.drawValuesEnabled = false
+        
         let data = BarChartData(dataSet: set11)
         data.setValueFont(UIFont(name: "HelveticaNeue-Light", size: 10)!)
         data.barWidth = 0.9
@@ -142,34 +143,22 @@ class HomeVC: UIViewController, ChartViewDelegate {
         barChartView.pinchZoomEnabled = false
         barChartView.highlightFullBarEnabled = false
         barChartView.highlightPerTapEnabled = false
-        var xAxis = barChartView.xAxis
-        xAxis.labelPosition = .bottom
-        
         barChartView.rightAxis.enabled = false
-        
         barChartView.drawBarShadowEnabled = false
         barChartView.drawValueAboveBarEnabled = false
-        
         barChartView.maxVisibleCount = 60
-        
-        xAxis.drawAxisLineEnabled = false
-        xAxis.drawGridLinesEnabled = false
-        xAxis = barChartView.xAxis
-        xAxis.labelPosition = .bottom
-        xAxis.labelFont = .systemFont(ofSize: 10)
-        xAxis.granularity = 1
-        xAxis.labelCount = 7
-        xAxis.valueFormatter = DayAxisValueFormatter(chart: barChartView)
-        
         barChartView.xAxis.gridColor = .clear
         barChartView.leftAxis.gridColor = .clear
         barChartView.rightAxis.gridColor = .clear
-        
+        barChartView.xAxis.labelPosition = .bottom
+        let days = ["", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"]
+        barChartView.xAxis.valueFormatter = IndexAxisValueFormatter(values:days)
+        barChartView.xAxis.granularity = 1
+        barChartView.xAxis.labelCount = 7
         
         let leftAxisFormatter = NumberFormatter()
         leftAxisFormatter.minimumFractionDigits = 0
         leftAxisFormatter.maximumFractionDigits = 9
-        //
         let leftAxis = barChartView.leftAxis
         leftAxis.labelFont = .systemFont(ofSize: 10)
         leftAxis.labelCount = 8
@@ -185,3 +174,5 @@ class HomeVC: UIViewController, ChartViewDelegate {
 
     }
 }
+
+

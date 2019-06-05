@@ -24,13 +24,6 @@
 		BF0251852271B8850005E0A6 /* Lato-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BF02517B2271B7D50005E0A6 /* Lato-Light.ttf */; };
 		BF0251862271B8850005E0A6 /* Lato-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BF02517C2271B7D50005E0A6 /* Lato-LightItalic.ttf */; };
 		BF0251872271B8850005E0A6 /* Lato-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BF0251782271B7D50005E0A6 /* Lato-Regular.ttf */; };
-		BF02518D2271CC6D0005E0A6 /* XYMarkerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF02518A2271CC6C0005E0A6 /* XYMarkerView.swift */; };
-		BF02518E2271CC6D0005E0A6 /* RadarMarkerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF02518B2271CC6C0005E0A6 /* RadarMarkerView.swift */; };
-		BF02518F2271CC6D0005E0A6 /* BalloonMarker.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF02518C2271CC6C0005E0A6 /* BalloonMarker.swift */; };
-		BF0251942271CCB20005E0A6 /* DateValueFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0251902271CCB20005E0A6 /* DateValueFormatter.swift */; };
-		BF0251952271CCB20005E0A6 /* IntAxisValueFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0251912271CCB20005E0A6 /* IntAxisValueFormatter.swift */; };
-		BF0251962271CCB20005E0A6 /* DayAxisValueFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0251922271CCB20005E0A6 /* DayAxisValueFormatter.swift */; };
-		BF0251972271CCB20005E0A6 /* LargeValueFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0251932271CCB20005E0A6 /* LargeValueFormatter.swift */; };
 		BF02519B2276FE190005E0A6 /* ColoredImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF02519A2276FE190005E0A6 /* ColoredImageView.swift */; };
 		BF085B25229567DF002BFE9E /* TimelyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF085B24229567DF002BFE9E /* TimelyTests.swift */; };
 		BF085B2D2295682D002BFE9E /* LoginTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF085B2C2295682D002BFE9E /* LoginTests.swift */; };
@@ -75,6 +68,13 @@
 		BF7435B022A66E72009A03F7 /* LogDetailsFoldingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7435AE22A66E72009A03F7 /* LogDetailsFoldingCell.swift */; };
 		BF7435B122A66E72009A03F7 /* LogDetailsFoldingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF7435AF22A66E72009A03F7 /* LogDetailsFoldingCell.xib */; };
 		BF787AB2229C017800705819 /* TimelyDateExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF787AB1229C017800705819 /* TimelyDateExtensions.swift */; };
+		BF7E31FC22A7C0BD0094EE9A /* DayAxisValueFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7E31F522A7C0BD0094EE9A /* DayAxisValueFormatter.swift */; };
+		BF7E31FD22A7C0BD0094EE9A /* BalloonMarker.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7E31F622A7C0BD0094EE9A /* BalloonMarker.swift */; };
+		BF7E31FE22A7C0BD0094EE9A /* IntAxisValueFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7E31F722A7C0BD0094EE9A /* IntAxisValueFormatter.swift */; };
+		BF7E31FF22A7C0BD0094EE9A /* XYMarkerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7E31F822A7C0BD0094EE9A /* XYMarkerView.swift */; };
+		BF7E320022A7C0BD0094EE9A /* RadarMarkerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7E31F922A7C0BD0094EE9A /* RadarMarkerView.swift */; };
+		BF7E320122A7C0BD0094EE9A /* DateValueFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7E31FA22A7C0BD0094EE9A /* DateValueFormatter.swift */; };
+		BF7E320222A7C0BD0094EE9A /* LargeValueFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7E31FB22A7C0BD0094EE9A /* LargeValueFormatter.swift */; };
 		BF854307229BBBE600960B4D /* DGElasticPullToRefreshLoadingViewCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF854302229BBBE500960B4D /* DGElasticPullToRefreshLoadingViewCircle.swift */; };
 		BF854308229BBBE600960B4D /* DGElasticPullToRefreshLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF854303229BBBE500960B4D /* DGElasticPullToRefreshLoadingView.swift */; };
 		BF854309229BBBE600960B4D /* DGElasticPullToRefreshExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF854304229BBBE500960B4D /* DGElasticPullToRefreshExtensions.swift */; };
@@ -133,13 +133,6 @@
 		BF02517B2271B7D50005E0A6 /* Lato-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Light.ttf"; sourceTree = "<group>"; };
 		BF02517C2271B7D50005E0A6 /* Lato-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-LightItalic.ttf"; sourceTree = "<group>"; };
 		BF02517D2271B7D50005E0A6 /* Lato-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Black.ttf"; sourceTree = "<group>"; };
-		BF02518A2271CC6C0005E0A6 /* XYMarkerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = XYMarkerView.swift; path = ../XYMarkerView.swift; sourceTree = "<group>"; };
-		BF02518B2271CC6C0005E0A6 /* RadarMarkerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RadarMarkerView.swift; path = ../RadarMarkerView.swift; sourceTree = "<group>"; };
-		BF02518C2271CC6C0005E0A6 /* BalloonMarker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BalloonMarker.swift; path = ../BalloonMarker.swift; sourceTree = "<group>"; };
-		BF0251902271CCB20005E0A6 /* DateValueFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DateValueFormatter.swift; path = ../DateValueFormatter.swift; sourceTree = "<group>"; };
-		BF0251912271CCB20005E0A6 /* IntAxisValueFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = IntAxisValueFormatter.swift; path = ../IntAxisValueFormatter.swift; sourceTree = "<group>"; };
-		BF0251922271CCB20005E0A6 /* DayAxisValueFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DayAxisValueFormatter.swift; path = ../DayAxisValueFormatter.swift; sourceTree = "<group>"; };
-		BF0251932271CCB20005E0A6 /* LargeValueFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LargeValueFormatter.swift; path = ../LargeValueFormatter.swift; sourceTree = "<group>"; };
 		BF02519A2276FE190005E0A6 /* ColoredImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColoredImageView.swift; sourceTree = "<group>"; };
 		BF085B22229567DF002BFE9E /* TimelyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TimelyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF085B24229567DF002BFE9E /* TimelyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelyTests.swift; sourceTree = "<group>"; };
@@ -195,6 +188,13 @@
 		BF7435AE22A66E72009A03F7 /* LogDetailsFoldingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogDetailsFoldingCell.swift; sourceTree = "<group>"; };
 		BF7435AF22A66E72009A03F7 /* LogDetailsFoldingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LogDetailsFoldingCell.xib; sourceTree = "<group>"; };
 		BF787AB1229C017800705819 /* TimelyDateExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelyDateExtensions.swift; sourceTree = "<group>"; };
+		BF7E31F522A7C0BD0094EE9A /* DayAxisValueFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DayAxisValueFormatter.swift; path = Timely/Custom/DayAxisValueFormatter.swift; sourceTree = SOURCE_ROOT; };
+		BF7E31F622A7C0BD0094EE9A /* BalloonMarker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BalloonMarker.swift; path = Timely/Custom/BalloonMarker.swift; sourceTree = SOURCE_ROOT; };
+		BF7E31F722A7C0BD0094EE9A /* IntAxisValueFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = IntAxisValueFormatter.swift; path = Timely/Custom/IntAxisValueFormatter.swift; sourceTree = SOURCE_ROOT; };
+		BF7E31F822A7C0BD0094EE9A /* XYMarkerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = XYMarkerView.swift; path = Timely/Custom/XYMarkerView.swift; sourceTree = SOURCE_ROOT; };
+		BF7E31F922A7C0BD0094EE9A /* RadarMarkerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RadarMarkerView.swift; path = Timely/Custom/RadarMarkerView.swift; sourceTree = SOURCE_ROOT; };
+		BF7E31FA22A7C0BD0094EE9A /* DateValueFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DateValueFormatter.swift; path = Timely/Custom/DateValueFormatter.swift; sourceTree = SOURCE_ROOT; };
+		BF7E31FB22A7C0BD0094EE9A /* LargeValueFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LargeValueFormatter.swift; path = Timely/Custom/LargeValueFormatter.swift; sourceTree = SOURCE_ROOT; };
 		BF854302229BBBE500960B4D /* DGElasticPullToRefreshLoadingViewCircle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DGElasticPullToRefreshLoadingViewCircle.swift; sourceTree = "<group>"; };
 		BF854303229BBBE500960B4D /* DGElasticPullToRefreshLoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DGElasticPullToRefreshLoadingView.swift; sourceTree = "<group>"; };
 		BF854304229BBBE500960B4D /* DGElasticPullToRefreshExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DGElasticPullToRefreshExtensions.swift; sourceTree = "<group>"; };
@@ -261,13 +261,13 @@
 		BF0251992271CCE50005E0A6 /* New Group */ = {
 			isa = PBXGroup;
 			children = (
-				BF0251902271CCB20005E0A6 /* DateValueFormatter.swift */,
-				BF0251922271CCB20005E0A6 /* DayAxisValueFormatter.swift */,
-				BF0251912271CCB20005E0A6 /* IntAxisValueFormatter.swift */,
-				BF0251932271CCB20005E0A6 /* LargeValueFormatter.swift */,
-				BF02518C2271CC6C0005E0A6 /* BalloonMarker.swift */,
-				BF02518B2271CC6C0005E0A6 /* RadarMarkerView.swift */,
-				BF02518A2271CC6C0005E0A6 /* XYMarkerView.swift */,
+				BF7E31F622A7C0BD0094EE9A /* BalloonMarker.swift */,
+				BF7E31FA22A7C0BD0094EE9A /* DateValueFormatter.swift */,
+				BF7E31F522A7C0BD0094EE9A /* DayAxisValueFormatter.swift */,
+				BF7E31F722A7C0BD0094EE9A /* IntAxisValueFormatter.swift */,
+				BF7E31FB22A7C0BD0094EE9A /* LargeValueFormatter.swift */,
+				BF7E31F922A7C0BD0094EE9A /* RadarMarkerView.swift */,
+				BF7E31F822A7C0BD0094EE9A /* XYMarkerView.swift */,
 			);
 			path = "New Group";
 			sourceTree = "<group>";
@@ -806,48 +806,47 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BF02518E2271CC6D0005E0A6 /* RadarMarkerView.swift in Sources */,
 				BFE0A0222293CC8900B5A0E8 /* TimeLogDetails.swift in Sources */,
 				BF5E9ABB22967C9D0080B093 /* TimelyColorsUtility.swift in Sources */,
 				BF1286FC226DE2FE000DB226 /* ViewController.swift in Sources */,
 				BF854309229BBBE600960B4D /* DGElasticPullToRefreshExtensions.swift in Sources */,
 				BF854308229BBBE600960B4D /* DGElasticPullToRefreshLoadingView.swift in Sources */,
+				BF7E31FD22A7C0BD0094EE9A /* BalloonMarker.swift in Sources */,
 				BF0251692271928D0005E0A6 /* TimelyColors.swift in Sources */,
 				BF128716226ED90E000DB226 /* PlaceholderIcon.swift in Sources */,
 				BF12873C22717D90000DB226 /* LGSideMenuController.m in Sources */,
 				BF12873D22717D90000DB226 /* LGSideMenuGesturesHandler.m in Sources */,
 				BF02516B2271929C0005E0A6 /* TimelyConstants.swift in Sources */,
 				BFE3EF172292910B0029DA89 /* Binding.swift in Sources */,
-				BF0251952271CCB20005E0A6 /* IntAxisValueFormatter.swift in Sources */,
 				BFE0A0202293CB5300B5A0E8 /* TimeLogService.swift in Sources */,
 				BF128728226EE8B5000DB226 /* AuthenticationVC.swift in Sources */,
 				BF02516322718CC10005E0A6 /* HomeVC.swift in Sources */,
 				BF7435B022A66E72009A03F7 /* LogDetailsFoldingCell.swift in Sources */,
 				BF02516D227192AB0005E0A6 /* TimelyFonts.swift in Sources */,
-				BF0251962271CCB20005E0A6 /* DayAxisValueFormatter.swift in Sources */,
 				BFD56217229FB18300A2905F /* TimelyButtonExtensions.swift in Sources */,
 				BF85430A229BBBE600960B4D /* DGElasticPullToRefreshConstants.swift in Sources */,
 				BF1287422271828E000DB226 /* MainVC.swift in Sources */,
 				BFE3EF1D2292A6120029DA89 /* Reachability.swift in Sources */,
 				BF02519B2276FE190005E0A6 /* ColoredImageView.swift in Sources */,
+				BF7E320122A7C0BD0094EE9A /* DateValueFormatter.swift in Sources */,
 				BF128725226EDFCF000DB226 /* RoundedView.swift in Sources */,
-				BF02518D2271CC6D0005E0A6 /* XYMarkerView.swift in Sources */,
 				BF787AB2229C017800705819 /* TimelyDateExtensions.swift in Sources */,
 				BFA8973922A51E3400A51517 /* SemiCircleView.swift in Sources */,
 				BF12873F22717D90000DB226 /* LGSideMenuSegue.m in Sources */,
 				BF0E32D3227857AF003C0B8B /* TimelyArrayExtensions.swift in Sources */,
 				BF85430B229BBBE600960B4D /* DGElasticPullToRefreshView.swift in Sources */,
-				BF0251972271CCB20005E0A6 /* LargeValueFormatter.swift in Sources */,
 				BF128718226ED913000DB226 /* HRToast+UIView.swift in Sources */,
+				BF7E31FE22A7C0BD0094EE9A /* IntAxisValueFormatter.swift in Sources */,
 				BFE0A02D229414B000B5A0E8 /* TimeLogHistoryCell.swift in Sources */,
 				BFE3EF2B2292BCD10029DA89 /* UIView+Gradient.swift in Sources */,
 				BF12873B22717D90000DB226 /* LGSideMenuBorderView.m in Sources */,
+				BF7E320222A7C0BD0094EE9A /* LargeValueFormatter.swift in Sources */,
 				BF12873A22717D90000DB226 /* LGSideMenuView.m in Sources */,
-				BF02518F2271CC6D0005E0A6 /* BalloonMarker.swift in Sources */,
 				BF0E32CD227823F8003C0B8B /* InOutCollectionCell.swift in Sources */,
 				BF12873E22717D90000DB226 /* UIViewController+LGSideMenuController.m in Sources */,
 				BFE0A01E2293C7BB00B5A0E8 /* TimeLogHistoryVC.swift in Sources */,
 				BF53C56A22A5520200A1E917 /* DeviceExtension.swift in Sources */,
+				BF7E320022A7C0BD0094EE9A /* RadarMarkerView.swift in Sources */,
 				BFAE039622A63D3D008FBE04 /* TimelyTextFieldExtensions.swift in Sources */,
 				BF4085C4229E5BF70030B6C1 /* FilterView.swift in Sources */,
 				BF128712226ED8F2000DB226 /* RoundedButton.swift in Sources */,
@@ -857,8 +856,9 @@
 				BF0E32C922781BA2003C0B8B /* InOutCell.swift in Sources */,
 				BF02516722718DA90005E0A6 /* SideMenuVC.swift in Sources */,
 				BF1286FA226DE2FE000DB226 /* AppDelegate.swift in Sources */,
-				BF0251942271CCB20005E0A6 /* DateValueFormatter.swift in Sources */,
+				BF7E31FF22A7C0BD0094EE9A /* XYMarkerView.swift in Sources */,
 				BFE3EF1F2292AFA40029DA89 /* SplashVC.swift in Sources */,
+				BF7E31FC22A7C0BD0094EE9A /* DayAxisValueFormatter.swift in Sources */,
 				BF39E093228EBDDE00881626 /* LoginService.swift in Sources */,
 				BF12874022717D90000DB226 /* LGSideMenuHelper.m in Sources */,
 				BFE3EF1A229291480029DA89 /* LoginVM.swift in Sources */,
