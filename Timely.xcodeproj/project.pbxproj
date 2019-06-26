@@ -25,6 +25,7 @@
 		BF0251862271B8850005E0A6 /* Lato-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BF02517C2271B7D50005E0A6 /* Lato-LightItalic.ttf */; };
 		BF0251872271B8850005E0A6 /* Lato-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BF0251782271B7D50005E0A6 /* Lato-Regular.ttf */; };
 		BF02519B2276FE190005E0A6 /* ColoredImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF02519A2276FE190005E0A6 /* ColoredImageView.swift */; };
+		BF037D5C22C34FCF0045465D /* MenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF037D5B22C34FCF0045465D /* MenuItem.swift */; };
 		BF085B25229567DF002BFE9E /* TimelyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF085B24229567DF002BFE9E /* TimelyTests.swift */; };
 		BF085B2D2295682D002BFE9E /* LoginTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF085B2C2295682D002BFE9E /* LoginTests.swift */; };
 		BF0E32C922781BA2003C0B8B /* InOutCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0E32C722781BA2003C0B8B /* InOutCell.swift */; };
@@ -134,6 +135,7 @@
 		BF02517C2271B7D50005E0A6 /* Lato-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-LightItalic.ttf"; sourceTree = "<group>"; };
 		BF02517D2271B7D50005E0A6 /* Lato-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Black.ttf"; sourceTree = "<group>"; };
 		BF02519A2276FE190005E0A6 /* ColoredImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColoredImageView.swift; sourceTree = "<group>"; };
+		BF037D5B22C34FCF0045465D /* MenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItem.swift; sourceTree = "<group>"; };
 		BF085B22229567DF002BFE9E /* TimelyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TimelyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF085B24229567DF002BFE9E /* TimelyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelyTests.swift; sourceTree = "<group>"; };
 		BF085B26229567DF002BFE9E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -370,6 +372,7 @@
 			children = (
 				BF39E08F228EB97800881626 /* User.swift */,
 				BFE0A0212293CC8900B5A0E8 /* TimeLogDetails.swift */,
+				BF037D5B22C34FCF0045465D /* MenuItem.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -819,6 +822,7 @@
 				BF02516B2271929C0005E0A6 /* TimelyConstants.swift in Sources */,
 				BFE3EF172292910B0029DA89 /* Binding.swift in Sources */,
 				BFE0A0202293CB5300B5A0E8 /* TimeLogService.swift in Sources */,
+				BF037D5C22C34FCF0045465D /* MenuItem.swift in Sources */,
 				BF128728226EE8B5000DB226 /* AuthenticationVC.swift in Sources */,
 				BF02516322718CC10005E0A6 /* HomeVC.swift in Sources */,
 				BF7435B022A66E72009A03F7 /* LogDetailsFoldingCell.swift in Sources */,

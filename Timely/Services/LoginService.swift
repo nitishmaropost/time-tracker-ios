@@ -20,6 +20,8 @@ class LoginService: NSObject {
                 let user = Mapper<User>().map(JSON: response.value as! [String : Any])
                 KeychainHelper.shared.setValueInKeychain(forKey: TimelyConstants.shared.token, value: user?.token ?? "")
                 UserDefaults.standard.setValue(user?.userInfo?.userRole, forKey: "role")
+                UserDefaults.standard.setValue(user?.userInfo?.fullName, forKey: "fullName")
+                UserDefaults.standard.setValue(user?.userInfo?.email, forKey: "email")
                 return completion(.success(user!))
             }
             else if response.response?.statusCode == 422 {
