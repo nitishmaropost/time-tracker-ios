@@ -20,8 +20,9 @@ class TimelyUrls {
         "Content-Type": "application/json; charset=utf-8",
         "x-access-token": "\(KeychainHelper.shared.getValueInKeychain(forKey: TimelyConstants.shared.token))"
     ]
-    
-    let kServerUrl = "http://173.168.100.191:8000/api/v1/"
+    // http://35.200.185.188/
+//    let kServerUrl = "http://173.168.100.191:8000/api/v1/"
+    let kServerUrl = "http://35.200.185.188/api/v1/"
     let kLoginUrl = "auth/login"
     let kTimeLogHistoryUrl = "attendance/logs"
     

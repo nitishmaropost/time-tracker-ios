@@ -37,6 +37,7 @@ class UserInfo: Mappable {
     var lastName: String?
     var email: String?
     var employeeCode: Int?
+    var userRole: String?
 
     required init?(map: Map) {
 
@@ -48,20 +49,7 @@ class UserInfo: Mappable {
         self.lastName <- map["last_name"]
         self.email <- map["email_id"]
         self.employeeCode <- map["emp_code"]
+        self.userRole <- map["user_role"]
     }
 }
 
-
-
-//class User : Decodable {
-//    var user_info: UserInfo?
-//    var token: String?
-//}
-//
-//class UserInfo: Decodable {
-//    var full_name: String?
-//    var first_name: String?
-//    var last_name: String?
-//    var email_id: String?
-//    var emp_code: Int?
-//}

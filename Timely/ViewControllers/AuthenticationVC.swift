@@ -79,10 +79,10 @@ class AuthenticationVC: UIViewController {
     func setupUI() {
         self.labelTitle.text = "Login"
         // For test
-        self.textFieldUsername.text = "saurabh.thukral@maropost.com"
-        self.textFieldPassword.text = "saurabh.thukral@maropost.com"
-        self.viewModel.username = "saurabh.thukral@maropost.com"
-        self.viewModel.password = "saurabh.thukral@maropost.com"
+        self.textFieldUsername.text = "shubha.goyal@maropost.com"
+        self.textFieldPassword.text = "shubha.goyal@maropost.com"
+        self.viewModel.username = "shubha.goyal@maropost.com"
+        self.viewModel.password = "shubha.goyal@maropost.com"
         
 //        self.textFieldUsername.setRightPaddingPoints(40)
 //        self.textFieldPassword.setRightPaddingPoints(40)
