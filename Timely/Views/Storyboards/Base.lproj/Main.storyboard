@@ -91,9 +91,10 @@
         <scene sceneID="FCe-EO-aCE">
             <objects>
                 <navigationController storyboardIdentifier="Attendance" id="LjW-bf-Gam" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="9G3-kv-tUF">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="blackTranslucent" id="9G3-kv-tUF">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </navigationBar>
                     <connections>
                         <segue destination="oXu-K8-ALn" kind="relationship" relationship="rootViewController" id="579-HA-eth"/>
@@ -110,7 +111,23 @@
                     <view key="view" contentMode="scaleToFill" id="rm0-D0-ssO">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="jIE-B8-vXw">
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="oXu-K8-ALn" id="lIe-hI-bRd"/>
+                                    <outlet property="delegate" destination="oXu-K8-ALn" id="PQD-rD-kyr"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="jIE-B8-vXw" firstAttribute="leading" secondItem="CU8-z9-J0g" secondAttribute="leading" id="0md-6l-QFR"/>
+                            <constraint firstItem="jIE-B8-vXw" firstAttribute="top" secondItem="CU8-z9-J0g" secondAttribute="top" id="44q-cR-hNX"/>
+                            <constraint firstItem="CU8-z9-J0g" firstAttribute="bottom" secondItem="jIE-B8-vXw" secondAttribute="bottom" constant="-34" id="8Ae-Eu-Ilj"/>
+                            <constraint firstItem="CU8-z9-J0g" firstAttribute="trailing" secondItem="jIE-B8-vXw" secondAttribute="trailing" id="Dwk-Ik-6BO"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="CU8-z9-J0g"/>
                     </view>
                     <navigationItem key="navigationItem" id="c5E-P9-bbG">
@@ -121,10 +138,15 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="tableUsers" destination="jIE-B8-vXw" id="XTo-xy-uiV"/>
+                        <outlet property="viewModel" destination="wWi-8b-2GJ" id="yhj-KZ-LFw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UJ6-Jk-uNw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="wWi-8b-2GJ" customClass="AttendanceVM" customModule="Timely" customModuleProvider="target"/>
             </objects>
-            <point key="canvasLocation" x="-96" y="1903"/>
+            <point key="canvasLocation" x="-97.101449275362327" y="1902.4553571428571"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="GnI-k5-jEu">
@@ -168,7 +190,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Details" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ljh-NI-In2">
-                                                <rect key="frame" x="20" y="340" width="80" height="24"/>
+                                                <rect key="frame" x="20" y="340" width="80" height="23.5"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="80" id="QEB-j1-ruL"/>
                                                 </constraints>

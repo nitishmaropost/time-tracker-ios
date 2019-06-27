@@ -29,6 +29,9 @@
 		BF037D5E22C495EA0045465D /* UsersVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF037D5D22C495EA0045465D /* UsersVC.swift */; };
 		BF037D6222C4A05A0045465D /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF037D6022C4A05A0045465D /* UserCell.swift */; };
 		BF037D6322C4A05A0045465D /* UserCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF037D6122C4A05A0045465D /* UserCell.xib */; };
+		BF037D6522C4A4140045465D /* Attendance.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF037D6422C4A4140045465D /* Attendance.swift */; };
+		BF037D6722C4D1750045465D /* AttendanceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF037D6622C4D1750045465D /* AttendanceService.swift */; };
+		BF037D6922C4E6260045465D /* AttendanceVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF037D6822C4E6260045465D /* AttendanceVM.swift */; };
 		BF085B25229567DF002BFE9E /* TimelyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF085B24229567DF002BFE9E /* TimelyTests.swift */; };
 		BF085B2D2295682D002BFE9E /* LoginTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF085B2C2295682D002BFE9E /* LoginTests.swift */; };
 		BF0E32C922781BA2003C0B8B /* InOutCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0E32C722781BA2003C0B8B /* InOutCell.swift */; };
@@ -142,6 +145,9 @@
 		BF037D5D22C495EA0045465D /* UsersVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersVC.swift; sourceTree = "<group>"; };
 		BF037D6022C4A05A0045465D /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
 		BF037D6122C4A05A0045465D /* UserCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserCell.xib; sourceTree = "<group>"; };
+		BF037D6422C4A4140045465D /* Attendance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Attendance.swift; sourceTree = "<group>"; };
+		BF037D6622C4D1750045465D /* AttendanceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttendanceService.swift; sourceTree = "<group>"; };
+		BF037D6822C4E6260045465D /* AttendanceVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttendanceVM.swift; sourceTree = "<group>"; };
 		BF085B22229567DF002BFE9E /* TimelyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TimelyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF085B24229567DF002BFE9E /* TimelyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelyTests.swift; sourceTree = "<group>"; };
 		BF085B26229567DF002BFE9E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -388,6 +394,7 @@
 				BF39E08F228EB97800881626 /* User.swift */,
 				BFE0A0212293CC8900B5A0E8 /* TimeLogDetails.swift */,
 				BF037D5B22C34FCF0045465D /* MenuItem.swift */,
+				BF037D6422C4A4140045465D /* Attendance.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -398,6 +405,7 @@
 				BFE3EF14229290FD0029DA89 /* Binding */,
 				BFE3EF19229291480029DA89 /* LoginVM.swift */,
 				BFE0A0262293F68400B5A0E8 /* TimeLogHistoryVM.swift */,
+				BF037D6822C4E6260045465D /* AttendanceVM.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -507,6 +515,7 @@
 				BF39E094228ECD6200881626 /* ResponseEnums.swift */,
 				BF39E092228EBDDE00881626 /* LoginService.swift */,
 				BFE0A01F2293CB5300B5A0E8 /* TimeLogService.swift */,
+				BF037D6622C4D1750045465D /* AttendanceService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -860,6 +869,7 @@
 				BF85430B229BBBE600960B4D /* DGElasticPullToRefreshView.swift in Sources */,
 				BF128718226ED913000DB226 /* HRToast+UIView.swift in Sources */,
 				BF7E31FE22A7C0BD0094EE9A /* IntAxisValueFormatter.swift in Sources */,
+				BF037D6522C4A4140045465D /* Attendance.swift in Sources */,
 				BFE0A02D229414B000B5A0E8 /* TimeLogHistoryCell.swift in Sources */,
 				BFE3EF2B2292BCD10029DA89 /* UIView+Gradient.swift in Sources */,
 				BF12873B22717D90000DB226 /* LGSideMenuBorderView.m in Sources */,
@@ -877,6 +887,7 @@
 				BF854307229BBBE600960B4D /* DGElasticPullToRefreshLoadingViewCircle.swift in Sources */,
 				BF025170227198040005E0A6 /* TimelyColorsExtension.swift in Sources */,
 				BF39E097228ED02000881626 /* TimelyUrls.swift in Sources */,
+				BF037D6922C4E6260045465D /* AttendanceVM.swift in Sources */,
 				BF0E32C922781BA2003C0B8B /* InOutCell.swift in Sources */,
 				BF02516722718DA90005E0A6 /* SideMenuVC.swift in Sources */,
 				BF1286FA226DE2FE000DB226 /* AppDelegate.swift in Sources */,
@@ -884,6 +895,7 @@
 				BFE3EF1F2292AFA40029DA89 /* SplashVC.swift in Sources */,
 				BF7E31FC22A7C0BD0094EE9A /* DayAxisValueFormatter.swift in Sources */,
 				BF39E093228EBDDE00881626 /* LoginService.swift in Sources */,
+				BF037D6722C4D1750045465D /* AttendanceService.swift in Sources */,
 				BF12874022717D90000DB226 /* LGSideMenuHelper.m in Sources */,
 				BFE3EF1A229291480029DA89 /* LoginVM.swift in Sources */,
 				BF128714226ED8FC000DB226 /* DesignableTextField.swift in Sources */,

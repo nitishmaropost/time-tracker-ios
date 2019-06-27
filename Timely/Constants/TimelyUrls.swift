@@ -25,5 +25,6 @@ class TimelyUrls {
     let kServerUrl = "http://35.200.185.188/api/v1/"
     let kLoginUrl = "auth/login"
     let kTimeLogHistoryUrl = "attendance/logs"
+    let kAttendanceUrl = "attendance/shifts?start_date=1558204200000&end_date=1558722600000"
     
 }
