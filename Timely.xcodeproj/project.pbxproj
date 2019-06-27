@@ -27,6 +27,8 @@
 		BF02519B2276FE190005E0A6 /* ColoredImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF02519A2276FE190005E0A6 /* ColoredImageView.swift */; };
 		BF037D5C22C34FCF0045465D /* MenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF037D5B22C34FCF0045465D /* MenuItem.swift */; };
 		BF037D5E22C495EA0045465D /* UsersVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF037D5D22C495EA0045465D /* UsersVC.swift */; };
+		BF037D6222C4A05A0045465D /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF037D6022C4A05A0045465D /* UserCell.swift */; };
+		BF037D6322C4A05A0045465D /* UserCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF037D6122C4A05A0045465D /* UserCell.xib */; };
 		BF085B25229567DF002BFE9E /* TimelyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF085B24229567DF002BFE9E /* TimelyTests.swift */; };
 		BF085B2D2295682D002BFE9E /* LoginTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF085B2C2295682D002BFE9E /* LoginTests.swift */; };
 		BF0E32C922781BA2003C0B8B /* InOutCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0E32C722781BA2003C0B8B /* InOutCell.swift */; };
@@ -138,6 +140,8 @@
 		BF02519A2276FE190005E0A6 /* ColoredImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColoredImageView.swift; sourceTree = "<group>"; };
 		BF037D5B22C34FCF0045465D /* MenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItem.swift; sourceTree = "<group>"; };
 		BF037D5D22C495EA0045465D /* UsersVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersVC.swift; sourceTree = "<group>"; };
+		BF037D6022C4A05A0045465D /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
+		BF037D6122C4A05A0045465D /* UserCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserCell.xib; sourceTree = "<group>"; };
 		BF085B22229567DF002BFE9E /* TimelyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TimelyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF085B24229567DF002BFE9E /* TimelyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelyTests.swift; sourceTree = "<group>"; };
 		BF085B26229567DF002BFE9E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -274,6 +278,15 @@
 				BF7E31F822A7C0BD0094EE9A /* XYMarkerView.swift */,
 			);
 			path = "New Group";
+			sourceTree = "<group>";
+		};
+		BF037D5F22C4A03E0045465D /* UserCell */ = {
+			isa = PBXGroup;
+			children = (
+				BF037D6022C4A05A0045465D /* UserCell.swift */,
+				BF037D6122C4A05A0045465D /* UserCell.xib */,
+			);
+			path = UserCell;
 			sourceTree = "<group>";
 		};
 		BF085B23229567DF002BFE9E /* TimelyTests */ = {
@@ -456,6 +469,7 @@
 		BF12872922717D6A000DB226 /* Custom */ = {
 			isa = PBXGroup;
 			children = (
+				BF037D5F22C4A03E0045465D /* UserCell */,
 				BFA8973522A51DF200A51517 /* SemiCircleView */,
 				BF854301229BBBDA00960B4D /* DGElasticPullToRefresh */,
 				BFE0A02A2294148100B5A0E8 /* TimeLogHistoryCell */,
@@ -727,6 +741,7 @@
 				BFE0A02E229414B000B5A0E8 /* TimeLogHistoryCell.xib in Resources */,
 				BF128721226EDBE6000DB226 /* fa-regular-400.ttf in Resources */,
 				BF128722226EDBE6000DB226 /* fa-solid-900.ttf in Resources */,
+				BF037D6322C4A05A0045465D /* UserCell.xib in Resources */,
 				BF5E9AB9229675ED0080B093 /* person_in.svg in Resources */,
 				BF128723226EDBE6000DB226 /* FontAwesome.otf in Resources */,
 				BF128704226DE300000DB226 /* LaunchScreen.storyboard in Resources */,
@@ -832,6 +847,7 @@
 				BF02516D227192AB0005E0A6 /* TimelyFonts.swift in Sources */,
 				BFD56217229FB18300A2905F /* TimelyButtonExtensions.swift in Sources */,
 				BF85430A229BBBE600960B4D /* DGElasticPullToRefreshConstants.swift in Sources */,
+				BF037D6222C4A05A0045465D /* UserCell.swift in Sources */,
 				BF1287422271828E000DB226 /* MainVC.swift in Sources */,
 				BFE3EF1D2292A6120029DA89 /* Reachability.swift in Sources */,
 				BF02519B2276FE190005E0A6 /* ColoredImageView.swift in Sources */,
