@@ -88,9 +88,48 @@
             <point key="canvasLocation" x="-1865" y="1900"/>
         </scene>
         <!--Navigation Controller-->
+        <scene sceneID="FCe-EO-aCE">
+            <objects>
+                <navigationController storyboardIdentifier="Attendance" id="LjW-bf-Gam" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="9G3-kv-tUF">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="oXu-K8-ALn" kind="relationship" relationship="rootViewController" id="579-HA-eth"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Kzm-JW-5dh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-933" y="1900"/>
+        </scene>
+        <!--UsersVC-->
+        <scene sceneID="vWD-bk-fUx">
+            <objects>
+                <viewController id="oXu-K8-ALn" customClass="UsersVC" customModule="Timely" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rm0-D0-ssO">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="CU8-z9-J0g"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="c5E-P9-bbG">
+                        <barButtonItem key="leftBarButtonItem" image="side_menu" id="aYH-IA-aXv">
+                            <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="openLeftView:" destination="oXu-K8-ALn" id="JZJ-Sb-pB8"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UJ6-Jk-uNw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-96" y="1903"/>
+        </scene>
+        <!--Navigation Controller-->
         <scene sceneID="GnI-k5-jEu">
             <objects>
-                <navigationController id="8Fy-f0-TmW" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="Home" id="8Fy-f0-TmW" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="blackTranslucent" id="iRa-Tg-4aU">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>

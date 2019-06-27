@@ -88,4 +88,20 @@ class SideMenuVC: UITableViewController {
         
         return cell
     }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let mainVC = sideMenuController!
+        switch indexPath.row {
+        case 1:
+            let attendanceNavController = self.storyboard?.instantiateViewController(withIdentifier: "Home") as! UINavigationController
+            mainVC.rootViewController = attendanceNavController
+            mainVC.hideLeftView(animated: true, completionHandler: nil)
+        case 2:
+            let attendanceNavController = self.storyboard?.instantiateViewController(withIdentifier: "Attendance") as! UINavigationController
+            mainVC.rootViewController = attendanceNavController
+            mainVC.hideLeftView(animated: true, completionHandler: nil)
+        default:
+            print("")
+        }
+    }
 }

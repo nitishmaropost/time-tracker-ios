@@ -26,6 +26,7 @@
 		BF0251872271B8850005E0A6 /* Lato-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BF0251782271B7D50005E0A6 /* Lato-Regular.ttf */; };
 		BF02519B2276FE190005E0A6 /* ColoredImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF02519A2276FE190005E0A6 /* ColoredImageView.swift */; };
 		BF037D5C22C34FCF0045465D /* MenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF037D5B22C34FCF0045465D /* MenuItem.swift */; };
+		BF037D5E22C495EA0045465D /* UsersVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF037D5D22C495EA0045465D /* UsersVC.swift */; };
 		BF085B25229567DF002BFE9E /* TimelyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF085B24229567DF002BFE9E /* TimelyTests.swift */; };
 		BF085B2D2295682D002BFE9E /* LoginTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF085B2C2295682D002BFE9E /* LoginTests.swift */; };
 		BF0E32C922781BA2003C0B8B /* InOutCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0E32C722781BA2003C0B8B /* InOutCell.swift */; };
@@ -136,6 +137,7 @@
 		BF02517D2271B7D50005E0A6 /* Lato-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Black.ttf"; sourceTree = "<group>"; };
 		BF02519A2276FE190005E0A6 /* ColoredImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColoredImageView.swift; sourceTree = "<group>"; };
 		BF037D5B22C34FCF0045465D /* MenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItem.swift; sourceTree = "<group>"; };
+		BF037D5D22C495EA0045465D /* UsersVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersVC.swift; sourceTree = "<group>"; };
 		BF085B22229567DF002BFE9E /* TimelyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TimelyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF085B24229567DF002BFE9E /* TimelyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelyTests.swift; sourceTree = "<group>"; };
 		BF085B26229567DF002BFE9E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -407,6 +409,7 @@
 				BF025171227199890005E0A6 /* RightVC.swift */,
 				BFE3EF1E2292AFA40029DA89 /* SplashVC.swift */,
 				BFE0A01D2293C7BB00B5A0E8 /* TimeLogHistoryVC.swift */,
+				BF037D5D22C495EA0045465D /* UsersVC.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -844,6 +847,7 @@
 				BFE0A02D229414B000B5A0E8 /* TimeLogHistoryCell.swift in Sources */,
 				BFE3EF2B2292BCD10029DA89 /* UIView+Gradient.swift in Sources */,
 				BF12873B22717D90000DB226 /* LGSideMenuBorderView.m in Sources */,
+				BF037D5E22C495EA0045465D /* UsersVC.swift in Sources */,
 				BF7E320222A7C0BD0094EE9A /* LargeValueFormatter.swift in Sources */,
 				BF12873A22717D90000DB226 /* LGSideMenuView.m in Sources */,
 				BF0E32CD227823F8003C0B8B /* InOutCollectionCell.swift in Sources */,
