@@ -30,17 +30,16 @@ class SideMenuVC: UITableViewController {
         self.items?.append(MenuItem(title: "Attendance", image: UIImage(named: "attendance.png")!))
         self.items?.append(MenuItem(title: "Timesheet", image: UIImage(named: "timesheet.png")!))
         self.items?.append(MenuItem(title: "Settings", image: UIImage(named: "settings.png")!))
+        self.items?.append(MenuItem(title: "Logout", image: UIImage(named: "logout.png")!))
     }
 
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
         return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
         return self.items!.count + 1
     }
     
