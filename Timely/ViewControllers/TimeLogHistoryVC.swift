@@ -85,7 +85,7 @@ class TimeLogHistoryVC: UIViewController {
     }
     
     func callTimeDetailsAPI() {
-        self.viewModel.getTimeLogHistory(requestDict: ["start_date": self.viewModel.startDateString, "end_date": self.viewModel.endDateString]) { (result) in
+        self.viewModel.getTimeLogHistory(requestDict: ["start_date": self.viewModel.startDateString, "end_date": self.viewModel.endDateString, "emp_code": self.viewModel.empCode]) { (result) in
             switch result {
             case .success(_):
                 DispatchQueue.main.async {

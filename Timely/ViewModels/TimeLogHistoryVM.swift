@@ -17,6 +17,7 @@ class TimeLogHistoryVM : NSObject {
     var endDateString: String!
     var startDate: Date!
     var endDate: Date!
+    var empCode: String!
     var startDateDisplayString: String!
     var endDateDisplayString: String!
     enum selectedState {

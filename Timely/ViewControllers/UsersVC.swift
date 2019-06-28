@@ -22,11 +22,22 @@ class UsersVC: UIViewController {
             self.tableUsers.reloadData()
         }
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let vc = segue.destination as! ShiftsVC
+        vc.rowShift = self.viewModel.selectedRow
+    }
 }
 
 extension UsersVC: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
         return 10
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let row = self.viewModel.attendance?.rows![indexPath.section]
+        self.viewModel.selectedRow = row
+        self.performSegue(withIdentifier: TimelyConstants.shared.segue_users_to_shifts, sender: nil)
     }
 }
 

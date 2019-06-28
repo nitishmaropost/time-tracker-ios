@@ -87,6 +87,9 @@
 		BF854309229BBBE600960B4D /* DGElasticPullToRefreshExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF854304229BBBE500960B4D /* DGElasticPullToRefreshExtensions.swift */; };
 		BF85430A229BBBE600960B4D /* DGElasticPullToRefreshConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF854305229BBBE500960B4D /* DGElasticPullToRefreshConstants.swift */; };
 		BF85430B229BBBE600960B4D /* DGElasticPullToRefreshView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF854306229BBBE600960B4D /* DGElasticPullToRefreshView.swift */; };
+		BF8B44EC22C5CD75001E0152 /* ShiftsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8B44EB22C5CD75001E0152 /* ShiftsVC.swift */; };
+		BF8B44F122C5E076001E0152 /* ShiftCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8B44EF22C5E076001E0152 /* ShiftCell.swift */; };
+		BF8B44F222C5E076001E0152 /* ShiftCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF8B44F022C5E076001E0152 /* ShiftCell.xib */; };
 		BFA8973922A51E3400A51517 /* SemiCircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA8973822A51E3400A51517 /* SemiCircleView.swift */; };
 		BFAE039622A63D3D008FBE04 /* TimelyTextFieldExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAE039522A63D3D008FBE04 /* TimelyTextFieldExtensions.swift */; };
 		BFD56217229FB18300A2905F /* TimelyButtonExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD56216229FB18300A2905F /* TimelyButtonExtensions.swift */; };
@@ -202,18 +205,21 @@
 		BF7435AE22A66E72009A03F7 /* LogDetailsFoldingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogDetailsFoldingCell.swift; sourceTree = "<group>"; };
 		BF7435AF22A66E72009A03F7 /* LogDetailsFoldingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LogDetailsFoldingCell.xib; sourceTree = "<group>"; };
 		BF787AB1229C017800705819 /* TimelyDateExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelyDateExtensions.swift; sourceTree = "<group>"; };
-		BF7E31F522A7C0BD0094EE9A /* DayAxisValueFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DayAxisValueFormatter.swift; path = Timely/Custom/DayAxisValueFormatter.swift; sourceTree = SOURCE_ROOT; };
-		BF7E31F622A7C0BD0094EE9A /* BalloonMarker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BalloonMarker.swift; path = Timely/Custom/BalloonMarker.swift; sourceTree = SOURCE_ROOT; };
-		BF7E31F722A7C0BD0094EE9A /* IntAxisValueFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = IntAxisValueFormatter.swift; path = Timely/Custom/IntAxisValueFormatter.swift; sourceTree = SOURCE_ROOT; };
-		BF7E31F822A7C0BD0094EE9A /* XYMarkerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = XYMarkerView.swift; path = Timely/Custom/XYMarkerView.swift; sourceTree = SOURCE_ROOT; };
-		BF7E31F922A7C0BD0094EE9A /* RadarMarkerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RadarMarkerView.swift; path = Timely/Custom/RadarMarkerView.swift; sourceTree = SOURCE_ROOT; };
-		BF7E31FA22A7C0BD0094EE9A /* DateValueFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DateValueFormatter.swift; path = Timely/Custom/DateValueFormatter.swift; sourceTree = SOURCE_ROOT; };
-		BF7E31FB22A7C0BD0094EE9A /* LargeValueFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LargeValueFormatter.swift; path = Timely/Custom/LargeValueFormatter.swift; sourceTree = SOURCE_ROOT; };
+		BF7E31F522A7C0BD0094EE9A /* DayAxisValueFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DayAxisValueFormatter.swift; path = Timely/Custom/BarChartFormatter/DayAxisValueFormatter.swift; sourceTree = SOURCE_ROOT; };
+		BF7E31F622A7C0BD0094EE9A /* BalloonMarker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BalloonMarker.swift; path = Timely/Custom/BarChartFormatter/BalloonMarker.swift; sourceTree = SOURCE_ROOT; };
+		BF7E31F722A7C0BD0094EE9A /* IntAxisValueFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = IntAxisValueFormatter.swift; path = Timely/Custom/BarChartFormatter/IntAxisValueFormatter.swift; sourceTree = SOURCE_ROOT; };
+		BF7E31F822A7C0BD0094EE9A /* XYMarkerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = XYMarkerView.swift; path = Timely/Custom/BarChartFormatter/XYMarkerView.swift; sourceTree = SOURCE_ROOT; };
+		BF7E31F922A7C0BD0094EE9A /* RadarMarkerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RadarMarkerView.swift; path = Timely/Custom/BarChartFormatter/RadarMarkerView.swift; sourceTree = SOURCE_ROOT; };
+		BF7E31FA22A7C0BD0094EE9A /* DateValueFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DateValueFormatter.swift; path = Timely/Custom/BarChartFormatter/DateValueFormatter.swift; sourceTree = SOURCE_ROOT; };
+		BF7E31FB22A7C0BD0094EE9A /* LargeValueFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LargeValueFormatter.swift; path = Timely/Custom/BarChartFormatter/LargeValueFormatter.swift; sourceTree = SOURCE_ROOT; };
 		BF854302229BBBE500960B4D /* DGElasticPullToRefreshLoadingViewCircle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DGElasticPullToRefreshLoadingViewCircle.swift; sourceTree = "<group>"; };
 		BF854303229BBBE500960B4D /* DGElasticPullToRefreshLoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DGElasticPullToRefreshLoadingView.swift; sourceTree = "<group>"; };
 		BF854304229BBBE500960B4D /* DGElasticPullToRefreshExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DGElasticPullToRefreshExtensions.swift; sourceTree = "<group>"; };
 		BF854305229BBBE500960B4D /* DGElasticPullToRefreshConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DGElasticPullToRefreshConstants.swift; sourceTree = "<group>"; };
 		BF854306229BBBE600960B4D /* DGElasticPullToRefreshView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DGElasticPullToRefreshView.swift; sourceTree = "<group>"; };
+		BF8B44EB22C5CD75001E0152 /* ShiftsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShiftsVC.swift; sourceTree = "<group>"; };
+		BF8B44EF22C5E076001E0152 /* ShiftCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShiftCell.swift; sourceTree = "<group>"; };
+		BF8B44F022C5E076001E0152 /* ShiftCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShiftCell.xib; sourceTree = "<group>"; };
 		BFA8973822A51E3400A51517 /* SemiCircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SemiCircleView.swift; sourceTree = "<group>"; };
 		BFAE039522A63D3D008FBE04 /* TimelyTextFieldExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelyTextFieldExtensions.swift; sourceTree = "<group>"; };
 		BFD56216229FB18300A2905F /* TimelyButtonExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelyButtonExtensions.swift; sourceTree = "<group>"; };
@@ -270,20 +276,6 @@
 				BF0251782271B7D50005E0A6 /* Lato-Regular.ttf */,
 			);
 			path = Lato;
-			sourceTree = "<group>";
-		};
-		BF0251992271CCE50005E0A6 /* New Group */ = {
-			isa = PBXGroup;
-			children = (
-				BF7E31F622A7C0BD0094EE9A /* BalloonMarker.swift */,
-				BF7E31FA22A7C0BD0094EE9A /* DateValueFormatter.swift */,
-				BF7E31F522A7C0BD0094EE9A /* DayAxisValueFormatter.swift */,
-				BF7E31F722A7C0BD0094EE9A /* IntAxisValueFormatter.swift */,
-				BF7E31FB22A7C0BD0094EE9A /* LargeValueFormatter.swift */,
-				BF7E31F922A7C0BD0094EE9A /* RadarMarkerView.swift */,
-				BF7E31F822A7C0BD0094EE9A /* XYMarkerView.swift */,
-			);
-			path = "New Group";
 			sourceTree = "<group>";
 		};
 		BF037D5F22C4A03E0045465D /* UserCell */ = {
@@ -431,6 +423,7 @@
 				BFE3EF1E2292AFA40029DA89 /* SplashVC.swift */,
 				BFE0A01D2293C7BB00B5A0E8 /* TimeLogHistoryVC.swift */,
 				BF037D5D22C495EA0045465D /* UsersVC.swift */,
+				BF8B44EB22C5CD75001E0152 /* ShiftsVC.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -477,12 +470,13 @@
 		BF12872922717D6A000DB226 /* Custom */ = {
 			isa = PBXGroup;
 			children = (
+				BF8B44EE22C5DFFF001E0152 /* BarChartFormatter */,
+				BF8B44ED22C5DFB3001E0152 /* ShiftCell */,
 				BF037D5F22C4A03E0045465D /* UserCell */,
 				BFA8973522A51DF200A51517 /* SemiCircleView */,
 				BF854301229BBBDA00960B4D /* DGElasticPullToRefresh */,
 				BFE0A02A2294148100B5A0E8 /* TimeLogHistoryCell */,
 				BF0E32C6227817E7003C0B8B /* InOutCell */,
-				BF0251992271CCE50005E0A6 /* New Group */,
 				BF12872A22717D81000DB226 /* LGSideMenuController */,
 			);
 			path = Custom;
@@ -557,6 +551,29 @@
 				BF854306229BBBE600960B4D /* DGElasticPullToRefreshView.swift */,
 			);
 			path = DGElasticPullToRefresh;
+			sourceTree = "<group>";
+		};
+		BF8B44ED22C5DFB3001E0152 /* ShiftCell */ = {
+			isa = PBXGroup;
+			children = (
+				BF8B44EF22C5E076001E0152 /* ShiftCell.swift */,
+				BF8B44F022C5E076001E0152 /* ShiftCell.xib */,
+			);
+			path = ShiftCell;
+			sourceTree = "<group>";
+		};
+		BF8B44EE22C5DFFF001E0152 /* BarChartFormatter */ = {
+			isa = PBXGroup;
+			children = (
+				BF7E31F622A7C0BD0094EE9A /* BalloonMarker.swift */,
+				BF7E31FA22A7C0BD0094EE9A /* DateValueFormatter.swift */,
+				BF7E31F522A7C0BD0094EE9A /* DayAxisValueFormatter.swift */,
+				BF7E31F722A7C0BD0094EE9A /* IntAxisValueFormatter.swift */,
+				BF7E31FB22A7C0BD0094EE9A /* LargeValueFormatter.swift */,
+				BF7E31F922A7C0BD0094EE9A /* RadarMarkerView.swift */,
+				BF7E31F822A7C0BD0094EE9A /* XYMarkerView.swift */,
+			);
+			path = BarChartFormatter;
 			sourceTree = "<group>";
 		};
 		BFA8973522A51DF200A51517 /* SemiCircleView */ = {
@@ -747,6 +764,7 @@
 				BF4085C2229E57190030B6C1 /* FilterView.xib in Resources */,
 				BF0251872271B8850005E0A6 /* Lato-Regular.ttf in Resources */,
 				BF128720226EDBE6000DB226 /* fa-brands-400.ttf in Resources */,
+				BF8B44F222C5E076001E0152 /* ShiftCell.xib in Resources */,
 				BFE0A02E229414B000B5A0E8 /* TimeLogHistoryCell.xib in Resources */,
 				BF128721226EDBE6000DB226 /* fa-regular-400.ttf in Resources */,
 				BF128722226EDBE6000DB226 /* fa-solid-900.ttf in Resources */,
@@ -837,6 +855,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BFE0A0222293CC8900B5A0E8 /* TimeLogDetails.swift in Sources */,
+				BF8B44EC22C5CD75001E0152 /* ShiftsVC.swift in Sources */,
 				BF5E9ABB22967C9D0080B093 /* TimelyColorsUtility.swift in Sources */,
 				BF1286FC226DE2FE000DB226 /* ViewController.swift in Sources */,
 				BF854309229BBBE600960B4D /* DGElasticPullToRefreshExtensions.swift in Sources */,
@@ -896,6 +915,7 @@
 				BF7E31FC22A7C0BD0094EE9A /* DayAxisValueFormatter.swift in Sources */,
 				BF39E093228EBDDE00881626 /* LoginService.swift in Sources */,
 				BF037D6722C4D1750045465D /* AttendanceService.swift in Sources */,
+				BF8B44F122C5E076001E0152 /* ShiftCell.swift in Sources */,
 				BF12874022717D90000DB226 /* LGSideMenuHelper.m in Sources */,
 				BFE3EF1A229291480029DA89 /* LoginVM.swift in Sources */,
 				BF128714226ED8FC000DB226 /* DesignableTextField.swift in Sources */,

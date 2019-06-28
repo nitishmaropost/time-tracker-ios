@@ -75,6 +75,7 @@ class UserData: Mappable {
 
 class Shift: Mappable {
     
+    var empCode: Int?
     var dateString: String?
     var workTime: Int?
     var onPremisesTime: Int?
@@ -88,6 +89,7 @@ class Shift: Mappable {
     }
     
     func mapping(map: Map) {
+        self.empCode <- map["emp_code"]
         self.dateString <- map["dated_str"]
         self.workTime <- map["work_time"]
         self.onPremisesTime <- map["on_premises_time"]
