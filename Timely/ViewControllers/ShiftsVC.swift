@@ -42,6 +42,8 @@ class ShiftsVC: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let vc = segue.destination as! TimeLogHistoryVC
+        vc.viewModel.navType = .today
+        vc.viewModel.setInitialDates()
         vc.viewModel.empCode = "\(self.rowShift.shifts?[0].empCode ?? 0)"
     }
 }

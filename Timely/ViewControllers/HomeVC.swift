@@ -43,7 +43,7 @@ class HomeVC: UIViewController, ChartViewDelegate {
             }, loadingView: loadingView)
         scrollViewHome.dg_setPullToRefreshFillColor(TimelyColors.shared.kColorNavTitleColor)
         scrollViewHome.dg_setPullToRefreshBackgroundColor(UIColor.white)
-        self.addViewGestures()
+       // self.addViewGestures()
     }
     
     func addViewGestures() {
