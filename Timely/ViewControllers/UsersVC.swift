@@ -11,7 +11,9 @@ import UIKit
 class UsersVC: UIViewController {
     
     @IBOutlet weak var tableUsers: UITableView!
+    @IBOutlet weak var searchBarUsers: UISearchBar!
     @IBOutlet weak var viewModel: AttendanceVM!
+    var searchActive : Bool = false
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,7 +37,13 @@ extension UsersVC: UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let row = self.viewModel.attendance?.rows![indexPath.section]
+        var row: RowsShift?
+        if self.searchActive {
+            row = self.viewModel.filteredUsers[indexPath.section]
+        } else {
+            row = self.viewModel.attendance?.rows![indexPath.section]
+        }
+        
         self.viewModel.selectedRow = row
         self.performSegue(withIdentifier: TimelyConstants.shared.segue_users_to_shifts, sender: nil)
     }
@@ -44,11 +52,15 @@ extension UsersVC: UITableViewDelegate {
 extension UsersVC: UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        guard let count = self.viewModel.attendance?.rows!.count else {
-            return 8
+        if self.searchActive {
+            return self.viewModel.filteredUsers.count
+        } else {
+            guard let count = self.viewModel.attendance?.rows!.count else {
+                return 8
+            }
+            
+            return count
         }
-        
-        return count
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -59,7 +71,14 @@ extension UsersVC: UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "userCell", for: indexPath) as! UserCell
         if self.viewModel.attendance != nil {
             cell.hideSkeleton()
-            let row = self.viewModel.attendance?.rows![indexPath.section]
+            
+            var row: RowsShift?
+            if self.searchActive {
+                row = self.viewModel.filteredUsers[indexPath.section]
+            } else {
+                row = self.viewModel.attendance?.rows![indexPath.section]
+            }
+            
             if row?.userData.department == nil {
                 cell.constraint_height_labelDepartment.constant = 0
                 cell.constraint_top_labelDepartment.constant = 0
@@ -81,6 +100,42 @@ extension UsersVC: UITableViewDataSource {
     
         return cell
     }
+}
+
+extension UsersVC: UISearchBarDelegate {
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        self.viewModel.filteredUsers = (self.viewModel.attendance?.rows?.filter({ (rowShift) -> Bool in
+            let tmp = rowShift.userData.fullName
+           
+            if tmp!.range(of: searchText, options: .caseInsensitive) != nil {
+                return true
+            } else {
+                return false
+            }
+        }))!
+        
+        if self.viewModel.filteredUsers.count == 0 {
+            self.searchActive = false
+        } else {
+            self.searchActive = true
+        }
+        
+        self.tableUsers.reloadData()
+    }
     
+    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
+        self.searchActive = true;
+    }
     
+    func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
+        self.searchActive = false;
+    }
+    
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        self.searchActive = false;
+    }
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        self.searchActive = false;
+    }
 }

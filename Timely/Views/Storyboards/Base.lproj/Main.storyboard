@@ -111,20 +111,31 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="jIE-B8-vXw">
-                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                                <rect key="frame" x="0.0" y="144" width="414" height="752"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
                                     <outlet property="dataSource" destination="oXu-K8-ALn" id="lIe-hI-bRd"/>
                                     <outlet property="delegate" destination="oXu-K8-ALn" id="PQD-rD-kyr"/>
                                 </connections>
                             </tableView>
+                            <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="Enter user's name" translatesAutoresizingMaskIntoConstraints="NO" id="XLo-T6-DM6">
+                                <rect key="frame" x="0.0" y="88" width="414" height="56"/>
+                                <color key="barTintColor" red="0.91372549020000005" green="0.17254901959999999" blue="0.047058823530000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="oXu-K8-ALn" id="gd9-Bb-SaX"/>
+                                </connections>
+                            </searchBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="jIE-B8-vXw" firstAttribute="leading" secondItem="CU8-z9-J0g" secondAttribute="leading" id="0md-6l-QFR"/>
-                            <constraint firstItem="jIE-B8-vXw" firstAttribute="top" secondItem="CU8-z9-J0g" secondAttribute="top" id="44q-cR-hNX"/>
                             <constraint firstItem="CU8-z9-J0g" firstAttribute="bottom" secondItem="jIE-B8-vXw" secondAttribute="bottom" constant="-34" id="8Ae-Eu-Ilj"/>
                             <constraint firstItem="CU8-z9-J0g" firstAttribute="trailing" secondItem="jIE-B8-vXw" secondAttribute="trailing" id="Dwk-Ik-6BO"/>
+                            <constraint firstItem="XLo-T6-DM6" firstAttribute="trailing" secondItem="CU8-z9-J0g" secondAttribute="trailing" id="OOv-ow-1hH"/>
+                            <constraint firstItem="XLo-T6-DM6" firstAttribute="leading" secondItem="CU8-z9-J0g" secondAttribute="leading" id="Z3T-0j-ZUI"/>
+                            <constraint firstItem="XLo-T6-DM6" firstAttribute="top" secondItem="CU8-z9-J0g" secondAttribute="top" id="n0G-LG-2Pd"/>
+                            <constraint firstItem="jIE-B8-vXw" firstAttribute="top" secondItem="XLo-T6-DM6" secondAttribute="bottom" id="osp-dE-mcg"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="CU8-z9-J0g"/>
                     </view>
@@ -138,6 +149,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="searchBarUsers" destination="XLo-T6-DM6" id="R9y-xE-t2y"/>
                         <outlet property="tableUsers" destination="jIE-B8-vXw" id="XTo-xy-uiV"/>
                         <outlet property="viewModel" destination="wWi-8b-2GJ" id="yhj-KZ-LFw"/>
                         <segue destination="z4h-dv-EKk" kind="show" identifier="users_to_shifts" id="2Hu-1C-U5d"/>

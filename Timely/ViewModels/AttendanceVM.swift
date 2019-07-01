@@ -11,6 +11,7 @@ import Foundation
 class AttendanceVM: NSObject {
     var attendance: Attendance?
     var selectedRow: RowsShift?
+    var filteredUsers = [RowsShift]()
     
     func getAttendanceDetails(completion: @escaping (TimelyAPIResult) -> ()) {
         AttendanceService.shared.getAttendanceDetails { (result) in
