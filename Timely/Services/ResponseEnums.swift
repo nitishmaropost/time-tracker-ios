@@ -18,4 +18,5 @@ enum Navigations {
     case week
     case month
     case all
+    case custom
 }

@@ -51,6 +51,8 @@ class TimeLogHistoryVM : NSObject {
             case .month?:
                 self.startDate = Date().startOfMonth
                 self.endDate = Date().endOfMonth
+            case .custom?:
+                self.setDatesFromShift(startDateString: self.startDateString, endDateString: self.endDateString)
             default:
                 print("Error")
             }
@@ -59,6 +61,12 @@ class TimeLogHistoryVM : NSObject {
         self.startDateString = self.startDateMilliSeconds(startDate: self.startDate)
         self.endDateString = self.endDateMilliSeconds(endDate: self.endDate)
         self.setDisplayStrings()
+    }
+    
+    func setDatesFromShift(startDateString: String, endDateString: String) {
+        self.dateFormatter.dateFormat = "yyyy-MM-dd"
+        self.startDate = self.dateFormatter.date(from: self.startDateString)
+        self.endDate = self.startDate.endDateForSameDay()
     }
     
     func groupDetailsByDate() {
@@ -96,7 +104,7 @@ class TimeLogHistoryVM : NSObject {
     }
     
     func setDisplayStrings() {
-        self.dateFormatter.dateFormat = "dd-MM-yyyy"
+        self.dateFormatter.dateFormat = "yyyy-MM-dd"
         self.startDateDisplayString = self.dateFormatter.string(from: self.startDate)
         self.endDateDisplayString = self.dateFormatter.string(from: self.endDate)
     }

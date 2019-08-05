@@ -22,6 +22,7 @@ class LoginService: NSObject {
                 UserDefaults.standard.setValue(user?.userInfo?.userRole, forKey: "role")
                 UserDefaults.standard.setValue(user?.userInfo?.fullName, forKey: "fullName")
                 UserDefaults.standard.setValue(user?.userInfo?.email, forKey: "email")
+                UserDefaults.standard.setValue(user?.userInfo?.employeeCode, forKey: "emp_code")
                 return completion(.success(user!))
             }
             else if response.response?.statusCode == 422 {

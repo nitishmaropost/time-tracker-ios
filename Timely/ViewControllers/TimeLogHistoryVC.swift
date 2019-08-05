@@ -14,7 +14,7 @@ import FSCalendar
 class TimeLogHistoryVC: UIViewController {
     
     @IBOutlet weak var tableLogs: TableView!
-    @IBOutlet weak var viewModel: TimeLogHistoryVM!
+    @IBOutlet weak var viewModel: AttendanceVM!
     @IBOutlet weak var constraint_top_filter: NSLayoutConstraint!
     @IBOutlet weak var constraint_height_filter: NSLayoutConstraint!
     @IBOutlet weak var buttonFilterStartDate: UIButton!
@@ -35,8 +35,8 @@ class TimeLogHistoryVC: UIViewController {
         self.tableLogs.estimatedRowHeight = 130
         self.constraint_top_filter.constant = -80
         self.constraint_height_filter.constant = 0
-        self.addFilterView()
-        self.setDateButtonTexts()
+       // self.addFilterView()
+       // self.setDateButtonTexts()
         self.callTimeDetailsAPI()
         
     }

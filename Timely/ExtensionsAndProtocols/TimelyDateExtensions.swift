@@ -49,5 +49,10 @@ extension Date {
         components.year -= 20
         return Calendar.current.date(from: components as DateComponents)!
     }
+    
+    func endDateForSameDay() -> Date {
+        let tomorrow = Calendar.current.date(byAdding: .day, value: 1, to: self)
+        return tomorrow!
+    }
 }
 

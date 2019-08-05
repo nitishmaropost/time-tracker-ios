@@ -250,9 +250,10 @@
                     </view>
                     <navigationItem key="navigationItem" id="zf6-fK-Xyc">
                         <barButtonItem key="backBarButtonItem" title=" " id="iTd-sN-6Yk"/>
-                        <barButtonItem key="rightBarButtonItem" title="Logs" style="plain" id="vRI-SV-LaW">
+                        <barButtonItem key="rightBarButtonItem" image="navigation_calendar" style="plain" id="vRI-SV-LaW">
+                            <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
-                                <action selector="openLogs:" destination="z4h-dv-EKk" id="fKd-ch-iGE"/>
+                                <action selector="displayFilter:" destination="z4h-dv-EKk" id="bhq-L1-pCl"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -263,10 +264,12 @@
                         <outlet property="labelUserName" destination="KOH-0e-E70" id="Uoq-fR-nLj"/>
                         <outlet property="labelWorkTime" destination="gdM-KM-WtE" id="Ff2-0Y-sjc"/>
                         <outlet property="tableShifts" destination="XCu-aa-YFG" id="dIa-Pj-lDE"/>
+                        <outlet property="viewModel" destination="CB2-al-uit" id="qna-XJ-IEx"/>
                         <segue destination="nm1-sA-GTs" kind="show" identifier="shifts_to_logs" id="nsN-81-yzm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CIT-nP-V67" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="CB2-al-uit" customClass="AttendanceVM" customModule="Timely" customModuleProvider="target"/>
             </objects>
             <point key="canvasLocation" x="886.95652173913049" y="1899.7767857142856"/>
         </scene>
@@ -777,14 +780,7 @@
                         </userDefinedRuntimeAttributes>
                     </view>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" id="JDP-aK-8hD">
-                        <barButtonItem key="rightBarButtonItem" image="filter" id="7yw-0i-THK">
-                            <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <connections>
-                                <action selector="displayFilter:" destination="nm1-sA-GTs" id="onx-YC-8h3"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="JDP-aK-8hD"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="buttonFilterEndDate" destination="ADL-64-F5Y" id="ax8-9M-Ptv"/>
@@ -792,11 +788,11 @@
                         <outlet property="constraint_height_filter" destination="HZs-fl-Dt0" id="6hq-Ux-ioq"/>
                         <outlet property="constraint_top_filter" destination="LIh-FI-X98" id="8bC-0I-50x"/>
                         <outlet property="tableLogs" destination="1pX-pV-6id" id="30d-nI-tPC"/>
-                        <outlet property="viewModel" destination="ktW-Bb-IHR" id="q3O-HS-eBq"/>
+                        <outlet property="viewModel" destination="9QR-RK-HG0" id="BlL-v8-lff"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1n0-HU-k6z" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <customObject id="ktW-Bb-IHR" customClass="TimeLogHistoryVM" customModule="Timely" customModuleProvider="target"/>
+                <customObject id="9QR-RK-HG0" customClass="AttendanceVM" customModule="Timely" customModuleProvider="target"/>
             </objects>
             <point key="canvasLocation" x="992.75362318840587" y="1029.9107142857142"/>
         </scene>
@@ -1207,7 +1203,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="filter" width="16" height="16"/>
         <image name="navigation_calendar" width="18" height="18"/>
         <image name="run_in" width="32" height="32"/>
         <image name="run_out" width="32" height="32"/>
@@ -1215,6 +1210,6 @@
         <image name="time" width="24" height="24"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Xwf-jq-trR"/>
+        <segue reference="nsN-81-yzm"/>
     </inferredMetricsTieBreakers>
 </document>

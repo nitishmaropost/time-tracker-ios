@@ -84,12 +84,6 @@ class AuthenticationVC: UIViewController {
         self.viewModel.username = "shubha.goyal@maropost.com"
         self.viewModel.password = "shubha.goyal@maropost.com"
         
-//        self.textFieldUsername.setRightPaddingPoints(40)
-//        self.textFieldPassword.setRightPaddingPoints(40)
-        
-//        self.textFieldEmail.rightView = UIView(frame: CGRect(x: 0, y: 0, width: 15, height: textField.frame.height))
-//        textField.rightViewMode = .always
-        
         self.buttonForgotPassword.isHidden = false
         self.constraint_center_viewTextFields.constant = -30
         self.constraint_center_buttonAction.constant = -30
