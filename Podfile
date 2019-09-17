@@ -17,5 +17,7 @@ pod "SkeletonView"
 pod 'HGPlaceholders'
 pod 'FSCalendar'
 pod 'FoldingCell'
+pod 'CircleMenu'
+pod 'Hero'
 
 end
