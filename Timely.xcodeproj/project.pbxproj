@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -109,6 +109,12 @@
 		BFE3EF252292B0BD0029DA89 /* stopwatch.json in Resources */ = {isa = PBXBuildFile; fileRef = BFE3EF232292B0BC0029DA89 /* stopwatch.json */; };
 		BFE3EF272292B0CC0029DA89 /* wave.json in Resources */ = {isa = PBXBuildFile; fileRef = BFE3EF262292B0CC0029DA89 /* wave.json */; };
 		BFE3EF2B2292BCD10029DA89 /* UIView+Gradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE3EF2A2292BCD10029DA89 /* UIView+Gradient.swift */; };
+		C179B6A02328D22C000A1D14 /* CircleMenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C179B69F2328D22C000A1D14 /* CircleMenuVC.swift */; };
+		C179B6A32328D257000A1D14 /* CircleMenu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C179B6A22328D257000A1D14 /* CircleMenu.storyboard */; };
+		C179B6A62328D3E2000A1D14 /* CommonMenu.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C179B6A52328D3E2000A1D14 /* CommonMenu.xcassets */; };
+		C179B6A82328FD4B000A1D14 /* hand.json in Resources */ = {isa = PBXBuildFile; fileRef = C179B6A72328FD4B000A1D14 /* hand.json */; };
+		C179B6AC2328FF6C000A1D14 /* hand1.json in Resources */ = {isa = PBXBuildFile; fileRef = C179B6AB2328FF6C000A1D14 /* hand1.json */; };
+		C186D509232A280E00825D87 /* SwitchTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = C186D508232A280E00825D87 /* SwitchTheme.swift */; };
 		CF6825D85FB0D9A7E9A442A9 /* Pods_Timely.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FCF99208C2A9328624F467C /* Pods_Timely.framework */; };
 /* End PBXBuildFile section */
 
@@ -239,6 +245,12 @@
 		BFE3EF232292B0BC0029DA89 /* stopwatch.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = stopwatch.json; sourceTree = "<group>"; };
 		BFE3EF262292B0CC0029DA89 /* wave.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = wave.json; sourceTree = "<group>"; };
 		BFE3EF2A2292BCD10029DA89 /* UIView+Gradient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Gradient.swift"; sourceTree = "<group>"; };
+		C179B69F2328D22C000A1D14 /* CircleMenuVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleMenuVC.swift; sourceTree = "<group>"; };
+		C179B6A22328D257000A1D14 /* CircleMenu.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CircleMenu.storyboard; sourceTree = "<group>"; };
+		C179B6A52328D3E2000A1D14 /* CommonMenu.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = CommonMenu.xcassets; sourceTree = "<group>"; };
+		C179B6A72328FD4B000A1D14 /* hand.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = hand.json; sourceTree = "<group>"; };
+		C179B6AB2328FF6C000A1D14 /* hand1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = hand1.json; sourceTree = "<group>"; };
+		C186D508232A280E00825D87 /* SwitchTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchTheme.swift; sourceTree = "<group>"; };
 		F01F6EC1C06B8A93CAEB3494 /* Pods-Timely.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Timely.release.xcconfig"; path = "Pods/Target Support Files/Pods-Timely/Pods-Timely.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -311,6 +323,8 @@
 		BF1286ED226DE2FE000DB226 = {
 			isa = PBXGroup;
 			children = (
+				C179B69C2328C77C000A1D14 /* Common */,
+				C179B6992328C724000A1D14 /* Cabby */,
 				BF1286F8226DE2FE000DB226 /* Timely */,
 				BF085B23229567DF002BFE9E /* TimelyTests */,
 				BF1286F7226DE2FE000DB226 /* Products */,
@@ -376,6 +390,7 @@
 				BFD56216229FB18300A2905F /* TimelyButtonExtensions.swift */,
 				BF53C56922A5520200A1E917 /* DeviceExtension.swift */,
 				BFAE039522A63D3D008FBE04 /* TimelyTextFieldExtensions.swift */,
+				C186D508232A280E00825D87 /* SwitchTheme.swift */,
 			);
 			path = ExtensionsAndProtocols;
 			sourceTree = "<group>";
@@ -639,6 +654,73 @@
 			path = Splash;
 			sourceTree = "<group>";
 		};
+		C179B6992328C724000A1D14 /* Cabby */ = {
+			isa = PBXGroup;
+			children = (
+				C179B69B2328C75A000A1D14 /* Views */,
+				C179B69A2328C74F000A1D14 /* ViewControllers */,
+			);
+			path = Cabby;
+			sourceTree = "<group>";
+		};
+		C179B69A2328C74F000A1D14 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		C179B69B2328C75A000A1D14 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		C179B69C2328C77C000A1D14 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				C179B6A42328D3B7000A1D14 /* Assets */,
+				C179B69E2328C793000A1D14 /* Views */,
+				C179B69D2328C783000A1D14 /* ViewCntrollers */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		C179B69D2328C783000A1D14 /* ViewCntrollers */ = {
+			isa = PBXGroup;
+			children = (
+				C179B69F2328D22C000A1D14 /* CircleMenuVC.swift */,
+			);
+			path = ViewCntrollers;
+			sourceTree = "<group>";
+		};
+		C179B69E2328C793000A1D14 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C179B6A12328D233000A1D14 /* Storyboards */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		C179B6A12328D233000A1D14 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				C179B6A22328D257000A1D14 /* CircleMenu.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		C179B6A42328D3B7000A1D14 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				C179B6A72328FD4B000A1D14 /* hand.json */,
+				C179B6AB2328FF6C000A1D14 /* hand1.json */,
+				C179B6A52328D3E2000A1D14 /* CommonMenu.xcassets */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
 		C6494A0865D37AC60CB5256E /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -759,9 +841,12 @@
 				BF0251842271B8850005E0A6 /* Lato-Italic.ttf in Resources */,
 				BF0251852271B8850005E0A6 /* Lato-Light.ttf in Resources */,
 				BF0E32CE227823F8003C0B8B /* InOutCollectionCell.xib in Resources */,
+				C179B6A62328D3E2000A1D14 /* CommonMenu.xcassets in Resources */,
+				C179B6AC2328FF6C000A1D14 /* hand1.json in Resources */,
 				BFE3EF252292B0BD0029DA89 /* stopwatch.json in Resources */,
 				BF0251862271B8850005E0A6 /* Lato-LightItalic.ttf in Resources */,
 				BF4085C2229E57190030B6C1 /* FilterView.xib in Resources */,
+				C179B6A32328D257000A1D14 /* CircleMenu.storyboard in Resources */,
 				BF0251872271B8850005E0A6 /* Lato-Regular.ttf in Resources */,
 				BF128720226EDBE6000DB226 /* fa-brands-400.ttf in Resources */,
 				BF8B44F222C5E076001E0152 /* ShiftCell.xib in Resources */,
@@ -773,6 +858,7 @@
 				BF128723226EDBE6000DB226 /* FontAwesome.otf in Resources */,
 				BF128704226DE300000DB226 /* LaunchScreen.storyboard in Resources */,
 				BF0E32CA22781BA2003C0B8B /* InOutCell.xib in Resources */,
+				C179B6A82328FD4B000A1D14 /* hand.json in Resources */,
 				BF128701226DE300000DB226 /* Assets.xcassets in Resources */,
 				BF7435B122A66E72009A03F7 /* LogDetailsFoldingCell.xib in Resources */,
 				BF1286FF226DE2FE000DB226 /* Main.storyboard in Resources */,
@@ -805,37 +891,16 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-Timely/Pods-Timely-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/AlamofireObjectMapper/AlamofireObjectMapper.framework",
-				"${BUILT_PRODUCTS_DIR}/Charts/Charts.framework",
-				"${BUILT_PRODUCTS_DIR}/FSCalendar/FSCalendar.framework",
-				"${BUILT_PRODUCTS_DIR}/FoldingCell/FoldingCell.framework",
-				"${BUILT_PRODUCTS_DIR}/FontAwesome.swift/FontAwesome_swift.framework",
-				"${BUILT_PRODUCTS_DIR}/HGPlaceholders/HGPlaceholders.framework",
-				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
-				"${BUILT_PRODUCTS_DIR}/SkeletonView/SkeletonView.framework",
-				"${BUILT_PRODUCTS_DIR}/SwiftKeychainWrapper/SwiftKeychainWrapper.framework",
-				"${BUILT_PRODUCTS_DIR}/lottie-ios/Lottie.framework",
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Timely/Pods-Timely-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireObjectMapper.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Charts.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FSCalendar.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FoldingCell.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FontAwesome_swift.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HGPlaceholders.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SkeletonView.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftKeychainWrapper.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Lottie.framework",
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Timely/Pods-Timely-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Timely/Pods-Timely-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Timely/Pods-Timely-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -858,6 +923,7 @@
 				BF8B44EC22C5CD75001E0152 /* ShiftsVC.swift in Sources */,
 				BF5E9ABB22967C9D0080B093 /* TimelyColorsUtility.swift in Sources */,
 				BF1286FC226DE2FE000DB226 /* ViewController.swift in Sources */,
+				C186D509232A280E00825D87 /* SwitchTheme.swift in Sources */,
 				BF854309229BBBE600960B4D /* DGElasticPullToRefreshExtensions.swift in Sources */,
 				BF854308229BBBE600960B4D /* DGElasticPullToRefreshLoadingView.swift in Sources */,
 				BF7E31FD22A7C0BD0094EE9A /* BalloonMarker.swift in Sources */,
@@ -885,6 +951,7 @@
 				BFA8973922A51E3400A51517 /* SemiCircleView.swift in Sources */,
 				BF12873F22717D90000DB226 /* LGSideMenuSegue.m in Sources */,
 				BF0E32D3227857AF003C0B8B /* TimelyArrayExtensions.swift in Sources */,
+				C179B6A02328D22C000A1D14 /* CircleMenuVC.swift in Sources */,
 				BF85430B229BBBE600960B4D /* DGElasticPullToRefreshView.swift in Sources */,
 				BF128718226ED913000DB226 /* HRToast+UIView.swift in Sources */,
 				BF7E31FE22A7C0BD0094EE9A /* IntAxisValueFormatter.swift in Sources */,
