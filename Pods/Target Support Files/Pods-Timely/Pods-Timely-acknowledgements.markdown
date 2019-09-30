@@ -354,6 +354,18 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 
 
+## GoogleMaps
+
+Copyright 2019 Google
+
+## GooglePlacePicker
+
+Copyright 2019 Google
+
+## GooglePlaces
+
+Copyright 2019 Google
+
 ## HGPlaceholders
 
 Copyright (c) 2017 HamzaGhazouani <hamza.ghazouani@gmail.com>

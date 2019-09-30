@@ -9,6 +9,7 @@
 import UIKit
 import CircleMenu
 import Lottie
+import FontAwesome_swift
 
 extension UIColor {
     static func color(_ red: Int, green: Int, blue: Int, alpha: Float) -> UIColor {
@@ -29,6 +30,8 @@ class CircleMenuVC: UIViewController {
         ("settings-btn", UIColor(red: 0.51, green: 0.15, blue: 1, alpha: 1)),
         ("nearby-btn", UIColor(red: 1, green: 0.39, blue: 0, alpha: 1))
     ]
+    
+    let buttonTitles : [String] = [String.fontAwesomeIcon(name: .taxi), String.fontAwesomeIcon(name: .clock), String.fontAwesomeIcon(name: .keyboard), String.fontAwesomeIcon(name: .clock), String.fontAwesomeIcon(name: .users)]
     
     var animationHand: AnimationView!
     @IBOutlet weak var button: CircleMenu!
@@ -61,15 +64,19 @@ extension CircleMenuVC: CircleMenuDelegate {
     func circleMenu(_: CircleMenu, willDisplay button: UIButton, atIndex: Int) {
         button.backgroundColor = items[atIndex].color
         
-        button.setImage(UIImage(named: items[atIndex].icon), for: .normal)
-        
+       // button.setImage(UIImage(named: items[atIndex].icon), for: .normal)
+        button.titleLabel?.font = UIFont(name: "FontAwesome", size: 24)
+        button.setTitleColor(UIColor.black, for: .normal)
+        button.setTitle(buttonTitles[atIndex], for: .normal)
         // set highlited image
-        let highlightedImage = UIImage(named: items[atIndex].icon)?.withRenderingMode(.alwaysTemplate)
-        button.setImage(highlightedImage, for: .highlighted)
-        button.tintColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.3)
+//        let highlightedImage = UIImage(named: items[atIndex].icon)?.withRenderingMode(.alwaysTemplate)
+//        button.setImage(highlightedImage, for: .highlighted)
+//        button.tintColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.3)
     }
     
     func circleMenu(_: CircleMenu, buttonWillSelected _: UIButton, atIndex: Int) {
+        print("\(atIndex)")
+        self.performSegue(withIdentifier: "CabbyApp", sender: nil)
     }
     
     func circleMenu(_: CircleMenu, buttonDidSelected _: UIButton, atIndex: Int) {

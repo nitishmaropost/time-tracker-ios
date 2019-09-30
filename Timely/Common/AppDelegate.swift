@@ -7,6 +7,9 @@
 //
 
 import UIKit
+import GoogleMaps
+import GooglePlaces
+import GooglePlacePicker
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -18,7 +21,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         
         UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor: TimelyColors.shared.kColorNavTitleColor, NSAttributedString.Key.font: UIFont(name: "Lato-Bold", size: 25.0)!]
-
+        GMSServices.provideAPIKey(TimelyConstants.shared.GOOGLE_API_KEY)
+        GMSPlacesClient.provideAPIKey(TimelyConstants.shared.GOOGLE_API_KEY)
+        
         return true
     }
 

@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="fa-solid-900.ttf">
+            <string>FontAwesome5FreeSolid</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="drm-Ym-gcg">
+            <objects>
+                <navigationController storyboardIdentifier="CabHomeVC" id="x5O-bQ-6ou" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" id="RKn-K2-sou">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.043137254899999998" green="0.2156862745" blue="0.29411764709999999" alpha="1" colorSpace="calibratedRGB"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="V1D-ix-Yqa" kind="relationship" relationship="rootViewController" id="j2Z-jm-XLT"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EIp-DX-dTH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-452" y="129"/>
+        </scene>
+        <!--Cab HomeVC-->
+        <scene sceneID="ldj-gy-sfw">
+            <objects>
+                <viewController id="V1D-ix-Yqa" customClass="CabHomeVC" customModule="Timely" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="WhD-vG-ZVh">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TS8-0h-Md5" customClass="GMSMapView">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7bH-id-pV4" customClass="RoundedButton" customModule="Timely" customModuleProvider="target">
+                                <rect key="frame" x="354" y="637" width="40" height="40"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="53v-Yx-aGJ"/>
+                                    <constraint firstAttribute="height" constant="40" id="CIA-aN-vis"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="FontAwesome5FreeSolid" family="Font Awesome 5 Free" pointSize="21"/>
+                                <state key="normal" title="">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                        <size key="value" width="1" height="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Uw6-3C-lFv" customClass="RoundedView" customModule="Timely" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="697" width="414" height="200"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="4r4-iK-WKo"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                        <real key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                        <size key="value" width="1" height="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="dhq-pF-0UX" firstAttribute="trailing" secondItem="7bH-id-pV4" secondAttribute="trailing" constant="20" id="6M2-aq-6qc"/>
+                            <constraint firstItem="TS8-0h-Md5" firstAttribute="leading" secondItem="dhq-pF-0UX" secondAttribute="leading" id="B1n-vg-sns"/>
+                            <constraint firstItem="dhq-pF-0UX" firstAttribute="bottom" secondItem="Uw6-3C-lFv" secondAttribute="bottom" constant="-35" id="Fw3-sP-YmE"/>
+                            <constraint firstItem="Uw6-3C-lFv" firstAttribute="trailing" secondItem="dhq-pF-0UX" secondAttribute="trailing" id="JUH-TS-RiQ"/>
+                            <constraint firstItem="dhq-pF-0UX" firstAttribute="trailing" secondItem="TS8-0h-Md5" secondAttribute="trailing" id="SVH-tk-pYb"/>
+                            <constraint firstItem="dhq-pF-0UX" firstAttribute="bottom" secondItem="TS8-0h-Md5" secondAttribute="bottom" constant="-34" id="Xl5-OJ-L8q"/>
+                            <constraint firstItem="TS8-0h-Md5" firstAttribute="top" secondItem="dhq-pF-0UX" secondAttribute="top" constant="-88" id="eSX-Sw-gG6"/>
+                            <constraint firstItem="Uw6-3C-lFv" firstAttribute="leading" secondItem="dhq-pF-0UX" secondAttribute="leading" id="fDS-Ne-rSW"/>
+                            <constraint firstItem="Uw6-3C-lFv" firstAttribute="top" secondItem="7bH-id-pV4" secondAttribute="bottom" constant="20" id="utZ-d9-lF5"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="dhq-pF-0UX"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Yqb-1y-P3k"/>
+                    <connections>
+                        <outlet property="constraint_height_viewTaxi" destination="4r4-iK-WKo" id="bUD-uC-lXH"/>
+                        <outlet property="mapView" destination="TS8-0h-Md5" id="YWE-TD-E2J"/>
+                        <outlet property="viewTaxi" destination="Uw6-3C-lFv" id="VHt-lU-Ygv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OWd-86-jEk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="444.92753623188412" y="128.57142857142856"/>
+        </scene>
+    </scenes>
+</document>

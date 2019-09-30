@@ -93,11 +93,20 @@
                     <connections>
                         <outlet property="button" destination="Nmc-Po-hwa" id="Ujr-iO-IRo"/>
                         <outlet property="switchTheme" destination="v8j-Xo-GUu" id="1oc-yW-uwE"/>
+                        <segue destination="V9X-P0-UYx" kind="show" identifier="CabbyApp" id="aEq-mI-6U2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aoJ-I9-8dH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="90" y="139"/>
+        </scene>
+        <!--CabHomeVC-->
+        <scene sceneID="yuQ-YL-Hku">
+            <objects>
+                <viewControllerPlaceholder storyboardName="CabbyStoryboard" referencedIdentifier="CabHomeVC" id="V9X-P0-UYx" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gmA-4q-Hr6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="720" y="-96"/>
         </scene>
     </scenes>
     <resources>

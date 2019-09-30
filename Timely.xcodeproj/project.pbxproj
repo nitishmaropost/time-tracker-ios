@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BB32815D23337D9200FFA98A /* CabHomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB32815C23337D9200FFA98A /* CabHomeVC.swift */; };
+		BB4723122338A07200F21C75 /* CabbyStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB4723112338A07200F21C75 /* CabbyStoryboard.storyboard */; };
+		BB4723152338C9EE00F21C75 /* map-style.json in Resources */ = {isa = PBXBuildFile; fileRef = BB4723142338C9EE00F21C75 /* map-style.json */; };
 		BF02516322718CC10005E0A6 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF02516222718CC10005E0A6 /* HomeVC.swift */; };
 		BF02516722718DA90005E0A6 /* SideMenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF02516622718DA90005E0A6 /* SideMenuVC.swift */; };
 		BF0251692271928D0005E0A6 /* TimelyColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0251682271928D0005E0A6 /* TimelyColors.swift */; };
@@ -131,6 +134,9 @@
 /* Begin PBXFileReference section */
 		2521F61836ACAF313370B923 /* Pods-Timely.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Timely.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Timely/Pods-Timely.debug.xcconfig"; sourceTree = "<group>"; };
 		6FCF99208C2A9328624F467C /* Pods_Timely.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Timely.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BB32815C23337D9200FFA98A /* CabHomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CabHomeVC.swift; sourceTree = "<group>"; };
+		BB4723112338A07200F21C75 /* CabbyStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CabbyStoryboard.storyboard; sourceTree = "<group>"; };
+		BB4723142338C9EE00F21C75 /* map-style.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "map-style.json"; sourceTree = "<group>"; };
 		BF02516222718CC10005E0A6 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		BF02516622718DA90005E0A6 /* SideMenuVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuVC.swift; sourceTree = "<group>"; };
 		BF0251682271928D0005E0A6 /* TimelyColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelyColors.swift; sourceTree = "<group>"; };
@@ -273,6 +279,48 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BB328159233350BD00FFA98A /* Cabby */ = {
+			isa = PBXGroup;
+			children = (
+				BB4723132338C9E300F21C75 /* Assets */,
+				BB32815B233350CB00FFA98A /* ViewControllers */,
+				BB32815A233350C400FFA98A /* Views */,
+			);
+			path = Cabby;
+			sourceTree = "<group>";
+		};
+		BB32815A233350C400FFA98A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				BB4723102338A05800F21C75 /* Storyboards */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		BB32815B233350CB00FFA98A /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				BB32815C23337D9200FFA98A /* CabHomeVC.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		BB4723102338A05800F21C75 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				BB4723112338A07200F21C75 /* CabbyStoryboard.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		BB4723132338C9E300F21C75 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				BB4723142338C9EE00F21C75 /* map-style.json */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
 		BF0251732271B7C60005E0A6 /* Lato */ = {
 			isa = PBXGroup;
 			children = (
@@ -323,8 +371,8 @@
 		BF1286ED226DE2FE000DB226 = {
 			isa = PBXGroup;
 			children = (
+				BB328159233350BD00FFA98A /* Cabby */,
 				C179B69C2328C77C000A1D14 /* Common */,
-				C179B6992328C724000A1D14 /* Cabby */,
 				BF1286F8226DE2FE000DB226 /* Timely */,
 				BF085B23229567DF002BFE9E /* TimelyTests */,
 				BF1286F7226DE2FE000DB226 /* Products */,
@@ -654,29 +702,6 @@
 			path = Splash;
 			sourceTree = "<group>";
 		};
-		C179B6992328C724000A1D14 /* Cabby */ = {
-			isa = PBXGroup;
-			children = (
-				C179B69B2328C75A000A1D14 /* Views */,
-				C179B69A2328C74F000A1D14 /* ViewControllers */,
-			);
-			path = Cabby;
-			sourceTree = "<group>";
-		};
-		C179B69A2328C74F000A1D14 /* ViewControllers */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewControllers;
-			sourceTree = "<group>";
-		};
-		C179B69B2328C75A000A1D14 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
 		C179B69C2328C77C000A1D14 /* Common */ = {
 			isa = PBXGroup;
 			children = (
@@ -768,6 +793,7 @@
 				BF1286F3226DE2FE000DB226 /* Frameworks */,
 				BF1286F4226DE2FE000DB226 /* Resources */,
 				30BD9B663A8F5C80F0557C9B /* [CP] Embed Pods Frameworks */,
+				2D3B3F27B146AAC5D4838396 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -832,6 +858,7 @@
 				BF02517E2271B8850005E0A6 /* Lato-Black.ttf in Resources */,
 				BFE3EF272292B0CC0029DA89 /* wave.json in Resources */,
 				BF5E9AB8229675ED0080B093 /* person_out.svg in Resources */,
+				BB4723122338A07200F21C75 /* CabbyStoryboard.storyboard in Resources */,
 				BF02517F2271B8850005E0A6 /* Lato-BlackItalic.ttf in Resources */,
 				BFE3EF242292B0BD0029DA89 /* stopwatch.aep in Resources */,
 				BF0251802271B8850005E0A6 /* Lato-Bold.ttf in Resources */,
@@ -845,6 +872,7 @@
 				C179B6AC2328FF6C000A1D14 /* hand1.json in Resources */,
 				BFE3EF252292B0BD0029DA89 /* stopwatch.json in Resources */,
 				BF0251862271B8850005E0A6 /* Lato-LightItalic.ttf in Resources */,
+				BB4723152338C9EE00F21C75 /* map-style.json in Resources */,
 				BF4085C2229E57190030B6C1 /* FilterView.xib in Resources */,
 				C179B6A32328D257000A1D14 /* CircleMenu.storyboard in Resources */,
 				BF0251872271B8850005E0A6 /* Lato-Regular.ttf in Resources */,
@@ -884,6 +912,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2D3B3F27B146AAC5D4838396 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Timely/Pods-Timely-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Timely/Pods-Timely-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Timely/Pods-Timely-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		30BD9B663A8F5C80F0557C9B /* [CP] Embed Pods Frameworks */ = {
@@ -961,6 +1006,7 @@
 				BF12873B22717D90000DB226 /* LGSideMenuBorderView.m in Sources */,
 				BF037D5E22C495EA0045465D /* UsersVC.swift in Sources */,
 				BF7E320222A7C0BD0094EE9A /* LargeValueFormatter.swift in Sources */,
+				BB32815D23337D9200FFA98A /* CabHomeVC.swift in Sources */,
 				BF12873A22717D90000DB226 /* LGSideMenuView.m in Sources */,
 				BF0E32CD227823F8003C0B8B /* InOutCollectionCell.swift in Sources */,
 				BF12873E22717D90000DB226 /* UIViewController+LGSideMenuController.m in Sources */,

@@ -10,6 +10,16 @@ PODS:
   - FoldingCell (5.0.1)
   - FontAwesome.swift (1.7.0)
   - FSCalendar (2.8.0)
+  - GoogleMaps (3.1.0):
+    - GoogleMaps/Maps (= 3.1.0)
+  - GoogleMaps/Base (3.1.0)
+  - GoogleMaps/Maps (3.1.0):
+    - GoogleMaps/Base
+  - GooglePlacePicker (3.1.0):
+    - GoogleMaps (= 3.1.0)
+    - GooglePlaces (= 3.1.0)
+  - GooglePlaces (3.1.0):
+    - GoogleMaps/Base (= 3.1.0)
   - Hero (1.4.0)
   - HGPlaceholders (0.4.0)
   - lottie-ios (3.0.4)
@@ -25,6 +35,9 @@ DEPENDENCIES:
   - FoldingCell
   - FontAwesome.swift
   - FSCalendar
+  - GoogleMaps
+  - GooglePlacePicker
+  - GooglePlaces
   - Hero
   - HGPlaceholders
   - lottie-ios
@@ -40,6 +53,9 @@ SPEC REPOS:
     - FoldingCell
     - FontAwesome.swift
     - FSCalendar
+    - GoogleMaps
+    - GooglePlacePicker
+    - GooglePlaces
     - Hero
     - HGPlaceholders
     - lottie-ios
@@ -55,6 +71,9 @@ SPEC CHECKSUMS:
   FoldingCell: 9197b915a415af9e52a857964066797af6a51c2b
   FontAwesome.swift: 9f377615aa61381796dca143cddfd2a388723ea1
   FSCalendar: 3a5ed3636e2ba1b83ebebfcf0c2603105a6f5efe
+  GoogleMaps: 5c13302e6fe6bb6e686b267196586b91cd594225
+  GooglePlacePicker: 1c60c2a26e9d1e73bcb0c6f89609db8d777d13c1
+  GooglePlaces: e874db179f2675c4f3eeda0b686b540273a578b0
   Hero: bac92350d7201a1a940003e0767c7b52ce7c99a1
   HGPlaceholders: fd580aaf6050782bf2ee51eb62ed499ded6615b7
   lottie-ios: 55a2de40418f8de2b155efaba4d4d1a025a5c570
@@ -62,6 +81,6 @@ SPEC CHECKSUMS:
   SkeletonView: 6cbb80f82f8bdee3f9093e2fa03b84819b4bd826
   SwiftKeychainWrapper: 82c4c02cdc36f9a24f7edfcaab3e336401caa1a1
 
-PODFILE CHECKSUM: de81f4ea4dac78dc97b5f1287271912fe7d774a9
+PODFILE CHECKSUM: 2ede5f59591a12aa8c74d739a1472a67d99993ee
 
 COCOAPODS: 1.7.5

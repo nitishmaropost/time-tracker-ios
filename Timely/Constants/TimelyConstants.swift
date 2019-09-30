@@ -26,4 +26,7 @@ class TimelyConstants {
                                       "4": "In Card",
                                       "101": "Out Fingerprint",
                                       "104": "Out Card"]
+    
+    // Google API key
+    let GOOGLE_API_KEY = "AIzaSyD_VP-Xq2MdPvtB6vFYZQbINSaoYdKV1HM"
 }

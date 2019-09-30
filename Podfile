@@ -19,5 +19,8 @@ pod 'FSCalendar'
 pod 'FoldingCell'
 pod 'CircleMenu'
 pod 'Hero'
+pod 'GoogleMaps'
+pod 'GooglePlaces'
+pod 'GooglePlacePicker'
 
 end
